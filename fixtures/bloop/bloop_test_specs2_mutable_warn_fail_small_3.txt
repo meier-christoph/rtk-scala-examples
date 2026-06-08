@@ -1,0 +1,41 @@
+Compiling root (1 Scala source)
+[W]  [E1] src/main/scala/example/Calculator.scala:12:39
+[W]       match may not be exhaustive.
+[W]       
+[W]       It would fail on pattern case: None
+[W]       
+[W]       L12:   def label(o: Option[Int]): String = o match {
+[W]                                                  ^
+[W] src/main/scala/example/Calculator.scala: L12 [E1]
+Compiled root (1624ms)
+Compiling root-test (1 Scala source)
+Compiled root-test (1036ms)
+CalculatorSpec
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec
+Finished in 77 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 35ms
+4 tests, 2 passed, 2 failed
+
+====================================================================================================
+Total duration: 35ms
+1 failed
+
+Failed:
+- example.CalculatorSpec:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+====================================================================================================

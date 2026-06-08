@@ -1,0 +1,65 @@
+Compiling root (1 Scala source)
+[W]  [E1] src/main/scala/example/Calculator.scala:12:39
+[W]       match may not be exhaustive.
+[W]       
+[W]       It would fail on pattern case: None
+[W]       
+[W]       L12:   def label(o: Option[Int]): String = o match {
+[W]                                                  ^
+[W] src/main/scala/example/Calculator.scala: L12 [E1]
+Compiled root (1644ms)
+Compiling root-test (1 Scala source)
+Compiled root-test (1167ms)
++ Calculator
+  + add returns the sum
+  - sub returns the difference
+    ✗ 6 was not equal to 7
+    result == 7
+    result = 6
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:13 
+
+  + mul returns the product
+  - div returns the quotient
+    ✗ 5 was not equal to 4
+    result == 4
+    result = 5
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:21 
+
+Execution took 94ms
+4 tests, 2 passed, 2 failed
+
+2 tests passed. 2 tests failed. 0 tests ignored.
+
+
+  - Calculator / sub returns the difference
+    ✗ 6 was not equal to 7
+    result == 7
+    result = 6
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:13 
+
+  - Calculator / div returns the quotient
+    ✗ 5 was not equal to 4
+    result == 4
+    result = 5
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:21 
+
+Executed in 183 ms
+
+The test execution was successfully closed.
+====================================================================================================
+Total duration: 94ms
+1 failed
+
+Failed:
+- example.CalculatorSpec:
+  * Calculator - sub returns the difference -   - sub returns the difference
+    ✗ 6 was not equal to 7
+    result == 7
+    result = 6
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:13 
+  * Calculator - div returns the quotient -   - div returns the quotient
+    ✗ 5 was not equal to 4
+    result == 4
+    result = 5
+    at /tmp/workspace/ziotest-asserttrue-warn-fail-small/src/test/scala/example/CalculatorSpec.scala:21 
+====================================================================================================

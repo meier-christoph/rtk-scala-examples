@@ -1,0 +1,110 @@
+Compiling root (1 Scala source)
+Compiled root (1458ms)
+Compiling root-test (6 Scala sources)
+Compiled root-test (1726ms)
+CalculatorSpec1
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec1
+Finished in 65 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 31ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec1 passed
+
+CalculatorSpec2
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec2
+Finished in 26 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 4ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec2 passed
+
+CalculatorSpec3
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec3
+Finished in 15 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 4ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec3 passed
+
+CalculatorSpec4
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec4
+Finished in 12 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 4ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec4 passed
+
+CalculatorSpec5
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec5
+Finished in 13 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 4ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec5 passed
+
+CalculatorSpec6
+ 
+Calculator should
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+ 
+ 
+Total for specification CalculatorSpec6
+Finished in 17 ms
+4 examples, 0 failure, 0 error
+ 
+Execution took 4ms
+4 tests, 4 passed
+All tests in example.CalculatorSpec6 passed
+
+====================================================================================================
+Total duration: 51ms
+All 6 test suites passed.
+====================================================================================================

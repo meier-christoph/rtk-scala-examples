@@ -1,0 +1,27 @@
+bloop test: 12 passed, 12 failed (59ms)
+═══════════════════════════════════════
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec1.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec1.scala:17)
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec2.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec2.scala:17)
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec3.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec3.scala:17)
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec4.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec4.scala:17)
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec5.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec5.scala:17)
+  [FAIL] sub returns the difference
+         6 != 7 (CalculatorSpec6.scala:11)
+  [FAIL] div returns the quotient
+         5 != 4 (CalculatorSpec6.scala:17)
+[full output: ~/.local/share/rtk/tee/1780931960_bloop_test.log]

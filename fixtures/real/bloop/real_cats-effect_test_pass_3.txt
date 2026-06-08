@@ -1,0 +1,27 @@
+Compiling kernelTestkitJVM (9 Scala sources)
+Compiling lawsJVM (17 Scala sources)
+Compiling testsJVM (4 Scala sources)
+Compiled testsJVM (490ms)
+Compiled lawsJVM (1302ms)
+Compiled kernelTestkitJVM (1761ms)
+Compiling testkitJVM (4 Scala sources)
+Compiled testkitJVM (517ms)
+Compiling testsJVM-test (77 Scala sources)
+Compiled testsJVM-test (16728ms)
+ExitCodeSpec
+
++ ExitCode.unapply is exhaustive
+
+
+Total for specification ExitCodeSpec
+Finished in 235 ms
+1 example, 3 expectations, 0 failure, 0 error
+
+Execution took 9ms
+1 tests, 1 passed
+All tests in cats.effect.ExitCodeSpec passed
+
+====================================================================================================
+Total duration: 9ms
+All 1 test suites passed.
+====================================================================================================

@@ -1,0 +1,6 @@
+bloop test: 3 passed, 1 failed (15ms)
+═══════════════════════════════════════
+  [FAIL] example.CalculatorSuite.div returns the quotient
+         java.lang.ArithmeticException: / by zero
+         at example.Calculator$.div(Calculator.scala:8)
+[full output: ~/.local/share/rtk/tee/1780931540_bloop_test.log]

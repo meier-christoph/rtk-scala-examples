@@ -1,0 +1,7 @@
+bloop test: 2 passed, 2 failed (21ms)
+═══════════════════════════════════════
+  [FAIL] sub returns the difference
+         6 did not equal 7 (CalculatorSuite.scala:12)
+  [FAIL] div returns the quotient
+         5 did not equal 4 (CalculatorSuite.scala:20)
+[full output: ~/.local/share/rtk/tee/1780931842_bloop_test.log]

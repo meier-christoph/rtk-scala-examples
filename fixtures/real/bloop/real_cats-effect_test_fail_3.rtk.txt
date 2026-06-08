@@ -1,0 +1,5 @@
+bloop test: 0 passed, 1 failed (20ms)
+═══════════════════════════════════════
+  [FAIL] ExitCode.unapply is exhaustive
+         0 is less than 100 (ExitCodeSpec.scala:23)
+[full output: ~/.local/share/rtk/tee/1780935581_bloop_test.log]

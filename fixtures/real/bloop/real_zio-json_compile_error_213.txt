@@ -1,0 +1,18 @@
+Compiling zioJsonJVM (30 Scala sources)
+[W]  [E3] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala:366:29
+[W]       evidence parameter evidence$12 of type Ordering[A] in method sortedSet is never used
+[W]       L366:   implicit def sortedSet[A: Ordering: JsonEncoder]: JsonEncoder[immutable.SortedSet[A]] =
+[W]                                         ^^^^^^^^
+[E] [E2] zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala:9:20
+[E]      value thisMethodDoesNotExist is not a member of String
+[E]      L9:   val broken = "x".thisMethodDoesNotExist
+[E]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E1] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala:45:8
+[W]       a type was inferred to be `Any`; this may indicate a programming error.
+[W]       L45:       .fromInputStreamScoped(scoped)
+[W]                   ^
+[E] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala: L45 [E1]
+[E] zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala: L9 [E2]
+[E] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala: L366 [E3]
+Compiled zioJsonJVM (2890ms)
+[E] Failed to compile 'zioJsonJVM'

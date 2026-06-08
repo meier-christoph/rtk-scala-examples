@@ -1,0 +1,97 @@
+Compiling root (1 Scala source)
+[W]  [E1] src/main/scala/example/Calculator.scala:12:39
+[W]       match may not be exhaustive.
+[W]       
+[W]       It would fail on pattern case: None
+[W]       
+[W]       L12:   def label(o: Option[Int]): String = o match {
+[W]                                                  ^
+[W] src/main/scala/example/Calculator.scala: L12 [E1]
+Compiled root (1665ms)
+Compiling root-test (6 Scala sources)
+Compiled root-test (1529ms)
+CalculatorSuite1:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite1.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite1.scala:20)
+Execution took 23ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSuite2:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite2.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite2.scala:20)
+Execution took 2ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSuite3:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite3.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite3.scala:20)
+Execution took 2ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSuite4:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite4.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite4.scala:20)
+Execution took 2ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSuite5:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite5.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite5.scala:20)
+Execution took 2ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSuite6:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite6.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite6.scala:20)
+Execution took 1ms
+4 tests, 2 passed, 2 failed
+
+====================================================================================================
+Total duration: 32ms
+6 failed
+
+Failed:
+- example.CalculatorSuite1:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+- example.CalculatorSuite2:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+- example.CalculatorSuite3:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+- example.CalculatorSuite4:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+- example.CalculatorSuite5:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+- example.CalculatorSuite6:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+====================================================================================================
+The test execution was successfully closed.

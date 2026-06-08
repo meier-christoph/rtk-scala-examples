@@ -1,0 +1,22 @@
+Compiling root (1 Scala source)
+Compiled root (1445ms)
+Compiling root-test (1 Scala source)
+Compiled root-test (1281ms)
++ Calculator
+  + add returns the sum
+  + sub returns the difference
+  + mul returns the product
+  + div returns the quotient
+4 tests passed. 0 tests failed. 0 tests ignored.
+
+Executed in 177 ms
+
+Execution took 0.11s
+4 tests, 4 passed
+All tests in example.CalculatorSpec passed
+
+The test execution was successfully closed.
+====================================================================================================
+Total duration: 0.11s
+All 1 test suites passed.
+====================================================================================================

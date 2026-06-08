@@ -1,0 +1,24 @@
+Compiling root (1 Scala source)
+Compiled root (1464ms)
+Compiling root-test (1 Scala source)
+Compiled root-test (1017ms)
+CalculatorSuite:
+- add returns the sum
+- sub returns the difference *** FAILED ***
+  6 did not equal 7 (CalculatorSuite.scala:12)
+- mul returns the product
+- div returns the quotient *** FAILED ***
+  5 did not equal 4 (CalculatorSuite.scala:20)
+Execution took 22ms
+4 tests, 2 passed, 2 failed
+
+====================================================================================================
+Total duration: 22ms
+1 failed
+
+Failed:
+- example.CalculatorSuite:
+  * sub returns the difference - 6 did not equal 7
+  * div returns the quotient - 5 did not equal 4
+====================================================================================================
+The test execution was successfully closed.

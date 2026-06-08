@@ -1,0 +1,4 @@
+bloop compile: 30 sources, 1 error, 2 warnings (1.9s)
+═══════════════════════════════════════
+1. scala-2.x/zio/json/JsonEncoderVersionSpecific.scala:9:20 — value thisMethodDoesNotExist is not a member of String
+[full output: ~/.local/share/rtk/tee/1780935563_bloop_compile.log]

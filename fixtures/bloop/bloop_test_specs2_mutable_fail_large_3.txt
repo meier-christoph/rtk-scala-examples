@@ -1,0 +1,148 @@
+Compiling root (1 Scala source)
+Compiled root (1441ms)
+Compiling root-test (6 Scala sources)
+Compiled root-test (1747ms)
+CalculatorSpec1
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec1.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec1.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec1
+Finished in 78 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 36ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSpec2
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec2.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec2.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec2
+Finished in 27 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 4ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSpec3
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec3.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec3.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec3
+Finished in 18 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 4ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSpec4
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec4.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec4.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec4
+Finished in 13 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 5ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSpec5
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec5.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec5.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec5
+Finished in 15 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 4ms
+4 tests, 2 passed, 2 failed
+
+CalculatorSpec6
+ 
+Calculator should
+  + add returns the sum
+  x sub returns the difference
+[E]    6 != 7 (CalculatorSpec6.scala:11)
+[E]  
+  + mul returns the product
+  x div returns the quotient
+[E]    5 != 4 (CalculatorSpec6.scala:17)
+[E]  
+ 
+ 
+Total for specification CalculatorSpec6
+Finished in 14 ms
+4 examples, 2 failures, 0 error
+ 
+Execution took 0ms
+4 tests, 2 passed, 2 failed
+
+====================================================================================================
+Total duration: 53ms
+6 failed
+
+Failed:
+- example.CalculatorSpec1:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+- example.CalculatorSpec2:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+- example.CalculatorSpec3:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+- example.CalculatorSpec4:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+- example.CalculatorSpec5:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+- example.CalculatorSpec6:
+  * Calculator should::sub returns the difference - 6 != 7
+  * Calculator should::div returns the quotient - 5 != 4
+====================================================================================================

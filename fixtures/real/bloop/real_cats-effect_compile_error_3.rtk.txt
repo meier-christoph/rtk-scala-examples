@@ -1,0 +1,3 @@
+bloop compile: 75 sources, 1 error (1.1s)
+═══════════════════════════════════════
+1. cats/effect/ExitCode.scala:43:16 — method thisOverridesNothing overrides nothing

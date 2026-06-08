@@ -1,0 +1,8 @@
+Compiling coreJVM (67 Scala sources and 8 Java sources)
+[E] [E1] core/shared/src/main/scala/cats/effect/ExitCode.scala:43:16
+[E]      method thisOverridesNothing overrides nothing
+[E]      L43:   override def thisOverridesNothing(): Int = 1
+[E]                          ^
+[E] core/shared/src/main/scala/cats/effect/ExitCode.scala: L43 [E1]
+Compiled coreJVM (1932ms)
+[E] Failed to compile 'coreJVM'

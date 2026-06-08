@@ -1,0 +1,15 @@
+fixture,raw_bytes,raw_tokens,filtered_bytes,filtered_tokens,pct_saved
+real_cats-effect_compile_error_3,398,39,246,15,61.5
+real_cats-effect_test_fail_3,704,72,312,21,70.8
+real_cats-effect_test_pass_3,832,83,37,7,91.6
+real_circe_compile_error_213,11510,908,353,25,97.2
+real_circe_compile_warn_213,12994,1041,1471,164,84.2
+real_circe_test_fail_213,130070,14002,506,37,99.7
+real_circe_test_pass_213,149393,15627,43,7,100.0
+real_enumeratum_compile_error_212,380,33,245,15,54.5
+real_enumeratum_test_fail_212,12518,2078,326,25,98.8
+real_enumeratum_test_pass_212,12428,2059,40,7,99.7
+real_zio-json_compile_error_213,1180,94,358,24,74.5
+real_zio-json_compile_warn_213,790,65,411,39,40.0
+real_zio-json_test_fail_213,26460,2675,314,22,99.2
+real_zio-json_test_pass_213,26132,2636,53,9,99.7

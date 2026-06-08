@@ -1,0 +1,2164 @@
+Compiling testsJVM (9 Scala sources)
+[W]  [E8] modules/tests/shared/src/main/scala/io/circe/tests/MissingInstances.scala:108:14
+[W]       type Traversable in package scala is deprecated (since 2.13.0): Use Iterable instead of Traversable
+[W]       L108:     ev: C[A] => Traversable[A],
+[W]                     ^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E7] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:43:47
+[W]       value Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L43:       def newBuilder: Builder[A, Stream[A]] = Stream.newBuilder[A]
+[W]                                                          ^^^^^^
+[W]  [E6] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:43:23
+[W]       type Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L43:       def newBuilder: Builder[A, Stream[A]] = Stream.newBuilder[A]
+[W]                                  ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E5] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:42:58
+[W]       value Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L42:       def fromSpecific(it: IterableOnce[A]): Stream[A] = Stream.from(it)
+[W]                                                                     ^^^^^^
+[W]  [E4] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:42:46
+[W]       type Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L42:       def fromSpecific(it: IterableOnce[A]): Stream[A] = Stream.from(it)
+[W]                                                         ^^^^^^^^^
+[W]  [E3] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:41:9
+[W]       type Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L41:     new Factory[A, Stream[A]] with Serializable {
+[W]                    ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E2] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala:40:46
+[W]       type Stream in package scala is deprecated (since 2.13.0): Use LazyList instead of Stream
+[W]       L40:   implicit def factoryStreamSerializable[A]: Factory[A, Stream[A]] =
+[W]                                                         ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E1] modules/tests/shared/src/main/scala/io/circe/tests/MissingInstances.scala:67:27
+[W]       evidence parameter evidence$3 of type shapeless.IsTuple[P] in method eqTuple is never used
+[W]       L67:   implicit def eqTuple[P: IsTuple, L <: HList](implicit
+[W]                                      ^^^^^^^
+[W] modules/tests/shared/src/main/scala/io/circe/tests/MissingInstances.scala: L67 [E1], L108 [E8]
+[W] modules/tests/shared/src/main/scala-2.13+/io/circe/FactoryInstances.scala: L40 [E2], L41 [E3], L42 [E4], L42 [E5], L43 [E6], L43 [E7]
+Compiled testsJVM (5020ms)
+Compiling testsJVM-test (1 Scala source)
+Compiled testsJVM-test (1093ms)
+MemoizedPiecesSuite:
+Printer.MemoizedPieces
+- should should be correct for arbitrarily ordered depths under concurrent usage
+Execution took 0.15s
+1 tests, 1 passed
+All tests in io.circe.MemoizedPiecesSuite passed
+
+io.circe.ACursorSuite:
+  + focus should return the JSON value in a newly created cursor 0.087s
+  + top should return from navigation into an object 0.029s
+  + top should return from navigation into an array 0.014s
+  + root should return from navigation into an object 0.011s
+  + root should return from navigation into an array 0.021s
+  + up should undo navigation into an object 0.017s
+  + up should undo navigation into an array 0.033s
+  + up should fail at the top 0.015s
+  + withFocus should have no effect when given the identity function 0.021s
+  + withFocus should support adding an element to an array 0.004s
+  + withFocusM should lift a value into a List 0.026s
+  + delete should remove a value from an object 0.001s
+  + delete should remove a value from an array 0.252s
+  + delete should fail at the top 0.024s
+  + set should replace an element 0.002s
+  + values should return the expected values 0.001s
+  + keys should return the expected values 0.0s
+  + left should successfully select an existing value 0.001s
+  + left should fail to select a value that doesn't exist 0.0s
+  + left should fail at the top 0.009s
+  + right should successfully select an existing value 0.001s
+  + right should fail to select a value that doesn't exist 0.001s
+  + right should fail at the top 0.005s
+  + downArray should successfully select an existing value 0.001s
+  + downArray should fail to select a value that doesn't exist 0.001s
+  + field should successfully select an existing value 0.001s
+  + field should fail at the top 0.004s
+  + getOrElse should successfully decode an existing field 0.018s
+  + getOrElse should use the fallback if field is missing 0.001s
+  + getOrElse should fail if the field is the wrong type 0.002s
+  + key should return the key if the cursor is in an object 0.001s
+  + key should return None if the cursor is not in an object 0.0s
+  + key should return None if the cursor has failed 0.0s
+  + key should return None if the cursor has at the root 0.0s
+  + index should return the index if the cursor is in an array 0.001s
+  + index should return None if the cursor is not in an array 0.0s
+  + index should return None if the cursor has failed 0.001s
+  + index should return None if the cursor has at the root 0.0s
+  + pathString should return the correct paths 0.002s
+Execution took 0.61s
+39 tests, 39 passed
+All tests in io.circe.ACursorSuite passed
+
+io.circe.AccumulatingDecoderSpec:
+  + return as many errors as invalid elements in a list 0.019s
+  + return expected failures in a list 0.012s
+  + return expected failures in a map 0.032s
+  + return expected failures in a set 0.017s
+  + return expected failures in a non-empty list 0.017s
+  + return expected failures in a tuple 0.012s
+  + return expected failures in a case class 0.006s
+  + return expected failures combined with validation errors 0.005s
+Execution took 0.12s
+8 tests, 8 passed
+All tests in io.circe.AccumulatingDecoderSpec passed
+
+io.circe.AnyValCodecSuite:
+  + Codec[Unit]: codec.consistency with Codec.from 0.019s
+  + Codec[Unit]: codec.consistency with accumulating 0.006s
+  + Codec[Unit]: codec.decoder serializability 0.003s
+  + Codec[Unit]: codec.encoder serializability 0.0s
+  + Codec[Unit]: codec.roundTrip 0.001s
+  + Codec[Boolean]: codec.consistency with Codec.from 0.008s
+  + Codec[Boolean]: codec.consistency with accumulating 0.007s
+  + Codec[Boolean]: codec.decoder serializability 0.001s
+  + Codec[Boolean]: codec.encoder serializability 0.001s
+  + Codec[Boolean]: codec.roundTrip 0.0s
+  + Codec[Char]: codec.consistency with Codec.from 0.004s
+  + Codec[Char]: codec.consistency with accumulating 0.004s
+  + Codec[Char]: codec.decoder serializability 0.001s
+  + Codec[Char]: codec.encoder serializability 0.0s
+  + Codec[Char]: codec.roundTrip 0.0s
+  + Codec[Float]: codec.consistency with Codec.from 0.009s
+  + Codec[Float]: codec.consistency with accumulating 0.005s
+  + Codec[Float]: codec.decoder serializability 0.002s
+  + Codec[Float]: codec.encoder serializability 0.0s
+  + Codec[Float]: codec.roundTrip 0.001s
+  + Codec[Double]: codec.consistency with Codec.from 0.008s
+  + Codec[Double]: codec.consistency with accumulating 0.01s
+  + Codec[Double]: codec.decoder serializability 0.001s
+  + Codec[Double]: codec.encoder serializability 0.001s
+  + Codec[Double]: codec.roundTrip 0.0s
+  + Codec[Byte]: codec.consistency with Codec.from 0.015s
+  + Codec[Byte]: codec.consistency with accumulating 0.008s
+  + Codec[Byte]: codec.decoder serializability 0.002s
+  + Codec[Byte]: codec.encoder serializability 0.001s
+  + Codec[Byte]: codec.roundTrip 0.0s
+  + Codec[Short]: codec.consistency with Codec.from 0.009s
+  + Codec[Short]: codec.consistency with accumulating 0.008s
+  + Codec[Short]: codec.decoder serializability 0.001s
+  + Codec[Short]: codec.encoder serializability 0.0s
+  + Codec[Short]: codec.roundTrip 0.0s
+  + Codec[Int]: codec.consistency with Codec.from 0.01s
+  + Codec[Int]: codec.consistency with accumulating 0.006s
+  + Codec[Int]: codec.decoder serializability 0.001s
+  + Codec[Int]: codec.encoder serializability 0.001s
+  + Codec[Int]: codec.roundTrip 0.0s
+  + Codec[Long]: codec.consistency with Codec.from 0.006s
+  + Codec[Long]: codec.consistency with accumulating 0.009s
+  + Codec[Long]: codec.decoder serializability 0.001s
+  + Codec[Long]: codec.encoder serializability 0.0s
+  + Codec[Long]: codec.roundTrip 0.0s
+Execution took 0.17s
+45 tests, 45 passed
+All tests in io.circe.AnyValCodecSuite passed
+
+io.circe.ArraySeqSuite:
+  + decoding an arraySeq should succeed when the type is fully specified 0.003s
+  + decoding an arraySeq should succeed for polymorphic decoders 0.002s
+  + decoding an arraySeq should specialise the array type where a class tag is available 0.005s
+  + decoding an arraySeq should not specialise the array type where no class tag is available 0.004s
+  + Codec[ArraySeq[Int]]: codec.consistency with Codec.from 0.014s
+  + Codec[ArraySeq[Int]]: codec.consistency with accumulating 0.004s
+  + Codec[ArraySeq[Int]]: codec.decoder serializability 0.002s
+  + Codec[ArraySeq[Int]]: codec.encoder serializability 0.007s
+  + Codec[ArraySeq[Int]]: codec.roundTrip 0.002s
+  + Codec[ArraySeq[String]]: codec.consistency with Codec.from 0.019s
+  + Codec[ArraySeq[String]]: codec.consistency with accumulating 0.002s
+  + Codec[ArraySeq[String]]: codec.decoder serializability 0.002s
+  + Codec[ArraySeq[String]]: codec.encoder serializability 0.001s
+  + Codec[ArraySeq[String]]: codec.roundTrip 0.004s
+Execution took 71ms
+14 tests, 14 passed
+All tests in io.circe.ArraySeqSuite passed
+
+io.circe.CatsCodecSuite:
+  + Codec[Chain[Int]]: codec.consistency with Codec.from 0.023s
+  + Codec[Chain[Int]]: codec.consistency with accumulating 0.004s
+  + Codec[Chain[Int]]: codec.decoder serializability 0.001s
+  + Codec[Chain[Int]]: codec.encoder serializability 0.0s
+  + Codec[Chain[Int]]: codec.roundTrip 0.005s
+  + Codec[NonEmptyList[Int]]: codec.consistency with Codec.from 0.018s
+  + Codec[NonEmptyList[Int]]: codec.consistency with accumulating 0.004s
+  + Codec[NonEmptyList[Int]]: codec.decoder serializability 0.015s
+  + Codec[NonEmptyList[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptyList[Int]]: codec.roundTrip 0.002s
+  + Codec[NonEmptySeq[Int]]: codec.consistency with Codec.from 0.012s
+  + Codec[NonEmptySeq[Int]]: codec.consistency with accumulating 0.01s
+  + Codec[NonEmptySeq[Int]]: codec.decoder serializability 0.003s
+  + Codec[NonEmptySeq[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptySeq[Int]]: codec.roundTrip 0.003s
+  + Codec[NonEmptyVector[Int]]: codec.consistency with Codec.from 0.014s
+  + Codec[NonEmptyVector[Int]]: codec.consistency with accumulating 0.007s
+  + Codec[NonEmptyVector[Int]]: codec.decoder serializability 0.002s
+  + Codec[NonEmptyVector[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptyVector[Int]]: codec.roundTrip 0.002s
+  + Codec[NonEmptyStream[Int]]: codec.consistency with Codec.from 0.018s
+  + Codec[NonEmptyStream[Int]]: codec.consistency with accumulating 0.003s
+  + Codec[NonEmptyStream[Int]]: codec.decoder serializability 0.003s
+  + Codec[NonEmptyStream[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptyStream[Int]]: codec.roundTrip 0.003s
+  + Codec[NonEmptySet[Int]]: codec.consistency with Codec.from 0.03s
+  + Codec[NonEmptySet[Int]]: codec.consistency with accumulating 0.008s
+  + Codec[NonEmptySet[Int]]: codec.decoder serializability 0.003s
+  + Codec[NonEmptySet[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptySet[Int]]: codec.roundTrip 0.004s
+  + Codec[NonEmptyMap[Int, String]]: codec.consistency with Codec.from 0.029s
+  + Codec[NonEmptyMap[Int, String]]: codec.consistency with accumulating 0.003s
+  + Codec[NonEmptyMap[Int, String]]: codec.roundTrip 0.01s
+  + Codec[NonEmptyChain[Int]]: codec.consistency with Codec.from 0.012s
+  + Codec[NonEmptyChain[Int]]: codec.consistency with accumulating 0.003s
+  + Codec[NonEmptyChain[Int]]: codec.decoder serializability 0.003s
+  + Codec[NonEmptyChain[Int]]: codec.encoder serializability 0.001s
+  + Codec[NonEmptyChain[Int]]: codec.roundTrip 0.003s
+Execution took 0.27s
+38 tests, 38 passed
+All tests in io.circe.CatsCodecSuite passed
+
+io.circe.CirceCodecSuite:
+  + Codec[Json]: codec.consistency with Codec.from 0.008s
+  + Codec[Json]: codec.consistency with accumulating 0.003s
+  + Codec[Json]: codec.decoder serializability 0.001s
+  + Codec[Json]: codec.encoder serializability 0.001s
+  + Codec[Json]: codec.roundTrip 0.003s
+  + Codec[JsonObject]: codec.consistency with Codec.from 0.018s
+  + Codec[JsonObject]: codec.consistency with accumulating 0.003s
+  + Codec[JsonObject]: codec.decoder serializability 0.001s
+  + Codec[JsonObject]: codec.encoder serializability 0.0s
+  + Codec[JsonObject]: codec.roundTrip 0.013s
+  + Codec[JsonNumber]: codec.consistency with Codec.from 0.006s
+  + Codec[JsonNumber]: codec.consistency with accumulating 0.006s
+  + Codec[JsonNumber]: codec.decoder serializability 0.001s
+  + Codec[JsonNumber]: codec.encoder serializability 0.001s
+  + Codec[JsonNumber]: codec.roundTrip 0.0s
+  + Codec[Foo]: codec.consistency with Codec.from 0.008s
+  + Codec[Foo]: codec.consistency with accumulating 0.003s
+  + Codec[Foo]: codec.decoder serializability 0.003s
+  + Codec[Foo]: codec.encoder serializability 0.001s
+  + Codec[Foo]: codec.roundTrip 0.004s
+Execution took 84ms
+20 tests, 20 passed
+All tests in io.circe.CirceCodecSuite passed
+
+io.circe.CustomIndentWithSortKeysPrinterSuite:
+  + Printing Long: printer.printer serializability 0.004s
+  + Printing Long: printer.roundTrip 0.004s
+  + Printing Unit: printer.printer serializability 0.001s
+  + Printing Unit: printer.roundTrip 0.002s
+  + Printing Boolean: printer.printer serializability 0.001s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.001s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.001s
+  + Printing Float: printer.roundTrip 0.003s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.003s
+  + Printing Short: printer.printer serializability 0.001s
+  + Printing Short: printer.roundTrip 0.001s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.001s
+  + Printing Map: printer.printer serializability 0.001s
+  + Printing Map: printer.roundTrip 0.055s
+  + printToByteBuffer should match print 0.029s
+  + Printer with sortKeys should sort the object keys (example) 0.0s
+  + Printer with sortKeys should sort the object keys 0.051s
+  + Sorting keys should handle "" consistently 0.001s
+Execution took 0.16s
+22 tests, 22 passed
+All tests in io.circe.CustomIndentWithSortKeysPrinterSuite passed
+
+io.circe.DecoderSuite:
+  + Decoder[Long] should succeed on whole decimal values (#83) 0.002s
+  + Decoder[BigInt] should succeed on whole decimal values (#83) 0.002s
+  + Decoder[Int]: monadError.ap consistent with product + map 0.312s
+  + Decoder[Int]: monadError.applicative homomorphism 0.107s
+  + Decoder[Int]: monadError.applicative identity 0.221s
+  + Decoder[Int]: monadError.applicative interchange 0.149s
+  + Decoder[Int]: monadError.applicative map 0.24s
+  + Decoder[Int]: monadError.applicative unit 0.09s
+  + Decoder[Int]: monadError.applicativeError adaptError pure 0.091s
+  + Decoder[Int]: monadError.applicativeError adaptError raise 0.25s
+  + Decoder[Int]: monadError.applicativeError attempt consistent with attemptT 0.142s
+  + Decoder[Int]: monadError.applicativeError attempt fromEither consistent with pure 0.084s
+  + Decoder[Int]: monadError.applicativeError handle 0.102s
+  + Decoder[Int]: monadError.applicativeError handleError . raiseError left-distributes over ap 0.132s
+  + Decoder[Int]: monadError.applicativeError handleError . raiseError right-distributes over ap 0.126s
+  + Decoder[Int]: monadError.applicativeError handleError consistent with recover 0.126s
+  + Decoder[Int]: monadError.applicativeError handleError pure 0.103s
+  + Decoder[Int]: monadError.applicativeError handleErrorWith consistent with recoverWith 0.161s
+  + Decoder[Int]: monadError.applicativeError handleErrorWith pure 0.11s
+  + Decoder[Int]: monadError.applicativeError handleWith 0.163s
+  + Decoder[Int]: monadError.applicativeError onError pure 0.131s
+  + Decoder[Int]: monadError.applicativeError onError raise 0.155s
+  + Decoder[Int]: monadError.applicativeError pure attempt 0.112s
+  + Decoder[Int]: monadError.applicativeError raiseError attempt 0.12s
+  + Decoder[Int]: monadError.applicativeError recover consistent with recoverWith 0.125s
+  + Decoder[Int]: monadError.applicativeError redeem is derived from attempt and map 0.14s
+  + Decoder[Int]: monadError.applicativeError voidError consistent with void+handleError 0.12s
+  + Decoder[Int]: monadError.apply composition 0.301s
+  + Decoder[Int]: monadError.covariant composition 0.114s
+  + Decoder[Int]: monadError.covariant identity 0.128s
+  + Decoder[Int]: monadError.flatMap associativity 0.137s
+  + Decoder[Int]: monadError.flatMap consistent apply 0.136s
+  + Decoder[Int]: monadError.flatMap from tailRecM consistency 0.148s
+  + Decoder[Int]: monadError.flatMapOrKeep flatMap coherence 0.145s
+  + Decoder[Int]: monadError.invariant composition 0.127s
+  + Decoder[Int]: monadError.invariant identity 0.125s
+  + Decoder[Int]: monadError.map flatMap coherence 0.137s
+  + Decoder[Int]: monadError.map2/map2Eval consistency 0.133s
+  + Decoder[Int]: monadError.map2/product-map consistency 0.135s
+  + Decoder[Int]: monadError.mapOrKeepToMapEquivalence 0.158s
+  + Decoder[Int]: monadError.monad left identity 0.138s
+  + Decoder[Int]: monadError.monad right identity 0.115s
+  + Decoder[Int]: monadError.monadError ensure consistency 0.145s
+  + Decoder[Int]: monadError.monadError ensureOr consistency 0.167s
+  + Decoder[Int]: monadError.monadError left zero 0.095s
+  + Decoder[Int]: monadError.monadError redeemWith is derived from attempt and flatMap 0.167s
+  + Decoder[Int]: monadError.monadError rethrow attempt 0.141s
+  + Decoder[Int]: monadError.monoidal left identity 0.141s
+  + Decoder[Int]: monadError.monoidal right identity 0.145s
+  + Decoder[Int]: monadError.mproduct consistent flatMap 0.265s
+  + Decoder[Int]: monadError.productL consistent map2 0.154s
+  + Decoder[Int]: monadError.productR consistent map2 0.161s
+  + Decoder[Int]: monadError.replicateA_ consistent with replicateA.void 0.158s
+  + Decoder[Int]: monadError.semigroupal associativity 0.195s
+  + Decoder[Int]: monadError.tailRecM consistent flatMap 0.164s
+  + Decoder[Int]: monadError.tailRecM stack safety 0.015s
+  + Decoder[Int]: semigroupK.semigroupK associative 0.131s
+  + transformations should do nothing when used with identity 0.006s
+  + transformations should fail when called on failed decoder 0.005s
+  + transformations should not break derived decoders when called on Decoder[Option[T]] 0.001s
+  + prepare should move appropriately with downField 0.009s
+  + at should move appropriately 0.006s
+  + at should accumulate errors 0.012s
+  + emap should appropriately transform the result with an operation that can't fail 0.001s
+  + emap should appropriately transform the result with an operation that may fail 0.001s
+  + emapTry should appropriately transform the result with an operation that can't fail 0.0s
+  + emapTry should appropriately transform the result with an operation that may fail 0.002s
+  + handleErrorWith should respect the underlying decoder's tryDecode (#1271) 0.001s
+  + failedWithMessage should replace the message 0.003s
+  + An optional object field decoder should fail appropriately 0.012s
+  + An optional array position decoder should fail appropriately 0.007s
+  + An optional top-level decoder should fail appropriately 0.005s
+  + A nested optional decoder should accumulate failures 0.001s
+  + SeqDecoder should keep track of cursor history on failure 0.001s
+  + SeqDecoder should keep track of cursor history when accumulating failures 0.0s
+  + instanceTry should provide instances that succeed or fail appropriately 0.015s
+  + Decoder[Byte] should - fail on out-of-range values (#83) 0.002s
+  + Decoder[Byte] should - fail on non-whole values (#83) 0.002s
+  + Decoder[Byte] should - succeed on whole decimal values (#83) 0.001s
+  + Decoder[Short] should - fail on out-of-range values (#83) 0.001s
+  + Decoder[Short] should - fail on non-whole values (#83) 0.0s
+  + Decoder[Short] should - succeed on whole decimal values (#83) 0.001s
+  + Decoder[Int] should - fail on out-of-range values (#83) 0.001s
+  + Decoder[Int] should - fail on non-whole values (#83) 0.001s
+  + Decoder[Int] should - succeed on whole decimal values (#83) 0.001s
+  + Decoder[Long] should fail on out-of-range values (#83) 0.0s
+  + Decoder[Long] should fail on non-whole values (#83) 0.001s
+  + Decoder[Float] - should attempt to parse string values as doubles (#173) 0.001s
+  + Decoder[Float] - match the rounding of Float.parseFloat (#1063) 0.002s
+  + Decoder[Float] -  should match the rounding of Float.parseFloat for known problematic inputs (#1063) 0.006s
+  + Decoder[Double] should attempt to parse string values as doubles (#173) 0.001s
+  + Decoder[BigInt] should fail when producing a value would be intractable 0.0s
+  + ensure should - fail appropriately on an invalid result 0.002s
+  + ensure should - only include the first failure when chained, even in error-accumulation mode 0.001s
+  + ensure should - not include failures it hasn't checked for 0.0s
+  + ensure should - include all given failures in error-accumulation mode 0.001s
+  + validate should - validate should fail appropriately on invalid input in fail-fast mode 0.002s
+  + validate should - fail appropriately on invalid input in error-accumulation mode (#865) 0.0s
+  + validate should - not infinitely recurse (#396) 0.001s
+  + validate should - preserve error accumulation when validation succeeds 0.001s
+  + validate should - provide the generated error messages from HCursor when a function is passed 0.001s
+  + validate should - not fail when the passed errors function returns an empty list 0.001s
+  + either should return the correct disjunct 0.001s
+  + either should respect the underlying decoder's tryDecode (#1271) 0.0s
+  + or should respect the underlying decoder's tryDecode (#1271) 0.001s
+  + a stateful Decoder with requireEmpty should  - succeed when there are no leftover fields 0.001s
+  + a stateful Decoder with requireEmpty should  - fail when there are leftover fields 0.0s
+  + a stateful Decoder with requireEmpty should  - fail normally when a field is missing 0.001s
+  + a stateful Decoder with requireEmpty should  - fail when a nested field is missing 0.001s
+  + a stateful Decoder with requireEmpty should  - fail when getting a wrong json type 0.0s
+  + a stateful Decoder with requireEmpty and an optional value should - succeed when there are no leftover fields and an optional field is missing 0.001s
+  + a stateful Decoder with requireEmpty and an optional value should - succeed when there are no leftover fields and an optional field is present 0.0s
+  + a stateful Decoder with requireEmpty and an optional value should - fail when there are leftover fields and an optional field is missing 0.0s
+  + a stateful Decoder with requireEmpty and an optional value should - fail when there are leftover fields and an optional field is present 0.001s
+  + a stateful Decoder with requireEmpty and an optional value should - fail normally when a field is missing and an optional field is present 0.0s
+  + a stateful Decoder with requireEmpty and an optional value should - fail normally when a field is missing and an optional field is missing 0.0s
+  + Codec[WrappedOptionalField]: codec.consistency with Codec.from 0.007s
+  + Codec[WrappedOptionalField]: codec.consistency with accumulating 0.007s
+  + Codec[WrappedOptionalField]: codec.decoder serializability 0.006s
+  + Codec[WrappedOptionalField]: codec.encoder serializability 0.004s
+  + Codec[WrappedOptionalField]: codec.roundTrip 0.0s
+  + decodeSet should match sequence decoders 0.003s
+  + decodeList should match sequence decoders 0.002s
+  + decodeVector should match sequence decoders 0.003s
+  + decodeChain should match sequence decoders 0.001s
+  + HCursor#history should be stack safe 0.003s
+  + container decoder should pass through error message from item 0.0s
+  + decodeAccumulating should accumulate errors after traversal 0.004s
+  + Defer[Decoder]: defer.defer Identity 0.124s
+  + Defer[Decoder]: defer.defer does not evaluate 0.001s
+  + Defer[Decoder]: defer.defer is stack safe 0.145s
+  + Defer[Decoder]: defer.defer matches fix 0.126s
+  + Decoder.recursive should prevent undesirable grown in the number of instances created 0.004s
+Execution took 8.6s
+133 tests, 133 passed
+All tests in io.circe.DecoderSuite passed
+
+io.circe.DecodingFailureSuite:
+  + A JSON number should not be decoded as a non-numeric type 0.001s
+  + A JSON boolean should not be decoded as a non-boolean type 0.0s
+  + A JSON string should not be decoded as a non-string type 0.0s
+  + A JSON array should not be decoded as an inappropriate type 0.001s
+  + A JSON object should anot be decoded as an inappropriate type 0.0s
+Execution took 2ms
+5 tests, 5 passed
+All tests in io.circe.DecodingFailureSuite passed
+
+io.circe.DisjunctionCodecSuite:
+  + Codec[Either[Int, String]]: codec.consistency with Codec.from 0.006s
+  + Codec[Either[Int, String]]: codec.consistency with accumulating 0.007s
+  + Codec[Either[Int, String]]: codec.decoder serializability 0.002s
+  + Codec[Either[Int, String]]: codec.encoder serializability 0.0s
+  + Codec[Either[Int, String]]: codec.roundTrip 0.001s
+  + Codec[Validated[String, Int]]: codec.consistency with Codec.from 0.004s
+  + Codec[Validated[String, Int]]: codec.consistency with accumulating 0.003s
+  + Codec[Validated[String, Int]]: codec.decoder serializability 0.011s
+  + Codec[Validated[String, Int]]: codec.encoder serializability 0.003s
+  + Codec[Validated[String, Int]]: codec.roundTrip 0.0s
+Execution took 37ms
+10 tests, 10 passed
+All tests in io.circe.DisjunctionCodecSuite passed
+
+io.circe.EitherCodecSuite:
+  + Codec[Either[Int, String]]: codec.consistency with Codec.from 0.005s
+  + Codec[Either[Int, String]]: codec.consistency with accumulating 0.002s
+  + Codec[Either[Int, String]]: codec.decoder serializability 0.001s
+  + Codec[Either[Int, String]]: codec.encoder serializability 0.0s
+  + Codec[Either[Int, String]]: codec.roundTrip 0.0s
+  + Codec[Either[Int, String]] via Codec: codec.consistency with Codec.from 0.003s
+  + Codec[Either[Int, String]] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Either[Int, String]] via Codec: codec.decoder serializability 0.001s
+  + Codec[Either[Int, String]] via Codec: codec.encoder serializability 0.001s
+  + Codec[Either[Int, String]] via Codec: codec.roundTrip 0.0s
+  + Codec[Either[Int, String]] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Either[Int, String]] via Decoder and Codec: codec.consistency with accumulating 0.008s
+  + Codec[Either[Int, String]] via Decoder and Codec: codec.decoder serializability 0.0s
+  + Codec[Either[Int, String]] via Decoder and Codec: codec.encoder serializability 0.0s
+  + Codec[Either[Int, String]] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Either[Int, String]] via Encoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Either[Int, String]] via Encoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Either[Int, String]] via Encoder and Codec: codec.decoder serializability 0.001s
+  + Codec[Either[Int, String]] via Encoder and Codec: codec.encoder serializability 0.0s
+  + Codec[Either[Int, String]] via Encoder and Codec: codec.roundTrip 0.0s
+Execution took 41ms
+20 tests, 20 passed
+All tests in io.circe.EitherCodecSuite passed
+
+io.circe.EncoderSuite:
+  + Encoder[Int]: contravariant.contravariant composition 0.14s
+  + Encoder[Int]: contravariant.contravariant identity 0.131s
+  + Encoder[Int]: contravariant.invariant composition 0.112s
+  + Encoder[Int]: contravariant.invariant identity 0.114s
+  + Encoder.AsArray[Int]: contravariant.contravariant composition 3.919s
+  + Encoder.AsArray[Int]: contravariant.contravariant identity 3.85s
+  + Encoder.AsArray[Int]: contravariant.invariant composition 3.578s
+  + Encoder.AsArray[Int]: contravariant.invariant identity 4.143s
+  + Encoder.AsObject[Int]: contravariant.contravariant composition 0.398s
+  + Encoder.AsObject[Int]: contravariant.contravariant identity 0.401s
+  + Encoder.AsObject[Int]: contravariant.invariant composition 0.4s
+  + Encoder.AsObject[Int]: contravariant.invariant identity 0.379s
+  + mapJson should transform encoded output 0.008s
+  + Encoder.AsObject#mapJsonObject should transform encoded output 0.005s
+  + encodeSet should match sequence encoders 0.001s
+  + encodeList should match sequence encoders 0.002s
+  + encodeMap should preserve insertion order 0.01s
+  + encodeVector should match sequence encoders 0.002s
+  + encodeChain should match sequence encoders 0.003s
+  + encodeFloat should match string representation, when in scientific notation 0.003s
+  + encodeFloat should match string representation 0.001s
+  + Defer[Encoder]: defer.defer Identity 0.13s
+  + Defer[Encoder]: defer.defer does not evaluate 0.0s
+  + Defer[Encoder]: defer.defer is stack safe 0.141s
+  + Defer[Encoder]: defer.defer matches fix 0.129s
+  + Encoder.recursive should prevent undesirable grown in the number of instances created 0.001s
+Execution took 18s
+26 tests, 26 passed
+All tests in io.circe.EncoderSuite passed
+
+io.circe.EnumerationCodecSuite:
+  + Codec[WeekDay.WeekDay]: codec.consistency with Codec.from 0.019s
+  + Codec[WeekDay.WeekDay]: codec.consistency with accumulating 0.005s
+  + Codec[WeekDay.WeekDay]: codec.roundTrip 0.001s
+  + Codec[WeekDay.WeekDay] via Codec: codec.consistency with Codec.from 0.01s
+  + Codec[WeekDay.WeekDay] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[WeekDay.WeekDay] via Codec: codec.roundTrip 0.0s
+  + Codec[WeekDay.WeekDay] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[WeekDay.WeekDay] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[WeekDay.WeekDay] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[WeekDay.WeekDay] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[WeekDay.WeekDay] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[WeekDay.WeekDay] via Encoder and Codec: codec.roundTrip 0.0s
+Execution took 58ms
+12 tests, 12 passed
+All tests in io.circe.EnumerationCodecSuite passed
+
+io.circe.EnumerationSuite:
+  + Decoder[Enumeration] should parse Scala Enumerations 0.001s
+  + Decoder[Enumeration] should fail on unknown values in Scala Enumerations 0.0s
+  + Encoder[Enumeration] should write Scala Enumerations 0.002s
+Execution took 3ms
+3 tests, 3 passed
+All tests in io.circe.EnumerationSuite passed
+
+io.circe.FromProductSuite:
+  + encode correctly Example(id: Int, value: String) 0.001s
+  + codec encode/decode correctly Example(id: Int, value: String) 0.001s
+Execution took 2ms
+2 tests, 2 passed
+All tests in io.circe.FromProductSuite passed
+
+io.circe.InvariantCodecSuite:
+  + Codec[Wub] via imap: codec.consistency with Codec.from 0.005s
+  + Codec[Wub] via imap: codec.consistency with accumulating 0.004s
+  + Codec[Wub] via imap: codec.decoder serializability 0.003s
+  + Codec[Wub] via imap: codec.encoder serializability 0.001s
+  + Codec[Wub] via imap: codec.roundTrip 0.0s
+  + Codec[Wub] via iemap: codec.consistency with Codec.from 0.004s
+  + Codec[Wub] via iemap: codec.consistency with accumulating 0.002s
+  + Codec[Wub] via iemap: codec.decoder serializability 0.002s
+  + Codec[Wub] via iemap: codec.encoder serializability 0.0s
+  + Codec[Wub] via iemap: codec.roundTrip 0.001s
+  + Codec[Wub] via iemapTry: codec.consistency with Codec.from 0.003s
+  + Codec[Wub] via iemapTry: codec.consistency with accumulating 0.003s
+  + Codec[Wub] via iemapTry: codec.decoder serializability 0.002s
+  + Codec[Wub] via iemapTry: codec.encoder serializability 0.001s
+  + Codec[Wub] via iemapTry: codec.roundTrip 0.0s
+Execution took 31ms
+15 tests, 15 passed
+All tests in io.circe.InvariantCodecSuite passed
+
+io.circe.JavaBoxedCodecSuite:
+  + Codec[java.lang.Boolean]: codec.consistency with Codec.from 0.005s
+  + Codec[java.lang.Boolean]: codec.consistency with accumulating 0.004s
+  + Codec[java.lang.Boolean]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Boolean]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Boolean]: codec.roundTrip 0.0s
+  + Codec[java.lang.Character]: codec.consistency with Codec.from 0.005s
+  + Codec[java.lang.Character]: codec.consistency with accumulating 0.002s
+  + Codec[java.lang.Character]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Character]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Character]: codec.roundTrip 0.0s
+  + Codec[java.lang.Float]: codec.consistency with Codec.from 0.003s
+  + Codec[java.lang.Float]: codec.consistency with accumulating 0.006s
+  + Codec[java.lang.Float]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Float]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Float]: codec.roundTrip 0.0s
+  + Codec[java.lang.Double]: codec.consistency with Codec.from 0.004s
+  + Codec[java.lang.Double]: codec.consistency with accumulating 0.005s
+  + Codec[java.lang.Double]: codec.decoder serializability 0.0s
+  + Codec[java.lang.Double]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Double]: codec.roundTrip 0.0s
+  + Codec[java.lang.Byte]: codec.consistency with Codec.from 0.004s
+  + Codec[java.lang.Byte]: codec.consistency with accumulating 0.003s
+  + Codec[java.lang.Byte]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Byte]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Byte]: codec.roundTrip 0.0s
+  + Codec[java.lang.Short]: codec.consistency with Codec.from 0.003s
+  + Codec[java.lang.Short]: codec.consistency with accumulating 0.004s
+  + Codec[java.lang.Short]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Short]: codec.encoder serializability 0.0s
+  + Codec[java.lang.Short]: codec.roundTrip 0.0s
+  + Codec[java.lang.Long]: codec.consistency with Codec.from 0.004s
+  + Codec[java.lang.Long]: codec.consistency with accumulating 0.003s
+  + Codec[java.lang.Long]: codec.decoder serializability 0.001s
+  + Codec[java.lang.Long]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Long]: codec.roundTrip 0.0s
+  + Codec[java.lang.Integer]: codec.consistency with Codec.from 0.005s
+  + Codec[java.lang.Integer]: codec.consistency with accumulating 0.007s
+  + Codec[java.lang.Integer]: codec.decoder serializability 0.002s
+  + Codec[java.lang.Integer]: codec.encoder serializability 0.001s
+  + Codec[java.lang.Integer]: codec.roundTrip 0.0s
+  + Codec[java.math.BigDecimal]: codec.consistency with Codec.from 0.005s
+  + Codec[java.math.BigDecimal]: codec.consistency with accumulating 0.003s
+  + Codec[java.math.BigDecimal]: codec.decoder serializability 0.001s
+  + Codec[java.math.BigDecimal]: codec.encoder serializability 0.001s
+  + Codec[java.math.BigDecimal]: codec.roundTrip 0.001s
+  + Codec[java.math.BigInteger]: codec.consistency with Codec.from 0.004s
+  + Codec[java.math.BigInteger]: codec.consistency with accumulating 0.004s
+  + Codec[java.math.BigInteger]: codec.decoder serializability 0.002s
+  + Codec[java.math.BigInteger]: codec.encoder serializability 0.001s
+  + Codec[java.math.BigInteger]: codec.roundTrip 0.0s
+Execution took 0.1s
+50 tests, 50 passed
+All tests in io.circe.JavaBoxedCodecSuite passed
+
+io.circe.JavaCurrencySuite:
+  + Codec[Currency]: codec.consistency with Codec.from 0.009s
+  + Codec[Currency]: codec.consistency with accumulating 0.005s
+  + Codec[Currency]: codec.decoder serializability 0.001s
+  + Codec[Currency]: codec.encoder serializability 0.001s
+  + Codec[Currency]: codec.roundTrip 0.001s
+Execution took 17ms
+5 tests, 5 passed
+All tests in io.circe.JavaCurrencySuite passed
+
+io.circe.JavaTimeCodecSuite:
+  + Codec[Instant]: codec.consistency with Codec.from 0.01s
+  + Codec[Instant]: codec.consistency with accumulating 0.003s
+  + Codec[Instant]: codec.decoder serializability 0.002s
+  + Codec[Instant]: codec.encoder serializability 0.0s
+  + Codec[Instant]: codec.roundTrip 0.005s
+  + Codec[LocalDateTime]: codec.consistency with Codec.from 0.01s
+  + Codec[LocalDateTime]: codec.consistency with accumulating 0.007s
+  + Codec[LocalDateTime]: codec.decoder serializability 0.001s
+  + Codec[LocalDateTime]: codec.encoder serializability 0.0s
+  + Codec[LocalDateTime]: codec.roundTrip 0.004s
+  + Codec[ZonedDateTime]: codec.consistency with Codec.from 0.008s
+  + Codec[ZonedDateTime]: codec.consistency with accumulating 0.007s
+  + Codec[ZonedDateTime]: codec.decoder serializability 0.001s
+  + Codec[ZonedDateTime]: codec.encoder serializability 0.0s
+  + Codec[ZonedDateTime]: codec.roundTrip 0.006s
+  + Codec[OffsetDateTime]: codec.consistency with Codec.from 0.006s
+  + Codec[OffsetDateTime]: codec.consistency with accumulating 0.006s
+  + Codec[OffsetDateTime]: codec.decoder serializability 0.0s
+  + Codec[OffsetDateTime]: codec.encoder serializability 0.001s
+  + Codec[OffsetDateTime]: codec.roundTrip 0.003s
+  + Codec[LocalDate]: codec.consistency with Codec.from 0.005s
+  + Codec[LocalDate]: codec.consistency with accumulating 0.004s
+  + Codec[LocalDate]: codec.decoder serializability 0.001s
+  + Codec[LocalDate]: codec.encoder serializability 0.0s
+  + Codec[LocalDate]: codec.roundTrip 0.001s
+  + Codec[LocalTime]: codec.consistency with Codec.from 0.003s
+  + Codec[LocalTime]: codec.consistency with accumulating 0.008s
+  + Codec[LocalTime]: codec.decoder serializability 0.002s
+  + Codec[LocalTime]: codec.encoder serializability 0.001s
+  + Codec[LocalTime]: codec.roundTrip 0.0s
+  + Codec[MonthDay]: codec.consistency with Codec.from 0.004s
+  + Codec[MonthDay]: codec.consistency with accumulating 0.002s
+  + Codec[MonthDay]: codec.decoder serializability 0.0s
+  + Codec[MonthDay]: codec.encoder serializability 0.001s
+  + Codec[MonthDay]: codec.roundTrip 0.001s
+  + Codec[OffsetTime]: codec.consistency with Codec.from 0.01s
+  + Codec[OffsetTime]: codec.consistency with accumulating 0.003s
+  + Codec[OffsetTime]: codec.decoder serializability 0.001s
+  + Codec[OffsetTime]: codec.encoder serializability 0.0s
+  + Codec[OffsetTime]: codec.roundTrip 0.002s
+  + Codec[Period]: codec.consistency with Codec.from 0.005s
+  + Codec[Period]: codec.consistency with accumulating 0.007s
+  + Codec[Period]: codec.decoder serializability 0.001s
+  + Codec[Period]: codec.encoder serializability 0.0s
+  + Codec[Period]: codec.roundTrip 0.004s
+  + Codec[Year]: codec.consistency with Codec.from 0.006s
+  + Codec[Year]: codec.consistency with accumulating 0.004s
+  + Codec[Year]: codec.decoder serializability 0.001s
+  + Codec[Year]: codec.encoder serializability 0.0s
+  + Codec[Year]: codec.roundTrip 0.001s
+  + Codec[YearMonth]: codec.consistency with Codec.from 0.007s
+  + Codec[YearMonth]: codec.consistency with accumulating 0.004s
+  + Codec[YearMonth]: codec.decoder serializability 0.001s
+  + Codec[YearMonth]: codec.encoder serializability 0.0s
+  + Codec[YearMonth]: codec.roundTrip 0.001s
+  + Codec[Duration]: codec.consistency with Codec.from 0.003s
+  + Codec[Duration]: codec.consistency with accumulating 0.005s
+  + Codec[Duration]: codec.decoder serializability 0.001s
+  + Codec[Duration]: codec.encoder serializability 0.001s
+  + Codec[Duration]: codec.roundTrip 0.001s
+  + Codec[ZoneId]: codec.consistency with Codec.from 0.004s
+  + Codec[ZoneId]: codec.consistency with accumulating 0.005s
+  + Codec[ZoneId]: codec.decoder serializability 0.001s
+  + Codec[ZoneId]: codec.encoder serializability 0.0s
+  + Codec[ZoneId]: codec.roundTrip 0.0s
+  + Codec[ZoneOffset]: codec.consistency with Codec.from 0.002s
+  + Codec[ZoneOffset]: codec.consistency with accumulating 0.002s
+  + Codec[ZoneOffset]: codec.decoder serializability 0.001s
+  + Codec[ZoneOffset]: codec.encoder serializability 0.0s
+  + Codec[ZoneOffset]: codec.roundTrip 0.0s
+  + Codec[JavaTimeCaseClass]: codec.consistency with Codec.from 0.01s
+  + Codec[JavaTimeCaseClass]: codec.consistency with accumulating 0.003s
+  + Codec[JavaTimeCaseClass]: codec.decoder serializability 0.002s
+  + Codec[JavaTimeCaseClass]: codec.encoder serializability 0.002s
+  + Codec[JavaTimeCaseClass]: codec.roundTrip 0.004s
+  + Decoder[ZoneId] should fail for invalid ZoneId 0.004s
+  + Decoder[Instant] should fail on invalid values 0.0s
+  + Encoder[Instant] should serialize 00 seconds and drop zeroes in nanos to millis or micros 0.0s
+  + Decoder[LocalDateTime] should fail on invalid values 0.001s
+  + Encoder[LocalDateTime] should serialize 00 seconds and drop all remaining zeroes in nanos 0.0s
+  + Decoder[ZonedDateTime] should fail on invalid values 0.001s
+  + Encoder[ZonedDateTime] should serialize 00 seconds and drop all remaining zeroes in nanos 0.001s
+  + Decoder[OffsetDateTime] should fail on invalid values 0.001s
+  + Encoder[OffsetDateTime] should serialize 00 seconds and drop all remaining zeroes in nanos 0.0s
+  + Decoder[LocalDate] should fail on invalid values 0.0s
+  + Decoder[LocalTime] should fail on invalid values 0.001s
+  + Encoder[LocalTime] should serialize 00 seconds and drop all remaining zeroes in nanos 0.0s
+  + Decoder[MonthDay] should fail on invalid values 0.001s
+  + Decoder[OffsetTime] should fail on invalid values 0.0s
+  + Encoder[OffsetTime] should serialize 00 seconds and drop all remaining zeroes in nanos 0.0s
+  + Decoder[Period] should fail on invalid values 0.0s
+  + Decoder[Year] should fail on invalid values 0.001s
+  + Decoder[YearMonth] should fail on invalid values 0.0s
+  + Decoder[Duration] should fail on invalid values 0.0s
+  + Decoder[ZoneOffset] should fail on invalid values 0.001s
+Execution took 0.23s
+95 tests, 95 passed
+All tests in io.circe.JavaTimeCodecSuite passed
+
+io.circe.JsonNumberSuite:
+  + fromString should parse valid JSON numbers 0.001s
+  + fromString  should match Json.fromDouble 0.001s
+  + fromString should match Json.fromFloat 0.001s
+  + fromString should match Json.fromFloat for Floats that don't have the same toString when Double-ed 0.0s
+  + fromString should round-trip Byte 0.001s
+  + fromString should round-trip Short 0.0s
+  + fromString should round-trip Int 0.001s
+  + fromString should round-trip Long 0.001s
+  + toByte should fail on out-of-range values 0.001s
+  + toShort should fail on out-of-range values 0.0s
+  + toInt should fail on out-of-range values 0.001s
+  + toBigDecimal should produce correct results 0.001s
+  + toBigDecimal should work for zero with a large exponent 0.001s
+  + toBigDecimal should work for other bad numbers 0.0s
+  + toBigInt should produce correct results 0.001s
+  + toBigInt should work for zero with a large exponent 0.001s
+  + JsonFloat.toLong should return None if outside of Long bounds 0.001s
+  + JsonFloat.toBigInt should return None if it loses precision 0.001s
+  + Eq[JsonNumber] should distinguish negative and positive zeros 0.001s
+  + Eq[JsonNumber] should not distinguish any positive zeros 0.0s
+  + Eq[JsonNumber] should not distinguish any negative zeros 0.0s
+  + Eq[JsonNumber] should compare Float and Long 0.002s
+  + Eq[JsonNumber] should compare Float and Double 0.001s
+  + Eq[JsonNumber] should compare Float and Float 0.001s
+  + fromDouble should fail on Double.NaN 0.0s
+  + fromDouble should fail on Double.PositiveInfinity 0.0s
+  + fromDouble should fail on Double.NegativeInfinity 0.001s
+  + fromFloat should fail on Float.Nan 0.0s
+  + fromFloat should fail on Float.PositiveInfinity 0.0s
+  + fromFloat should fail on Float.NegativeInfinity 0.0s
+  + toString should produce the same encoding as BigDecimal#toString 0.002s
+  + toString should produce the same encoding as BigInt#toString 0.001s
+Execution took 23ms
+32 tests, 32 passed
+All tests in io.circe.JsonNumberSuite passed
+
+io.circe.JsonObjectSuite:
+  + JsonObject.fromIterable should drop all but the last instance when fields have the same key 0.109s
+  + JsonObject.fromIterable should maintain the first position when keys are duplicated 0.0s
+  + JsonObject.fromFoldable should - match JsonObject.fromIterable 0.13s
+  + JsonObject.fromFoldable should - drop all but the last instance when fields have the same key 0.115s
+  + JsonObject.fromFoldable should - maintain the first position when keys are duplicated 0.0s
+  + JsonObject.apply should match JsonObject.fromIterable 0.094s
+  + apply should find fields when they exist 0.126s
+  + apply should find None when a key doesn't exist 0.136s
+  + contains should find fields if they exist 0.137s
+  + size should return the expected result 0.124s
+  + isEmpty should return the expected result 0.093s
+  + nonEmpty should return the expected result 0.265s
+  + kleisli should find fields if they exist 0.119s
+  + kleisli should return None if the key doesn't exist 0.118s
+  + keys should return all keys 0.099s
+  + values should return all values 0.099s
+  + toMap should round-trip through JsonObject.fromMap 0.102s
+  + toIterable should return all fields 0.119s
+  + toList should return all fields 0.13s
+  + toVector should return all fields 0.126s
+  + add should replace existing fields with the same key 0.113s
+  + add should replace existing fields with the same key in the correct position 0.119s
+  + add, +:, and remove should be applied correctly 0.073s
+  + +: should replace existing fields with the same key 0.123s
+  + +: should replace existing fields with the same key in the correct position 0.136s
+  + mapValues should transform the JSON object appropriately 0.128s
+  + traverse should transform the JSON object appropriately 0.108s
+  + traverse  should return values in order 0.022s
+  + filter should be consistent with Map#filter 0.027s
+  + filterKeys should be consistent with Map#filterKeys 0.019s
+  + Eq[JsonObject] should be consistent with comparing fields 0.215s
+  + deepMerge should merge correctly 0.023s
+  + deepMerge should preserve argument order 0.114s
+Execution took 3.46s
+33 tests, 33 passed
+All tests in io.circe.JsonObjectSuite passed
+
+io.circe.JsonSuite:
+  + fromFloatOrString should return a Json number for valid Floats 0.001s
+  + foldWith should give the same result as fold 0.009s
+  + asNull should give the same result as fold 0.007s
+  + asBoolean should give the same result as fold 0.004s
+  + asNumber should give the same result as fold 0.004s
+  + asString should give the same result as fold 0.005s
+  + asArray should give the same result as fold 0.006s
+  + asObject should give the same result as fold 0.005s
+  + withNull should be identity with Json.Null 0.004s
+  + withBoolean should be identity with Json.fromBoolean 0.003s
+  + withNumber should be identity with Json.fromJsonNumber 0.007s
+  + withString should be identity with Json.fromString 0.008s
+  + withArray should be identity with Json.fromValues 0.003s
+  + withObject should be identity with Json.fromJsonObject 0.004s
+  + deepMerge should preserve argument order 0.122s
+  + dropEmptyValues should remove empty values for JsonObject 0.001s
+  + deepDropNullValues should remove null value for JsonObject 0.001s
+==> X io.circe.JsonSuite.deepDropNullValues should remove null value for JsonArray  0.025s munit.ComparisonFailException: /tmp/rsx-preflight/circe/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala:187
+186:
+187:    assertEquals(actual, Json.fromValues(List(Json.fromString("REGRESSION"))))
+188:  }
+values are not the same
+=> Obtained
+JArray(
+  value = Vector(
+    JString(
+      value = "a"
+    )
+  )
+)
+=> Diff (- obtained, + expected)
+     JString(
+-      value = "a"
++      value = "REGRESSION"
+     )
+    at munit.Assertions.failComparison(Assertions.scala:278)
+  + deepDropNullValues should remove null value for nested object 0.001s
+  + findAllByKey and its alias, should return all values matching the given key with key-value pairs at heights 0 and 1. 0.001s
+  + findAllByKey and its alias, \\\\ should return a List of a single, empty object for a Json value with only that (key, value) matching. 0.0s
+  + findAllByKey and its alias, \\\\"" should return an empty List when used on a Json that's not an array or object 0.0s
+  + findAllByKey and its alias, \\\\"" should return all values matching the given key with key-value pairs at heights  0, 1, and 2. 0.001s
+  + fromStringOrNull return Null on None 0.0s
+  + fromStringOrNull return value on Some 0.0s
+  + fromBooleanOrNull return Null on None 0.0s
+  + fromBooleanOrNull return value on Some 0.001s
+  + fromIntOrNull return Null on None 0.0s
+  + fromIntOrNull return value on Some 0.001s
+  + fromLongOrNull return Null on None 0.0s
+  + fromLongOrNull return value on Some 0.001s
+  + fromBigIntOrNull returns Null on None 0.0s
+  + fromBigDecimalOrNull return value on Some 0.001s
+  + fromBigDecimalOrNull return Null on None 0.0s
+  + fromDouble should fail on Double.NaN 0.0s
+  + fromDouble should fail on Double.PositiveInfinity 0.0s
+  + fromDouble should fail on Double.NegativeInfinity 0.0s
+  + fromDoubleOrNull should return Null on Double.NaN 0.0s
+  + fromDoubleOrNull return Null on Double.PositiveInfinity 0.0s
+  + fromDoubleOrNull should return Null on Double.NegativeInfinity 0.0s
+  + fromDoubleOrNull should return Null on None 0.0s
+  + fromDoubleOrNull should return Null on some Double.NaN 0.001s
+  + fromDoubleOrNull should return Null on some Double.PositiveInfinity 0.0s
+  + fromDoubleOrNull should return Null on some Double.NegativeInfinity 0.0s
+  + fromDoubleOrNull should return value 0.0s
+  + fromDoubleOrString should return String on Double.NaN 0.0s
+  + fromDoubleOrString return String on Double.PositiveInfinity 0.0s
+  + fromDoubleOrString should return String on Double.NegativeInfinity 0.0s
+  + fromDoubleOrString should return JsonNumber Json values for valid Doubles 0.0s
+  + fromFloat should fail on Float.NaN 0.0s
+  + fromFloat should fail on Float.PositiveInfinity 0.0s
+  + fromFloat should fail on Float.NegativeInfinity 0.0s
+  + fromFloatOrNull should return Null on Float.NaN 0.0s
+  + fromFloatOrNull should return Null on Float.PositiveInfinity 0.0s
+  + fromFloatOrNull should return Null on Float.NegativeInfinity 0.0s
+  + fromFloatOrNull should return Null on None 0.001s
+  + fromFloatOrNull should return Null on some Float.NaN 0.0s
+  + fromFloatOrNull should return Null on some Float.PositiveInfinity 0.0s
+  + fromFloatOrNull should return Null on some Float.NegativeInfinity 0.0s
+  + fromFloatOrNull should return value 0.001s
+  + fromFloatOrString should return String on Float.NaN 0.0s
+  + fromFloatOrString should return String on Float.PositiveInfinity 0.001s
+  + fromFloatOrString should return String on Float.NegativeInfinity 0.0s
+  + obj should create object fluently 0.002s
+  + printer shortcuts should print the object 0.019s
+Execution took 0.25s
+65 tests, 64 passed, 1 failed
+
+io.circe.KeyCodecSuite:
+  + KeyCodec[String]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[String]: keyCodec.keyEncoder serializability 0.001s
+  + KeyCodec[String]: keyCodec.roundTrip 0.0s
+  + KeyCodec[Symbol]: keyCodec.keyDecoder serializability 0.002s
+  + KeyCodec[Symbol]: keyCodec.keyEncoder serializability 0.0s
+  + KeyCodec[Symbol]: keyCodec.roundTrip 0.004s
+  + KeyCodec[UUID]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[UUID]: keyCodec.keyEncoder serializability 0.001s
+  + KeyCodec[UUID]: keyCodec.roundTrip 0.002s
+  + KeyCodec[URI]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[URI]: keyCodec.keyEncoder serializability 0.0s
+  + KeyCodec[URI]: keyCodec.roundTrip 0.003s
+  + KeyCodec[Byte]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[Byte]: keyCodec.keyEncoder serializability 0.001s
+  + KeyCodec[Byte]: keyCodec.roundTrip 0.0s
+  + KeyCodec[Short]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[Short]: keyCodec.keyEncoder serializability 0.0s
+  + KeyCodec[Short]: keyCodec.roundTrip 0.0s
+  + KeyCodec[Int]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[Int]: keyCodec.keyEncoder serializability 0.0s
+  + KeyCodec[Int]: keyCodec.roundTrip 0.0s
+  + KeyCodec[Long]: keyCodec.keyDecoder serializability 0.001s
+  + KeyCodec[Long]: keyCodec.keyEncoder serializability 0.0s
+  + KeyCodec[Long]: keyCodec.roundTrip 0.001s
+  + KeyCodec[Double]: keyCodec.keyDecoder serializability 0.0s
+  + KeyCodec[Double]: keyCodec.keyEncoder serializability 0.001s
+  + KeyCodec[Double]: keyCodec.roundTrip 0.0s
+Execution took 23ms
+27 tests, 27 passed
+All tests in io.circe.KeyCodecSuite passed
+
+io.circe.KeyDecoderSuite:
+  + KeyDecoder[Int]: monadError.ap consistent with product + map 0.04s
+  + KeyDecoder[Int]: monadError.applicative homomorphism 0.007s
+  + KeyDecoder[Int]: monadError.applicative identity 0.02s
+  + KeyDecoder[Int]: monadError.applicative interchange 0.02s
+  + KeyDecoder[Int]: monadError.applicative map 0.022s
+  + KeyDecoder[Int]: monadError.applicative unit 0.003s
+  + KeyDecoder[Int]: monadError.applicativeError adaptError pure 0.004s
+  + KeyDecoder[Int]: monadError.applicativeError adaptError raise 0.005s
+  + KeyDecoder[Int]: monadError.applicativeError attempt consistent with attemptT 0.019s
+  + KeyDecoder[Int]: monadError.applicativeError attempt fromEither consistent with pure 0.004s
+  + KeyDecoder[Int]: monadError.applicativeError handle 0.005s
+  + KeyDecoder[Int]: monadError.applicativeError handleError . raiseError left-distributes over ap 0.018s
+  + KeyDecoder[Int]: monadError.applicativeError handleError . raiseError right-distributes over ap 0.018s
+  + KeyDecoder[Int]: monadError.applicativeError handleError consistent with recover 0.021s
+  + KeyDecoder[Int]: monadError.applicativeError handleError pure 0.003s
+  + KeyDecoder[Int]: monadError.applicativeError handleErrorWith consistent with recoverWith 0.029s
+  + KeyDecoder[Int]: monadError.applicativeError handleErrorWith pure 0.004s
+  + KeyDecoder[Int]: monadError.applicativeError handleWith 0.024s
+  + KeyDecoder[Int]: monadError.applicativeError onError pure 0.003s
+  + KeyDecoder[Int]: monadError.applicativeError onError raise 0.023s
+  + KeyDecoder[Int]: monadError.applicativeError pure attempt 0.005s
+  + KeyDecoder[Int]: monadError.applicativeError raiseError attempt 0.005s
+  + KeyDecoder[Int]: monadError.applicativeError recover consistent with recoverWith 0.022s
+  + KeyDecoder[Int]: monadError.applicativeError redeem is derived from attempt and map 0.024s
+  + KeyDecoder[Int]: monadError.applicativeError voidError consistent with void+handleError 0.025s
+  + KeyDecoder[Int]: monadError.apply composition 0.059s
+  + KeyDecoder[Int]: monadError.covariant composition 0.021s
+  + KeyDecoder[Int]: monadError.covariant identity 0.022s
+  + KeyDecoder[Int]: monadError.flatMap associativity 0.049s
+  + KeyDecoder[Int]: monadError.flatMap consistent apply 0.042s
+  + KeyDecoder[Int]: monadError.flatMap from tailRecM consistency 0.041s
+  + KeyDecoder[Int]: monadError.flatMapOrKeep flatMap coherence 0.042s
+  + KeyDecoder[Int]: monadError.invariant composition 0.023s
+  + KeyDecoder[Int]: monadError.invariant identity 0.022s
+  + KeyDecoder[Int]: monadError.map flatMap coherence 0.02s
+  + KeyDecoder[Int]: monadError.map2/map2Eval consistency 0.035s
+  + KeyDecoder[Int]: monadError.map2/product-map consistency 0.042s
+  + KeyDecoder[Int]: monadError.mapOrKeepToMapEquivalence 0.019s
+  + KeyDecoder[Int]: monadError.monad left identity 0.018s
+  + KeyDecoder[Int]: monadError.monad right identity 0.025s
+  + KeyDecoder[Int]: monadError.monadError ensure consistency 0.024s
+  + KeyDecoder[Int]: monadError.monadError ensureOr consistency 0.022s
+  + KeyDecoder[Int]: monadError.monadError left zero 0.007s
+  + KeyDecoder[Int]: monadError.monadError redeemWith is derived from attempt and flatMap 0.041s
+  + KeyDecoder[Int]: monadError.monadError rethrow attempt 0.022s
+  + KeyDecoder[Int]: monadError.monoidal left identity 0.019s
+  + KeyDecoder[Int]: monadError.monoidal right identity 0.022s
+  + KeyDecoder[Int]: monadError.mproduct consistent flatMap 0.074s
+  + KeyDecoder[Int]: monadError.productL consistent map2 0.039s
+  + KeyDecoder[Int]: monadError.productR consistent map2 0.036s
+  + KeyDecoder[Int]: monadError.replicateA_ consistent with replicateA.void 0.061s
+  + KeyDecoder[Int]: monadError.semigroupal associativity 0.051s
+  + KeyDecoder[Int]: monadError.tailRecM consistent flatMap 0.035s
+  + KeyDecoder[Int]: monadError.tailRecM stack safety 0.01s
+Execution took 1.32s
+54 tests, 54 passed
+All tests in io.circe.KeyDecoderSuite passed
+
+io.circe.KeyEncoderSuite:
+  + KeyEncoder[Int]: contravariant.contravariant composition 0.005s
+  + KeyEncoder[Int]: contravariant.contravariant identity 0.005s
+  + KeyEncoder[Int]: contravariant.invariant composition 0.005s
+  + KeyEncoder[Int]: contravariant.invariant identity 0.004s
+Execution took 19ms
+4 tests, 4 passed
+All tests in io.circe.KeyEncoderSuite passed
+
+io.circe.LiteralCodecSuite:
+  + Codec["foo"]": codec.consistency with Codec.from 0.005s
+  + Codec["foo"]": codec.consistency with accumulating 0.004s
+  + Codec["foo"]": codec.decoder serializability 0.001s
+  + Codec["foo"]": codec.encoder serializability 0.001s
+  + Codec["foo"]": codec.roundTrip 0.0s
+  + Codec[1.2345]: codec.consistency with Codec.from 0.004s
+  + Codec[1.2345]: codec.consistency with accumulating 0.004s
+  + Codec[1.2345]: codec.decoder serializability 0.001s
+  + Codec[1.2345]: codec.encoder serializability 0.001s
+  + Codec[1.2345]: codec.roundTrip 0.0s
+  + Codec[1.234F]: codec.consistency with Codec.from 0.004s
+  + Codec[1.234F]: codec.consistency with accumulating 0.003s
+  + Codec[1.234F]: codec.decoder serializability 0.001s
+  + Codec[1.234F]: codec.encoder serializability 0.001s
+  + Codec[1.234F]: codec.roundTrip 0.0s
+  + Codec[12345L]: codec.consistency with Codec.from 0.005s
+  + Codec[12345L]: codec.consistency with accumulating 0.005s
+  + Codec[12345L]: codec.decoder serializability 0.001s
+  + Codec[12345L]: codec.encoder serializability 0.0s
+  + Codec[12345L]: codec.roundTrip 0.0s
+  + Codec[123456]: codec.consistency with Codec.from 0.003s
+  + Codec[123456]: codec.consistency with accumulating 0.003s
+  + Codec[123456]: codec.decoder serializability 0.0s
+  + Codec[123456]: codec.encoder serializability 0.001s
+  + Codec[123456]: codec.roundTrip 0.0s
+  + Codec['a']: codec.consistency with Codec.from 0.005s
+  + Codec['a']: codec.consistency with accumulating 0.002s
+  + Codec['a']: codec.decoder serializability 0.001s
+  + Codec['a']: codec.encoder serializability 0.0s
+  + Codec['a']: codec.roundTrip 0.0s
+  + Codec[true]: codec.consistency with Codec.from 0.005s
+  + Codec[true]: codec.consistency with accumulating 0.002s
+  + Codec[true]: codec.decoder serializability 0.001s
+  + Codec[true]: codec.encoder serializability 0.002s
+  + Codec[true]: codec.roundTrip 0.001s
+  + Codec[false]: codec.consistency with Codec.from 0.004s
+  + Codec[false]: codec.consistency with accumulating 0.004s
+  + Codec[false]: codec.decoder serializability 0.001s
+  + Codec[false]: codec.encoder serializability 0.0s
+  + Codec[false]: codec.roundTrip 0.0s
+Execution took 76ms
+40 tests, 40 passed
+All tests in io.circe.LiteralCodecSuite passed
+
+io.circe.NoSpacesPrinterWithWriterReuseSuite:
+  + Printing Long: printer.printer serializability 0.0s
+  + Printing Long: printer.roundTrip 0.001s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.001s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.001s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.035s
+  + printToByteBuffer should match print 0.011s
+Execution took 49ms
+19 tests, 19 passed
+All tests in io.circe.NoSpacesPrinterWithWriterReuseSuite passed
+
+io.circe.NoSpacesSortKeysPrinterSuite:
+  + Printing Long: printer.printer serializability 0.0s
+  + Printing Long: printer.roundTrip 0.001s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.001s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.001s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.025s
+  + printToByteBuffer should match print 0.007s
+  + Printer with sortKeys should sort the object keys (example) 0.0s
+  + Printer with sortKeys should sort the object keys 0.026s
+  + Sorting keys should handle "" consistently 0.0s
+Execution took 61ms
+22 tests, 22 passed
+All tests in io.circe.NoSpacesSortKeysPrinterSuite passed
+
+io.circe.PrinterWriterReuseSuite:
+  + Printer#reuseWriters should not change the behavior of print 0.174s
+Execution took 0.17s
+1 tests, 1 passed
+All tests in io.circe.PrinterWriterReuseSuite passed
+
+io.circe.ProductCodecSuite:
+  + Codec[Cc1]: codec.consistency with Codec.from 0.005s
+  + Codec[Cc1]: codec.consistency with accumulating 0.005s
+  + Codec[Cc1]: codec.roundTrip 0.0s
+  + Codec[Cc1] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc1] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc1] via Codec: codec.roundTrip 0.0s
+  + Codec[Cc1] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc1] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc1] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc1] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc1] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc1] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc2]: codec.consistency with Codec.from 0.006s
+  + Codec[Cc2]: codec.consistency with accumulating 0.004s
+  + Codec[Cc2]: codec.roundTrip 0.001s
+  + Codec[Cc2] via Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc2] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc2] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc2] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc2] via Decoder and Codec: codec.consistency with accumulating 0.001s
+  + Codec[Cc2] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc2] via Encoder and Codec: codec.consistency with Codec.from 0.003s
+  + Codec[Cc2] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc2] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc3]: codec.consistency with Codec.from 0.007s
+  + Codec[Cc3]: codec.consistency with accumulating 0.004s
+  + Codec[Cc3]: codec.roundTrip 0.001s
+  + Codec[Cc3] via Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc3] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc3] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc3] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc3] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc3] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc3] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc3] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc3] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc4]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc4]: codec.consistency with accumulating 0.003s
+  + Codec[Cc4]: codec.roundTrip 0.001s
+  + Codec[Cc4] via Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc4] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc4] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc4] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc4] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc4] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc4] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc4] via Encoder and Codec: codec.consistency with accumulating 0.007s
+  + Codec[Cc4] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc5]: codec.consistency with Codec.from 0.005s
+  + Codec[Cc5]: codec.consistency with accumulating 0.002s
+  + Codec[Cc5]: codec.roundTrip 0.001s
+  + Codec[Cc5] via Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc5] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc5] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc5] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc5] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc5] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc5] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc5] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc5] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc6]: codec.consistency with Codec.from 0.006s
+  + Codec[Cc6]: codec.consistency with accumulating 0.006s
+  + Codec[Cc6]: codec.roundTrip 0.002s
+  + Codec[Cc6] via Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc6] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc6] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc6] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc6] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc6] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc6] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc6] via Encoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc6] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc7]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc7]: codec.consistency with accumulating 0.005s
+  + Codec[Cc7]: codec.roundTrip 0.001s
+  + Codec[Cc7] via Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc7] via Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc7] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc7] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc7] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc7] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc7] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc7] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc7] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc8]: codec.consistency with Codec.from 0.007s
+  + Codec[Cc8]: codec.consistency with accumulating 0.004s
+  + Codec[Cc8]: codec.roundTrip 0.002s
+  + Codec[Cc8] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc8] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc8] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc8] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc8] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc8] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc8] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc8] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc8] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc9]: codec.consistency with Codec.from 0.008s
+  + Codec[Cc9]: codec.consistency with accumulating 0.001s
+  + Codec[Cc9]: codec.roundTrip 0.002s
+  + Codec[Cc9] via Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc9] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc9] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc9] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc9] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc9] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc9] via Encoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc9] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc9] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc10]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc10]: codec.consistency with accumulating 0.003s
+  + Codec[Cc10]: codec.roundTrip 0.002s
+  + Codec[Cc10] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc10] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc10] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc10] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc10] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc10] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc10] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc10] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc10] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc11]: codec.consistency with Codec.from 0.007s
+  + Codec[Cc11]: codec.consistency with accumulating 0.002s
+  + Codec[Cc11]: codec.roundTrip 0.002s
+  + Codec[Cc11] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc11] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc11] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc11] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc11] via Decoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc11] via Decoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc11] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc11] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc11] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc12]: codec.consistency with Codec.from 0.008s
+  + Codec[Cc12]: codec.consistency with accumulating 0.003s
+  + Codec[Cc12]: codec.roundTrip 0.004s
+  + Codec[Cc12] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc12] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc12] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc12] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc12] via Decoder and Codec: codec.consistency with accumulating 0.001s
+  + Codec[Cc12] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc12] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc12] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc12] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc13]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc13]: codec.consistency with accumulating 0.004s
+  + Codec[Cc13]: codec.roundTrip 0.003s
+  + Codec[Cc13] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc13] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc13] via Codec: codec.roundTrip 0.005s
+  + Codec[Cc13] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc13] via Decoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc13] via Decoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc13] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc13] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc13] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc14]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc14]: codec.consistency with accumulating 0.003s
+  + Codec[Cc14]: codec.roundTrip 0.002s
+  + Codec[Cc14] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc14] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc14] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc14] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc14] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc14] via Decoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc14] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc14] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc14] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc15]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc15]: codec.consistency with accumulating 0.002s
+  + Codec[Cc15]: codec.roundTrip 0.002s
+  + Codec[Cc15] via Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc15] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc15] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc15] via Decoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc15] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc15] via Decoder and Codec: codec.roundTrip 0.005s
+  + Codec[Cc15] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc15] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc15] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc16]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc16]: codec.consistency with accumulating 0.003s
+  + Codec[Cc16]: codec.roundTrip 0.003s
+  + Codec[Cc16] via Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc16] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc16] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc16] via Decoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc16] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc16] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc16] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc16] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc16] via Encoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc17]: codec.consistency with Codec.from 0.011s
+  + Codec[Cc17]: codec.consistency with accumulating 0.006s
+  + Codec[Cc17]: codec.roundTrip 0.003s
+  + Codec[Cc17] via Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc17] via Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc17] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc17] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc17] via Decoder and Codec: codec.consistency with accumulating 0.008s
+  + Codec[Cc17] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc17] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc17] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc17] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc18]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc18]: codec.consistency with accumulating 0.005s
+  + Codec[Cc18]: codec.roundTrip 0.003s
+  + Codec[Cc18] via Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc18] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc18] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc18] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc18] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc18] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc18] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc18] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc18] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc19]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc19]: codec.consistency with accumulating 0.002s
+  + Codec[Cc19]: codec.roundTrip 0.004s
+  + Codec[Cc19] via Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc19] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc19] via Codec: codec.roundTrip 0.005s
+  + Codec[Cc19] via Decoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc19] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc19] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc19] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc19] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc19] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc20]: codec.consistency with Codec.from 0.018s
+  + Codec[Cc20]: codec.consistency with accumulating 0.003s
+  + Codec[Cc20]: codec.roundTrip 0.005s
+  + Codec[Cc20] via Codec: codec.consistency with Codec.from 0.012s
+  + Codec[Cc20] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc20] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc20] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc20] via Decoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc20] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc20] via Encoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc20] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc20] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc21]: codec.consistency with Codec.from 0.016s
+  + Codec[Cc21]: codec.consistency with accumulating 0.003s
+  + Codec[Cc21]: codec.roundTrip 0.003s
+  + Codec[Cc21] via Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc21] via Codec: codec.consistency with accumulating 0.01s
+  + Codec[Cc21] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc21] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc21] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc21] via Decoder and Codec: codec.roundTrip 0.005s
+  + Codec[Cc21] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc21] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc21] via Encoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc22]: codec.consistency with Codec.from 0.014s
+  + Codec[Cc22]: codec.consistency with accumulating 0.003s
+  + Codec[Cc22]: codec.roundTrip 0.003s
+  + Codec[Cc22] via Codec: codec.consistency with Codec.from 0.013s
+  + Codec[Cc22] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc22] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc22] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc22] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc22] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc22] via Encoder and Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc22] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc22] via Encoder and Codec: codec.roundTrip 0.003s
+Execution took 1.19s
+264 tests, 264 passed
+All tests in io.circe.ProductCodecSuite passed
+
+io.circe.ProductTypedCodecSuite:
+  + Codec[Cc1]: codec.consistency with Codec.from 0.027s
+  + Codec[Cc1]: codec.consistency with accumulating 0.006s
+  + Codec[Cc1]: codec.roundTrip 0.0s
+  + Codec[Cc1] via Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc1] via Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc1] via Codec: codec.roundTrip 0.0s
+  + Codec[Cc1] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc1] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc1] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc1] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc1] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc1] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc2]: codec.consistency with Codec.from 0.008s
+  + Codec[Cc2]: codec.consistency with accumulating 0.004s
+  + Codec[Cc2]: codec.roundTrip 0.0s
+  + Codec[Cc2] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc2] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc2] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc2] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc2] via Decoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc2] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc2] via Encoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc2] via Encoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc2] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc3]: codec.consistency with Codec.from 0.005s
+  + Codec[Cc3]: codec.consistency with accumulating 0.005s
+  + Codec[Cc3]: codec.roundTrip 0.001s
+  + Codec[Cc3] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc3] via Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc3] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc3] via Decoder and Codec: codec.consistency with Codec.from 0.003s
+  + Codec[Cc3] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc3] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc3] via Encoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc3] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc3] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc4]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc4]: codec.consistency with accumulating 0.004s
+  + Codec[Cc4]: codec.roundTrip 0.001s
+  + Codec[Cc4] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc4] via Codec: codec.consistency with accumulating 0.001s
+  + Codec[Cc4] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc4] via Decoder and Codec: codec.consistency with Codec.from 0.003s
+  + Codec[Cc4] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc4] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc4] via Encoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc4] via Encoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc4] via Encoder and Codec: codec.roundTrip 0.0s
+  + Codec[Cc5]: codec.consistency with Codec.from 0.006s
+  + Codec[Cc5]: codec.consistency with accumulating 0.002s
+  + Codec[Cc5]: codec.roundTrip 0.001s
+  + Codec[Cc5] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc5] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc5] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc5] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Cc5] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc5] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc5] via Encoder and Codec: codec.consistency with Codec.from 0.002s
+  + Codec[Cc5] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc5] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc6]: codec.consistency with Codec.from 0.005s
+  + Codec[Cc6]: codec.consistency with accumulating 0.006s
+  + Codec[Cc6]: codec.roundTrip 0.001s
+  + Codec[Cc6] via Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc6] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc6] via Codec: codec.roundTrip 0.001s
+  + Codec[Cc6] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc6] via Decoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc6] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc6] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc6] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc6] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc7]: codec.consistency with Codec.from 0.006s
+  + Codec[Cc7]: codec.consistency with accumulating 0.007s
+  + Codec[Cc7]: codec.roundTrip 0.002s
+  + Codec[Cc7] via Codec: codec.consistency with Codec.from 0.016s
+  + Codec[Cc7] via Codec: codec.consistency with accumulating 0.012s
+  + Codec[Cc7] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc7] via Decoder and Codec: codec.consistency with Codec.from 0.015s
+  + Codec[Cc7] via Decoder and Codec: codec.consistency with accumulating 0.012s
+  + Codec[Cc7] via Decoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc7] via Encoder and Codec: codec.consistency with Codec.from 0.017s
+  + Codec[Cc7] via Encoder and Codec: codec.consistency with accumulating 0.001s
+  + Codec[Cc7] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc8]: codec.consistency with Codec.from 0.008s
+  + Codec[Cc8]: codec.consistency with accumulating 0.003s
+  + Codec[Cc8]: codec.roundTrip 0.001s
+  + Codec[Cc8] via Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc8] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc8] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc8] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc8] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc8] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc8] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc8] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc8] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc9]: codec.consistency with Codec.from 0.007s
+  + Codec[Cc9]: codec.consistency with accumulating 0.003s
+  + Codec[Cc9]: codec.roundTrip 0.001s
+  + Codec[Cc9] via Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc9] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc9] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc9] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc9] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc9] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc9] via Encoder and Codec: codec.consistency with Codec.from 0.005s
+  + Codec[Cc9] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc9] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc10]: codec.consistency with Codec.from 0.006s
+  + Codec[Cc10]: codec.consistency with accumulating 0.004s
+  + Codec[Cc10]: codec.roundTrip 0.002s
+  + Codec[Cc10] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc10] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc10] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc10] via Decoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc10] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc10] via Decoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc10] via Encoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc10] via Encoder and Codec: codec.consistency with accumulating 0.007s
+  + Codec[Cc10] via Encoder and Codec: codec.roundTrip 0.001s
+  + Codec[Cc11]: codec.consistency with Codec.from 0.008s
+  + Codec[Cc11]: codec.consistency with accumulating 0.007s
+  + Codec[Cc11]: codec.roundTrip 0.002s
+  + Codec[Cc11] via Codec: codec.consistency with Codec.from 0.011s
+  + Codec[Cc11] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc11] via Codec: codec.roundTrip 0.002s
+  + Codec[Cc11] via Decoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc11] via Decoder and Codec: codec.consistency with accumulating 0.007s
+  + Codec[Cc11] via Decoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc11] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Cc11] via Encoder and Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc11] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc12]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc12]: codec.consistency with accumulating 0.004s
+  + Codec[Cc12]: codec.roundTrip 0.004s
+  + Codec[Cc12] via Codec: codec.consistency with Codec.from 0.015s
+  + Codec[Cc12] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc12] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc12] via Decoder and Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc12] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc12] via Decoder and Codec: codec.roundTrip 0.007s
+  + Codec[Cc12] via Encoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc12] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc12] via Encoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc13]: codec.consistency with Codec.from 0.012s
+  + Codec[Cc13]: codec.consistency with accumulating 0.005s
+  + Codec[Cc13]: codec.roundTrip 0.002s
+  + Codec[Cc13] via Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc13] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc13] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc13] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc13] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc13] via Decoder and Codec: codec.roundTrip 0.006s
+  + Codec[Cc13] via Encoder and Codec: codec.consistency with Codec.from 0.013s
+  + Codec[Cc13] via Encoder and Codec: codec.consistency with accumulating 0.011s
+  + Codec[Cc13] via Encoder and Codec: codec.roundTrip 0.006s
+  + Codec[Cc14]: codec.consistency with Codec.from 0.029s
+  + Codec[Cc14]: codec.consistency with accumulating 0.015s
+  + Codec[Cc14]: codec.roundTrip 0.003s
+  + Codec[Cc14] via Codec: codec.consistency with Codec.from 0.013s
+  + Codec[Cc14] via Codec: codec.consistency with accumulating 0.015s
+  + Codec[Cc14] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc14] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc14] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc14] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc14] via Encoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc14] via Encoder and Codec: codec.consistency with accumulating 0.002s
+  + Codec[Cc14] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc15]: codec.consistency with Codec.from 0.013s
+  + Codec[Cc15]: codec.consistency with accumulating 0.002s
+  + Codec[Cc15]: codec.roundTrip 0.003s
+  + Codec[Cc15] via Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc15] via Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc15] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc15] via Decoder and Codec: codec.consistency with Codec.from 0.011s
+  + Codec[Cc15] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc15] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc15] via Encoder and Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc15] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc15] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc16]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc16]: codec.consistency with accumulating 0.008s
+  + Codec[Cc16]: codec.roundTrip 0.002s
+  + Codec[Cc16] via Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc16] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc16] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc16] via Decoder and Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc16] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc16] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc16] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc16] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc16] via Encoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc17]: codec.consistency with Codec.from 0.01s
+  + Codec[Cc17]: codec.consistency with accumulating 0.006s
+  + Codec[Cc17]: codec.roundTrip 0.002s
+  + Codec[Cc17] via Codec: codec.consistency with Codec.from 0.007s
+  + Codec[Cc17] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc17] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc17] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc17] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc17] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc17] via Encoder and Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc17] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc17] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc18]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc18]: codec.consistency with accumulating 0.004s
+  + Codec[Cc18]: codec.roundTrip 0.003s
+  + Codec[Cc18] via Codec: codec.consistency with Codec.from 0.01s
+  + Codec[Cc18] via Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc18] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc18] via Decoder and Codec: codec.consistency with Codec.from 0.011s
+  + Codec[Cc18] via Decoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc18] via Decoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc18] via Encoder and Codec: codec.consistency with Codec.from 0.008s
+  + Codec[Cc18] via Encoder and Codec: codec.consistency with accumulating 0.003s
+  + Codec[Cc18] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc19]: codec.consistency with Codec.from 0.009s
+  + Codec[Cc19]: codec.consistency with accumulating 0.011s
+  + Codec[Cc19]: codec.roundTrip 0.01s
+  + Codec[Cc19] via Codec: codec.consistency with Codec.from 0.023s
+  + Codec[Cc19] via Codec: codec.consistency with accumulating 0.013s
+  + Codec[Cc19] via Codec: codec.roundTrip 0.011s
+  + Codec[Cc19] via Decoder and Codec: codec.consistency with Codec.from 0.027s
+  + Codec[Cc19] via Decoder and Codec: codec.consistency with accumulating 0.011s
+  + Codec[Cc19] via Decoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc19] via Encoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc19] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc19] via Encoder and Codec: codec.roundTrip 0.002s
+  + Codec[Cc20]: codec.consistency with Codec.from 0.011s
+  + Codec[Cc20]: codec.consistency with accumulating 0.005s
+  + Codec[Cc20]: codec.roundTrip 0.004s
+  + Codec[Cc20] via Codec: codec.consistency with Codec.from 0.012s
+  + Codec[Cc20] via Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc20] via Codec: codec.roundTrip 0.003s
+  + Codec[Cc20] via Decoder and Codec: codec.consistency with Codec.from 0.009s
+  + Codec[Cc20] via Decoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc20] via Decoder and Codec: codec.roundTrip 0.007s
+  + Codec[Cc20] via Encoder and Codec: codec.consistency with Codec.from 0.018s
+  + Codec[Cc20] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Cc20] via Encoder and Codec: codec.roundTrip 0.004s
+  + Codec[Cc21]: codec.consistency with Codec.from 0.019s
+  + Codec[Cc21]: codec.consistency with accumulating 0.006s
+  + Codec[Cc21]: codec.roundTrip 0.005s
+  + Codec[Cc21] via Codec: codec.consistency with Codec.from 0.013s
+  + Codec[Cc21] via Codec: codec.consistency with accumulating 0.006s
+  + Codec[Cc21] via Codec: codec.roundTrip 0.004s
+  + Codec[Cc21] via Decoder and Codec: codec.consistency with Codec.from 0.012s
+  + Codec[Cc21] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc21] via Decoder and Codec: codec.roundTrip 0.008s
+  + Codec[Cc21] via Encoder and Codec: codec.consistency with Codec.from 0.016s
+  + Codec[Cc21] via Encoder and Codec: codec.consistency with accumulating 0.008s
+  + Codec[Cc21] via Encoder and Codec: codec.roundTrip 0.003s
+  + Codec[Cc22]: codec.consistency with Codec.from 0.026s
+  + Codec[Cc22]: codec.consistency with accumulating 0.01s
+  + Codec[Cc22]: codec.roundTrip 0.005s
+  + Codec[Cc22] via Codec: codec.consistency with Codec.from 0.018s
+  + Codec[Cc22] via Codec: codec.consistency with accumulating 0.01s
+  + Codec[Cc22] via Codec: codec.roundTrip 0.005s
+  + Codec[Cc22] via Decoder and Codec: codec.consistency with Codec.from 0.015s
+  + Codec[Cc22] via Decoder and Codec: codec.consistency with accumulating 0.007s
+  + Codec[Cc22] via Decoder and Codec: codec.roundTrip 0.005s
+  + Codec[Cc22] via Encoder and Codec: codec.consistency with Codec.from 0.011s
+  + Codec[Cc22] via Encoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Cc22] via Encoder and Codec: codec.roundTrip 0.004s
+Execution took 1.54s
+264 tests, 264 passed
+All tests in io.circe.ProductTypedCodecSuite passed
+
+io.circe.RecursiveProductSuite:
+  + recursive 0.002s
+Execution took 2ms
+1 tests, 1 passed
+All tests in io.circe.RecursiveProductSuite passed
+
+io.circe.SerializableSuite:
+  + Json should be serializable 0.007s
+  + HCursor should be serializable 0.004s
+  + Decoder[Int]: serializable.can serialize and deserialize 0.001s
+  + Encoder[Int]: serializable.can serialize and deserialize 0.0s
+  + Encoder.AsArray[List[String]]: serializable.can serialize and deserialize 0.0s
+  + Encoder.AsObject[Map[String, Int]]: serializable.can serialize and deserialize 0.003s
+  + Parser: serializable.can serialize and deserialize 0.001s
+  + Printer: serializable.can serialize and deserialize 0.001s
+Execution took 17ms
+8 tests, 8 passed
+All tests in io.circe.SerializableSuite passed
+
+io.circe.ShowErrorSuite:
+  + Show[ParsingFailure] should produce the expected output 0.002s
+  + Show[DecodingFailure] should produce the expected output on a small example 0.002s
+  + DecodingFailure.toString should be equivalent to Show 0.0s
+  + Show[DecodingFailure] should produce the expected output on a larger example 0.0s
+  + Show[DecodingFailure] should display field selection 0.011s
+  + Show[DecodingFailure] should display array indexing 0.01s
+  + Failing error messages on decoders should be of the typical format. 0.002s
+  + Failing error messages on decoders should show whole path form root. 0.003s
+Execution took 30ms
+8 tests, 8 passed
+All tests in io.circe.ShowErrorSuite passed
+
+Execution took 52ms
+20 tests, 20 passed
+All tests in io.circe.Spaces2PrinterSuite passed
+
+io.circe.Spaces2PrinterSuite:
+  + Printing Long: printer.printer serializability 0.0s
+  + Printing Long: printer.roundTrip 0.001s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.001s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.002s
+  + Printing Double: printer.printer serializability 0.001s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.001s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.001s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.037s
+  + printToByteBuffer should match print 0.006s
+  + Printer.spaces2 should generate the expected output for the example doc 0.002s
+io.circe.Spaces2PrinterWithWriterReuseSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.001s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.001s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.0s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.001s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.029s
+  + printToByteBuffer should match print 0.015s
+Execution took 48ms
+19 tests, 19 passed
+All tests in io.circe.Spaces2PrinterWithWriterReuseSuite passed
+
+io.circe.Spaces2SortKeysPrinterSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.001s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.0s
+  + Printing Double: printer.printer serializability 0.001s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.001s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.001s
+  + Printing Map: printer.roundTrip 0.031s
+  + printToByteBuffer should match print 0.008s
+  + Printer with sortKeys should sort the object keys (example) 0.001s
+  + Printer with sortKeys should sort the object keys 0.025s
+  + Sorting keys should handle "" consistently 0.0s
+Execution took 70ms
+22 tests, 22 passed
+All tests in io.circe.Spaces2SortKeysPrinterSuite passed
+
+io.circe.Spaces4PrinterSuite:
+  + Printing Long: printer.printer serializability 0.0s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.001s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.001s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.0s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.001s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.001s
+  + Printing Map: printer.roundTrip 0.029s
+  + printToByteBuffer should match print 0.019s
+Execution took 52ms
+19 tests, 19 passed
+All tests in io.circe.Spaces4PrinterSuite passed
+
+io.circe.Spaces4PrinterWithWriterReuseSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.004s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.001s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.001s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.001s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.032s
+  + printToByteBuffer should match print 0.005s
+Execution took 45ms
+19 tests, 19 passed
+All tests in io.circe.Spaces4PrinterWithWriterReuseSuite passed
+
+io.circe.Spaces4SortKeysPrinterSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.001s
+  + Printing Float: printer.roundTrip 0.0s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.001s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.032s
+  + printToByteBuffer should match print 0.004s
+  + Printer with sortKeys should sort the object keys (example) 0.0s
+  + Printer with sortKeys should sort the object keys 0.025s
+  + Sorting keys should handle "" consistently 0.0s
+Execution took 64ms
+22 tests, 22 passed
+All tests in io.circe.Spaces4SortKeysPrinterSuite passed
+
+io.circe.StdLibCodecSuite:
+  + Codec[String]: codec.consistency with Codec.from 0.004s
+  + Codec[String]: codec.consistency with accumulating 0.003s
+  + Codec[String]: codec.decoder serializability 0.0s
+  + Codec[String]: codec.encoder serializability 0.0s
+  + Codec[String]: codec.roundTrip 0.0s
+  + Codec[BigInt]: codec.consistency with Codec.from 0.004s
+  + Codec[BigInt]: codec.consistency with accumulating 0.004s
+  + Codec[BigInt]: codec.decoder serializability 0.0s
+  + Codec[BigInt]: codec.encoder serializability 0.0s
+  + Codec[BigInt]: codec.roundTrip 0.001s
+  + Codec[BigDecimal]: codec.consistency with Codec.from 0.003s
+  + Codec[BigDecimal]: codec.consistency with accumulating 0.007s
+  + Codec[BigDecimal]: codec.decoder serializability 0.001s
+  + Codec[BigDecimal]: codec.encoder serializability 0.0s
+  + Codec[BigDecimal]: codec.roundTrip 0.0s
+  + Codec[UUID]: codec.consistency with Codec.from 0.005s
+  + Codec[UUID]: codec.consistency with accumulating 0.004s
+  + Codec[UUID]: codec.decoder serializability 0.001s
+  + Codec[UUID]: codec.encoder serializability 0.0s
+  + Codec[UUID]: codec.roundTrip 0.001s
+  + Codec[URI]: codec.consistency with Codec.from 0.01s
+  + Codec[URI]: codec.consistency with accumulating 0.003s
+  + Codec[URI]: codec.decoder serializability 0.001s
+  + Codec[URI]: codec.encoder serializability 0.0s
+  + Codec[URI]: codec.roundTrip 0.002s
+  + Codec[Option[Int]]: codec.consistency with Codec.from 0.006s
+  + Codec[Option[Int]]: codec.consistency with accumulating 0.007s
+  + Codec[Option[Int]]: codec.decoder serializability 0.0s
+  + Codec[Option[Int]]: codec.encoder serializability 0.0s
+  + Codec[Option[Int]]: codec.roundTrip 0.0s
+  + Codec[Some[Int]]: codec.consistency with Codec.from 0.004s
+  + Codec[Some[Int]]: codec.consistency with accumulating 0.005s
+  + Codec[Some[Int]]: codec.decoder serializability 0.001s
+  + Codec[Some[Int]]: codec.encoder serializability 0.0s
+  + Codec[Some[Int]]: codec.roundTrip 0.0s
+  + Codec[None.type]: codec.consistency with Codec.from 0.006s
+  + Codec[None.type]: codec.consistency with accumulating 0.005s
+  + Codec[None.type]: codec.decoder serializability 0.001s
+  + Codec[None.type]: codec.encoder serializability 0.0s
+  + Codec[None.type]: codec.roundTrip 0.0s
+  + Codec[List[Int]]: codec.consistency with Codec.from 0.009s
+  + Codec[List[Int]]: codec.consistency with accumulating 0.007s
+  + Codec[List[Int]]: codec.decoder serializability 0.001s
+  + Codec[List[Int]]: codec.encoder serializability 0.001s
+  + Codec[List[Int]]: codec.roundTrip 0.001s
+  + Codec[Seq[Int]]: codec.consistency with Codec.from 0.006s
+  + Codec[Seq[Int]]: codec.consistency with accumulating 0.005s
+  + Codec[Seq[Int]]: codec.decoder serializability 0.001s
+  + Codec[Seq[Int]]: codec.encoder serializability 0.001s
+  + Codec[Seq[Int]]: codec.roundTrip 0.0s
+  + Codec[Map[String, Int]]: codec.consistency with Codec.from 0.014s
+  + Codec[Map[String, Int]]: codec.consistency with accumulating 0.005s
+  + Codec[Map[String, Int]]: codec.decoder serializability 0.001s
+  + Codec[Map[String, Int]]: codec.encoder serializability 0.001s
+  + Codec[Map[String, Int]]: codec.roundTrip 0.007s
+  + Codec[Map[Symbol, Int]]: codec.consistency with Codec.from 0.019s
+  + Codec[Map[Symbol, Int]]: codec.consistency with accumulating 0.005s
+  + Codec[Map[Symbol, Int]]: codec.decoder serializability 0.001s
+  + Codec[Map[Symbol, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[Symbol, Int]]: codec.roundTrip 0.007s
+  + Codec[Map[UUID, Int]]: codec.consistency with Codec.from 0.018s
+  + Codec[Map[UUID, Int]]: codec.consistency with accumulating 0.008s
+  + Codec[Map[UUID, Int]]: codec.decoder serializability 0.0s
+  + Codec[Map[UUID, Int]]: codec.encoder serializability 0.001s
+  + Codec[Map[UUID, Int]]: codec.roundTrip 0.005s
+  + Codec[Map[URI, Int]]: codec.consistency with Codec.from 0.022s
+  + Codec[Map[URI, Int]]: codec.consistency with accumulating 0.004s
+  + Codec[Map[URI, Int]]: codec.decoder serializability 0.001s
+  + Codec[Map[URI, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[URI, Int]]: codec.roundTrip 0.007s
+  + Codec[Map[Byte, Int]]: codec.consistency with Codec.from 0.006s
+  + Codec[Map[Byte, Int]]: codec.consistency with accumulating 0.005s
+  + Codec[Map[Byte, Int]]: codec.decoder serializability 0.0s
+  + Codec[Map[Byte, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[Byte, Int]]: codec.roundTrip 0.002s
+  + Codec[Map[Short, Int]]: codec.consistency with Codec.from 0.009s
+  + Codec[Map[Short, Int]]: codec.consistency with accumulating 0.006s
+  + Codec[Map[Short, Int]]: codec.decoder serializability 0.0s
+  + Codec[Map[Short, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[Short, Int]]: codec.roundTrip 0.003s
+  + Codec[Map[Int, Int]]: codec.consistency with Codec.from 0.011s
+  + Codec[Map[Int, Int]]: codec.consistency with accumulating 0.03s
+  + Codec[Map[Int, Int]]: codec.decoder serializability 0.001s
+  + Codec[Map[Int, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[Int, Int]]: codec.roundTrip 0.005s
+  + Codec[Map[Long, Int]]: codec.consistency with Codec.from 0.025s
+  + Codec[Map[Long, Int]]: codec.consistency with accumulating 0.019s
+  + Codec[Map[Long, Int]]: codec.decoder serializability 0.001s
+  + Codec[Map[Long, Int]]: codec.encoder serializability 0.0s
+  + Codec[Map[Long, Int]]: codec.roundTrip 0.01s
+  + Codec[HashMap[Long, Int]]: codec.consistency with Codec.from 0.02s
+  + Codec[HashMap[Long, Int]]: codec.consistency with accumulating 0.02s
+  + Codec[HashMap[Long, Int]]: codec.roundTrip 0.01s
+  + Codec[SortedMap[Long, Int]]: codec.consistency with Codec.from 0.034s
+  + Codec[SortedMap[Long, Int]]: codec.consistency with accumulating 0.028s
+  + Codec[SortedMap[Long, Int]]: codec.roundTrip 0.004s
+  + Codec[Set[Int]]: codec.consistency with Codec.from 0.003s
+  + Codec[Set[Int]]: codec.consistency with accumulating 0.002s
+  + Codec[Set[Int]]: codec.decoder serializability 0.001s
+  + Codec[Set[Int]]: codec.encoder serializability 0.0s
+  + Codec[Set[Int]]: codec.roundTrip 0.001s
+  + Codec[Array[String]]: codec.consistency with Codec.from 0.013s
+  + Codec[Array[String]]: codec.consistency with accumulating 0.004s
+  + Codec[Array[String]]: codec.decoder serializability 0.001s
+  + Codec[Array[String]]: codec.encoder serializability 0.005s
+  + Codec[Array[String]]: codec.roundTrip 0.004s
+  + A tuple encoder should return a JSON array 0.002s
+  + A tuple decoder should fail if not given enough elements 0.001s
+  + A tuple decoder should fail if given too many elements 0.002s
+  + A list decoder should not stack overflow with a large number of elements 0.004s
+  + A list decoder should stop after first failure 0.0s
+  + None.type decoder should succeed for missing fields 0.0s
+Execution took 0.54s
+112 tests, 112 passed
+All tests in io.circe.StdLibCodecSuite passed
+
+io.circe.TupleCodecSuite:
+  + Codec[Tuple1[Int]]: codec.consistency with Codec.from 0.006s
+  + Codec[Tuple1[Int]]: codec.consistency with accumulating 0.003s
+  + Codec[Tuple1[Int]]: codec.decoder serializability 0.001s
+  + Codec[Tuple1[Int]]: codec.encoder serializability 0.001s
+  + Codec[Tuple1[Int]]: codec.roundTrip 0.0s
+  + Codec[(Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int)]: codec.decoder serializability 0.0s
+  + Codec[(Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int)]: codec.roundTrip 0.0s
+  + Codec[(Int,Int,Int)]: codec.consistency with Codec.from 0.005s
+  + Codec[(Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int)]: codec.decoder serializability 0.002s
+  + Codec[(Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int)]: codec.consistency with Codec.from 0.006s
+  + Codec[(Int,Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.005s
+  + Codec[(Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.013s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.004s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.006s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.006s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.004s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.01s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.008s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.009s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.004s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.01s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.01s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.007s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.006s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.009s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.005s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with Codec.from 0.012s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.consistency with accumulating 0.003s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.decoder serializability 0.001s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.encoder serializability 0.0s
+  + Codec[(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)]: codec.roundTrip 0.002s
+Execution took 0.33s
+110 tests, 110 passed
+All tests in io.circe.TupleCodecSuite passed
+
+io.circe.UnicodeEscapePrinterSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.001s
+  + Printing Float: printer.roundTrip 0.0s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.001s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.001s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.033s
+  + printToByteBuffer should match print 0.007s
+  + Printing object should unicode-escape all non-ASCII chars 0.0s
+Execution took 44ms
+20 tests, 20 passed
+All tests in io.circe.UnicodeEscapePrinterSuite passed
+
+io.circe.UnicodeEscapePrinterWithWriterReuseSuite:
+  + Printing Long: printer.printer serializability 0.001s
+  + Printing Long: printer.roundTrip 0.0s
+  + Printing Unit: printer.printer serializability 0.0s
+  + Printing Unit: printer.roundTrip 0.0s
+  + Printing Boolean: printer.printer serializability 0.0s
+  + Printing Boolean: printer.roundTrip 0.0s
+  + Printing Char: printer.printer serializability 0.0s
+  + Printing Char: printer.roundTrip 0.0s
+  + Printing Float: printer.printer serializability 0.0s
+  + Printing Float: printer.roundTrip 0.001s
+  + Printing Double: printer.printer serializability 0.0s
+  + Printing Double: printer.roundTrip 0.0s
+  + Printing Short: printer.printer serializability 0.0s
+  + Printing Short: printer.roundTrip 0.0s
+  + Printing Int: printer.printer serializability 0.0s
+  + Printing Int: printer.roundTrip 0.0s
+  + Printing Map: printer.printer serializability 0.0s
+  + Printing Map: printer.roundTrip 0.027s
+  + printToByteBuffer should match print 0.006s
+Execution took 35ms
+19 tests, 19 passed
+All tests in io.circe.UnicodeEscapePrinterWithWriterReuseSuite passed
+
+io.circe.ValidatedCodecSuite:
+  + Codec[Validated[Int, String]]: codec.consistency with Codec.from 0.005s
+  + Codec[Validated[Int, String]]: codec.consistency with accumulating 0.004s
+  + Codec[Validated[Int, String]]: codec.decoder serializability 0.0s
+  + Codec[Validated[Int, String]]: codec.encoder serializability 0.0s
+  + Codec[Validated[Int, String]]: codec.roundTrip 0.001s
+  + Codec[Validated[Int, String]] via Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Validated[Int, String]] via Codec: codec.consistency with accumulating 0.002s
+  + Codec[Validated[Int, String]] via Codec: codec.decoder serializability 0.001s
+  + Codec[Validated[Int, String]] via Codec: codec.encoder serializability 0.001s
+  + Codec[Validated[Int, String]] via Codec: codec.roundTrip 0.001s
+  + Codec[Validated[Int, String]] via Decoder and Codec: codec.consistency with Codec.from 0.004s
+  + Codec[Validated[Int, String]] via Decoder and Codec: codec.consistency with accumulating 0.005s
+  + Codec[Validated[Int, String]] via Decoder and Codec: codec.decoder serializability 0.0s
+  + Codec[Validated[Int, String]] via Decoder and Codec: codec.encoder serializability 0.001s
+  + Codec[Validated[Int, String]] via Decoder and Codec: codec.roundTrip 0.0s
+  + Codec[Validated[Int, String]] via Encoder and Codec: codec.consistency with Codec.from 0.006s
+  + Codec[Validated[Int, String]] via Encoder and Codec: codec.consistency with accumulating 0.004s
+  + Codec[Validated[Int, String]] via Encoder and Codec: codec.decoder serializability 0.0s
+  + Codec[Validated[Int, String]] via Encoder and Codec: codec.encoder serializability 0.001s
+  + Codec[Validated[Int, String]] via Encoder and Codec: codec.roundTrip 0.0s
+Execution took 40ms
+20 tests, 20 passed
+All tests in io.circe.ValidatedCodecSuite passed
+
+io.circe.jawn.JawnParserSuite:
+  + Parser: parser[fromString].decodingAccumulatingRoundTripWithSpaces 0.013s
+  + Parser: parser[fromString].decodingAccumulatingRoundTripWithoutSpaces 0.009s
+  + Parser: parser[fromString].decodingRoundTripWithSpaces 0.005s
+  + Parser: parser[fromString].decodingRoundTripWithoutSpaces 0.008s
+  + Parser: parser[fromString].parser serializability 0.002s
+  + Parser: parser[fromString].parsingRoundTripWithSpaces 0.008s
+  + Parser: parser[fromString].parsingRoundTripWithoutSpaces 0.009s
+  + Parser: parser[fromByteBuffer].decodingAccumulatingRoundTripWithSpaces 0.028s
+  + Parser: parser[fromByteBuffer].decodingAccumulatingRoundTripWithoutSpaces 0.007s
+  + Parser: parser[fromByteBuffer].decodingRoundTripWithSpaces 0.014s
+  + Parser: parser[fromByteBuffer].decodingRoundTripWithoutSpaces 0.007s
+  + Parser: parser[fromByteBuffer].parser serializability 0.0s
+  + Parser: parser[fromByteBuffer].parsingRoundTripWithSpaces 0.016s
+  + Parser: parser[fromByteBuffer].parsingRoundTripWithoutSpaces 0.009s
+  + parse and decode(Accumulating) should fail on invalid input 0.01s
+  + parseFile and decodeFile(Accumulating) should parse a JSON file 0.004s
+  + parseByteBuffer and decodeByteBuffer(Accumulating) should parse a byte buffer 0.002s
+  + parseByteArray and decodeByteArray(Accumulating) should parse a byte array 0.002s
+Execution took 0.15s
+18 tests, 18 passed
+All tests in io.circe.jawn.JawnParserSuite passed
+
+io.circe.parser.ParserSuite:
+  + Parser: parser[fromString].decodingAccumulatingRoundTripWithSpaces 0.014s
+  + Parser: parser[fromString].decodingAccumulatingRoundTripWithoutSpaces 0.01s
+  + Parser: parser[fromString].decodingRoundTripWithSpaces 0.006s
+  + Parser: parser[fromString].decodingRoundTripWithoutSpaces 0.002s
+  + Parser: parser[fromString].parser serializability 0.001s
+  + Parser: parser[fromString].parsingRoundTripWithSpaces 0.003s
+  + Parser: parser[fromString].parsingRoundTripWithoutSpaces 0.007s
+  + parse and decode(Accumulating) should fail on invalid input 0.003s
+Execution took 46ms
+8 tests, 8 passed
+All tests in io.circe.parser.ParserSuite passed
+
+io.circe.syntax.SyntaxSuite:
+  + asJson should be available and work appropriately 0.001s
+  + asJsonObject should be available and work appropriately 0.005s
+  + := should be available and work with String keys 0.008s
+  + := should be available and work with non-String keys that have a KeyEncoder instance 0.01s
+Execution took 24ms
+4 tests, 4 passed
+All tests in io.circe.syntax.SyntaxSuite passed
+
+The test execution was successfully closed.
+================================================================================
+Total duration: 38s
+48 passed, 1 failed
+
+Failed:
+- io.circe.JsonSuite:
+  * io.circe.JsonSuite.deepDropNullValues should remove null value for JsonArray - munit.ComparisonFailException: /tmp/rsx-preflight/circe/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala:187
+186:
+187:    assertEquals(actual, Json.fromValues(List(Json.fromString("REGRESSION"))))
+188:  }
+values are not the same
+=> Obtained
+JArray(
+  value = Vector(
+    JString(
+      value = "a"
+    )
+  )
+)
+=> Diff (- obtained, + expected)
+     JString(
+-      value = "a"
++      value = "REGRESSION"
+     )
+================================================================================

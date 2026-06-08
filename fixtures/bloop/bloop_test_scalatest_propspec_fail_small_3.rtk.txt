@@ -1,0 +1,5 @@
+bloop test: 0 passed, 1 failed (34ms)
+═══════════════════════════════════════
+  [FAIL] Calculator.add matches the table
+         17 did not equal 99 (CalculatorSuite.scala:16) [a=10, b=7, sum=99]
+[full output: ~/.local/share/rtk/tee/1780931871_bloop_test.log]

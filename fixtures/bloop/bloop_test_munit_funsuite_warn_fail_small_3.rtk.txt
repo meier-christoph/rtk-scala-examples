@@ -1,0 +1,9 @@
+bloop test: 2 passed, 2 failed (39ms)
+═══════════════════════════════════════
+  [FAIL] example.CalculatorSuite.sub returns the difference
+         munit.ComparisonFailException: CalculatorSuite.scala:10
+         expected 7, obtained 6
+  [FAIL] example.CalculatorSuite.div returns the quotient
+         munit.ComparisonFailException: CalculatorSuite.scala:18
+         expected 4, obtained 5
+[full output: ~/.local/share/rtk/tee/1780931638_bloop_test.log]

@@ -1,0 +1,672 @@
+Compiling zioJsonJVM (30 Scala sources)
+[W]  [E2] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala:366:29
+[W]       evidence parameter evidence$12 of type Ordering[A] in method sortedSet is never used
+[W]       L366:   implicit def sortedSet[A: Ordering: JsonEncoder]: JsonEncoder[immutable.SortedSet[A]] =
+[W]                                         ^^^^^^^^
+[W]  [E1] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala:45:8
+[W]       a type was inferred to be `Any`; this may indicate a programming error.
+[W]       L45:       .fromInputStreamScoped(scoped)
+[W]                   ^
+[W] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala: L45 [E1]
+[W] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala: L366 [E2]
+Compiled zioJsonJVM (9160ms)
+Compiling zioJsonJVM-test (19 Scala sources)
+[W]  [E41] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:233:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L233:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Tweet]
+[W]                                                                       ^
+[W]  [E40] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:231:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L231:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Tweet]
+[W]                                                                       ^
+[W]  [E39] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:191:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L191:     circe.generic.extras.semiauto.deriveConfiguredEncoder[RetweetedStatus]
+[W]                                                                       ^
+[W]  [E38] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:189:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L189:     circe.generic.extras.semiauto.deriveConfiguredDecoder[RetweetedStatus]
+[W]                                                                       ^
+[W]  [E37] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:150:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L150:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Entities]
+[W]                                                                       ^
+[W]  [E36] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:148:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L148:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Entities]
+[W]                                                                       ^
+[W]  [E35] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:131:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L131:     circe.generic.extras.semiauto.deriveConfiguredEncoder[User]
+[W]                                                                       ^
+[W]  [E34] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:129:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L129:     circe.generic.extras.semiauto.deriveConfiguredDecoder[User]
+[W]                                                                       ^
+[W]  [E33] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:73:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L73:     circe.generic.extras.semiauto.deriveConfiguredEncoder[UserMentions]
+[W]                                                                      ^
+[W]  [E32] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:71:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L71:     circe.generic.extras.semiauto.deriveConfiguredDecoder[UserMentions]
+[W]                                                                      ^
+[W]  [E31] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:52:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L52:     circe.generic.extras.semiauto.deriveConfiguredEncoder[UserEntities]
+[W]                                                                      ^
+[W]  [E30] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:50:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L50:     circe.generic.extras.semiauto.deriveConfiguredDecoder[UserEntities]
+[W]                                                                      ^
+[W]  [E29] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:38:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L38:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Url]
+[W]                                                                      ^
+[W]  [E28] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:36:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L36:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Url]
+[W]                                                                      ^
+[W]  [E27] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:25:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L25:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Urls]
+[W]                                                                      ^
+[W]  [E26] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:23:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L23:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Urls]
+[W]                                                                      ^
+[W]  [E25] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:103:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L103:     circe.generic.extras.semiauto.deriveConfiguredEncoder[DistanceMatrix]
+[W]                                                                       ^
+[W]  [E24] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:101:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L101:     circe.generic.extras.semiauto.deriveConfiguredDecoder[DistanceMatrix]
+[W]                                                                       ^
+[W]  [E23] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:85:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L85:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Rows]
+[W]                                                                      ^
+[W]  [E22] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:83:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L83:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Rows]
+[W]                                                                      ^
+[W]  [E21] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:69:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L69:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Elements]
+[W]                                                                      ^
+[W]  [E20] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:67:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L67:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Elements]
+[W]                                                                      ^
+[W]  [E19] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:36:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L36:     circe.generic.extras.semiauto.deriveConfiguredEncoder[Value]
+[W]                                                                      ^
+[W]  [E18] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala:34:58
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L34:     circe.generic.extras.semiauto.deriveConfiguredDecoder[Value]
+[W]                                                                      ^
+[W]  [E17] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:361:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L361:       circe.generic.extras.semiauto.deriveConfiguredEncoder[GeoJSON]
+[W]                                                                         ^
+[W]  [E16] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:359:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L359:       circe.generic.extras.semiauto.deriveConfiguredDecoder[GeoJSON]
+[W]                                                                         ^
+[W]  [E15] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:250:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L250:       circe.generic.extras.semiauto.deriveConfiguredEncoder[Geometry]
+[W]                                                                         ^
+[W]  [E14] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:248:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L248:       circe.generic.extras.semiauto.deriveConfiguredDecoder[Geometry]
+[W]                                                                         ^
+[W]  [E13] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:75:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L75:       circe.generic.extras.semiauto.deriveConfiguredEncoder[GeoJSON]
+[W]                                                                        ^
+[W]  [E12] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:73:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L73:       circe.generic.extras.semiauto.deriveConfiguredDecoder[GeoJSON]
+[W]                                                                        ^
+[W]  [E11] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:49:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L49:       circe.generic.extras.semiauto.deriveConfiguredEncoder[Geometry]
+[W]                                                                        ^
+[W]  [E10] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala:47:60
+[W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
+[W]        L47:       circe.generic.extras.semiauto.deriveConfiguredDecoder[Geometry]
+[W]                                                                        ^
+[W]  [E9] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:188:22
+[W]       local val config in method spec is never used
+[W]       L188:         implicit val config: JsonCodecConfiguration =
+[W]                                  ^^^^^^
+[W]  [E8] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:173:24
+[W]       local val config in method spec is never used
+[W]       L173:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E7] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:161:24
+[W]       local val config in method spec is never used
+[W]       L161:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E6] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:148:24
+[W]       local val config in method spec is never used
+[W]       L148:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E5] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:134:24
+[W]       local val config in method spec is never used
+[W]       L134:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E4] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:122:24
+[W]       local val config in method spec is never used
+[W]       L122:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E3] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:109:24
+[W]       local val config in method spec is never used
+[W]       L109:           implicit val config: JsonCodecConfiguration =
+[W]                                    ^^^^^^
+[W]  [E2] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala:96:24
+[W]       local val config in method spec is never used
+[W]       L96:           implicit val config: JsonCodecConfiguration =
+[W]                                   ^^^^^^
+[W]  [E1] zio-json/jvm/src/test/scala/zio/json/internal/StringMatrixSpec.scala:26:40
+[W]       a type was inferred to be `Any`; this may indicate a programming error.
+[W]       L26:       check(genTestStrings.filterNot(_.startsWith("wibble")))(xs => assert(matcher(xs, List.empty, "wibble"))(isEmpty))
+[W]                                                 ^^^^^^^^^^^^
+[W] zio-json/jvm/src/test/scala/zio/json/internal/StringMatrixSpec.scala: L26 [E1]
+[W] zio-json/shared/src/test/scala-2.x/zio/json/ConfigurableDeriveCodecSpec.scala: L96 [E2], L109 [E3], L122 [E4], L134 [E5], L148 [E6], L161 [E7], L173 [E8], L188 [E9]
+[W] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala: L23 [E26], L25 [E27], L36 [E28], L38 [E29], L50 [E30], L52 [E31], L71 [E32], L73 [E33], L129 [E34], L131 [E35], L148 [E36], L150 [E37], L189 [E38], L191 [E39], L231 [E40], L233 [E41]
+[W] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala: L47 [E10], L49 [E11], L73 [E12], L75 [E13], L248 [E14], L250 [E15], L359 [E16], L361 [E17]
+[W] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala: L34 [E18], L36 [E19], L67 [E20], L69 [E21], L83 [E22], L85 [E23], L101 [E24], L103 [E25]
+Compiled zioJsonJVM-test (22319ms)
++ Carter
+  + simple left
+  + simple right
+  + https://github.com/zio/zio-json/issues/209
+  + case class 1 field
+  + whitespace showing no retract call
++ CodecSpec
+  + Codec regressions
+Execution took 0.34s
+5 tests, 5 passed
+All tests in testzio.json.CarterSpec passed
+
+    + option in recursive structure
+  + Decoding
+    + empty
+    + sum encoding
+    + primitives
+    + eithers
+    + java.util.Currency
+    + parameterless products
+    + no extra fields
+    + sum encoding with hint names
+    + sum alternative encoding
+    + sum alternative encoding with hint names
+    + unicode
+    + Seq
+    + Vector
+    + key transformation - except native
+    + SortedSet
+    + HashSet
+    + Set
+    + Map
+    + key transformation
+    + zio.Chunk
+  + Encode -> Decode
+    + control chars
+      + carriage return
+      + form feed
+      + newline
+      + tab
+      + quote
+      + escape
+      + backspace
+Execution took 0.54s
+28 tests, 28 passed
+All tests in testzio.json.CodecSpec passed
+
++ Decoder
+  + excessively nested structures
+  + googleMapsError
+  + googleMapsNormal
+  + googleMapsExtra
+  + googleMapsCompact
+  + googleMapsAst
+  + twitter
+  + geojson1 alt
+  + jawn
+    + bar
+    + dkw-sample
+    + bla2
+    + foo
+    + countries.geo
+    + qux1
+    + qux2
+    + bla25
+    + ugh10k
+  + geojson2 lowlevel
+  + geojson1
+  + geojson2
+  + ZIO Streams integration
+    + decodes an encoded stream of bytes
+    + decodes a stream of chars
+    + combinators
+      + test hand-coded alternative in `orElse` comment
+      + test JsonDecoder.orElse
+    + helpers in zio.json
+      + readJsonLines reads from URLs
+      + readJsonLines reads from files
+    + decodeJsonPipeline
+      + Array delimited
+        + empty array
+        + handles whitespace leniently
+        + decodes multiple elements
+        + decodes single elements
+      + Newline delimited
+        + accepts trailing NL
+        + decodes multiple elements
+        + decodes multiple elements when fed in smaller chunks
+        + decodes single elements
+        + errors
+        + is interruptible
+Execution took 4.12s
+36 tests, 36 passed
+All tests in testzio.json.DecoderPlatformSpecificSpec passed
+
++ Decoder
+  + fromJson
+    + BigInteger too large
+    + eithers
+    + BigDecimal
+    + parameterless products
+    + typical
+    + no extra fields
+    + collections
+    + aliases
+    + aliases - alias collides with field name
+    + aliases - alias collides with another alias
+    + option
+    + aliases - double alias
+    + option - fromJsonAST
+    + default field value
+    + sum encoding with hint names
+    + sum alternative encoding
+    + sum encoding
+    + sum alternative encoding with hint names
+    + unicode
+    + Seq
+    + Option: .map on derived JsonDecoder with missing value
+    + Vector
+    + SortedSet
+    + HashSet
+    + Set
+    + Map
+    + Map with unicode keys
+    + zio.Chunk
+    + zio.NonEmptyChunk
+    + zio.NonEmptyChunk failure
+    + Map with UUID keys
+    + java.util.Currency
+    + java.util.UUID
+    + java.time.Duration
+    + java.time.ZonedDateTime
+  + fromJsonAST
+    + BigDecimal
+    + parameterless products
+    + no extra fields
+    + eithers
+    + preserve error path
+    + default field value
+    + aliases
+    + sum alternative encoding
+    + sum encoding
+    + IndexedSeq
+    + Seq
+    + LinearSeq
+    + TreeSet
+    + ListSet
+    + Vector
+    + Set
+    + HashSet
+    + SortedSet
+    + Map
+    + zio.Chunk
+    + SortedMap
+    + Map, custom keys
+    + zio.NonEmptyChunk
+    + java.util.UUID
+Execution took 0.45s
+59 tests, 59 passed
+All tests in testzio.json.DecoderSpec passed
+
++ Encoder
+  + toJson
+    + primitives
+      + char
+      + strings
+      + boolean
+      + other numerics
+      + float
+      + double
+    + options
+    + eithers
+    + exclude fields
+    + Map, custom keys
+    + Map, UUID keys
+    + java.util.UUID
+    + collections
+    + java.util.Currency
+    + parameterless products
+    + tuples
+    + sum encoding
+    + products
+    + sum alternative encoding
+    + aliases
+  + toJsonAST
+    + options
+    + eithers
+    + collections
+    + primitives
+      + char
+      + boolean
+      + strings
+      + numerics
+    + java.util.UUID
+    + tuples
+    + parameterless products
+    + sum encoding
+    + sum encoding with hint names
+    + products
+    + sum alternative encoding
+    + alias
+    + sum alternative encoding with hint names
+Execution took 0.34s
+36 tests, 36 passed
+All tests in testzio.json.EncoderSpec passed
+
++ java.time
+  + Decoder
+    + DayOfWeek
+    + Duration
+    + LocalDate
+    + LocalDateTime
+    + LocalTime
+    + Instant
+    + OffsetDateTime
+    + MonthDay
+    + Month
+    + OffsetTime
+    + Year
+    + Period
+    + YearMonth
+    + ZonedDateTime
+    + ZoneId
+    + ZoneOffset
+  + Decoder Sad Path
+    + DayOfWeek
+    + LocalDate
+    + Duration
+    + LocalTime
+    + Month
+    + MonthDay
+    + LocalDateTime
+    + Instant
+    + OffsetTime
+    + Period
+    + Year
+    + OffsetDateTime
+    + ZoneId
+    + YearMonth
+    + ZoneOffset
+    + ZonedDateTime
+  + Encoder
+    + Instant
+    + DayOfWeek
+    + Duration
+    + LocalDateTime
+    + LocalTime
+    + Month
+    + MonthDay
+    + LocalDate
+    + OffsetTime
+    + Period
+    + OffsetDateTime
+    + Year
+    + YearMonth
+    + ZoneId
+    + ZonedDateTime
+    + ZoneOffset
+Execution took 0.6s
+48 tests, 48 passed
+All tests in testzio.json.JavaTimeSpec passed
+
++ JsonTestSuite
+  - passes all tests - ignored: 1
+Execution took 2ms
+1 tests, 1 ignored
+All tests in testzio.json.JsonTestSuiteSpec passed
+
++ RoundTrip
+  + bytes
+  + booleans
+  + ints
+  + shorts
+  + longs
+  + AST
+  + java.time
+    + DayOfWeek
+    + Duration
+    + Instant
+    + Month
+    + MonthDay
+    + LocalDate
+    + LocalTime
+    + LocalDateTime
+    + Year
+    + Period
+    + OffsetTime
+    + ZoneId
+    + ZoneOffset
+    + YearMonth
+    + OffsetDateTime
+    + ZonedDateTime
+  + floats
+  + doubles
+  + bigInts
+Execution took 7s
+25 tests, 25 passed
+All tests in testzio.json.RoundTripSpec passed
+
++ SafeNumbers
+  + invalid big decimals
+  + valid BigInteger edge cases
+  + valid big decimal edge cases
+  + valid big decimals
+  + valid big Integer
+  + invalid BigInteger edge cases
+  + invalid BigDecimal text
+  + invalid Byte (numbers)
+  + valid Byte
+  + Double
+    + invalid edge cases
+    + valid (from Int)
+    + valid (from Long)
+    + valid
+    + valid edge cases
+    + valid magic doubles
+    + invalid doubles (text)
+  + Long
+    + in valid edge cases
+    + valid
+    + valid edge cases
+    + invalid (out of range)
+    + invalid (text)
+  + Short
+    + invalid (out of range)
+    + valid
+    + invalid (text)
+  + invalid BigInteger
+  + invalid Byte (text)
+  + Int
+    + invalid (out of range)
+    + valid
+    + invalid (text)
+  + Float
+    + large mantissa
+    + valid (from Int)
+    + valid (from Long)
+    + valid edge cases
+    + invalid edge cases
+    + valid
+    + valid (from Double)
+    + invalid float (text)
+Execution took 0.45s
+37 tests, 37 passed
+All tests in testzio.json.internal.SafeNumbersSpec passed
+
++ StringMatrix
+  + basic positive succeeds
+  + trivial
+  + exact match is a substring
+  + positive succeeds
+  + negative fails
+  + first resolves to field index
+  + substring fails
+  + alias trivial
+  + alias exact match is a substring
+  + alias negative fails
+  + alias positive succeeds
+  + alias substring fails
+  + alias first resolves to aliased field index
+Execution took 27s
+13 tests, 13 passed
+All tests in testzio.json.internal.StringMatrixSpec passed
+
++ ConfigurableDeriveCodecSpec
+  + overrides
+    + AST
+      + should prevent extra fields
+      + should override field name mapping
+      + should specify discriminator
+    + string
+      + should override field name mapping
+      + should prevent extra fields
+      + should specify discriminator
+      + should override sum type mapping
+  + explicit nulls
+    + write null if configured
+  + defaults
+    + string
+      + should allow extra fields by default
+      + should not map field names by default
+      + should not use discriminator by default
+    + AST
+      + should allow extra fields by default
+      + should not map field names by default
+      + should not use discriminator by default
+Execution took 0.12s
+14 tests, 14 passed
+All tests in zio.json.ConfigurableDeriveCodecSpec passed
+
++ Encoder
+  + roundtrip
+    + google_maps_api_response
+    + twitter_api_response
+    + che.geo
+  + helpers in zio.json
+    + writeJsonLines writes JSON lines
+  + ZIO Streams integration
+    + encodeJsonLinesPipeline
+    + encodes into a ZStream of Char
+    + encodeJsonLinesPipeline handles elements which take up > DefaultChunkSize to encode
+    + encodes values that yield a result of length > DefaultChunkSize
+    + encodeJsonArrayPipeline XYZ
+    + encodeJsonArrayPipeline, empty stream
+Execution took 0.12s
+10 tests, 10 passed
+All tests in zio.json.EncoderPlatformSpecificSpec passed
+
++ Json
+  + equals
+    + equality fails for different objects of different sizes
+    + equality fails for different objects of the same size with different keys
+    + object order does not matter for equality
+    + mismatched Json subtypes
+  + hashCode
+    + objects with the same elements regardless of order have the same hashCode
+  + foldUp
+    + folds the structure bottom-up (starting at the leaves)
+  + foldDown
+    + folds the structure top-down (starting at the root)
+  + relocate
+    + nested
+      + failure - from
+      + failure - to
+      + success
+  + transformAt
+    + scalar
+      + failure
+      + success
+    + nested
+      + failure
+      + success
+  + arrays with the same elements in a different order will not have the same hashCode
+  + delete
+    + scalar
+      + failure
+      + success
+    + nested
+      + success
+      + failure
+  + arrays with the same elements in the same order will have the same hashCode
+  + intersect
+    + object + object
+    + array
+    + object, deep
+    + array - duplicates
+    + scalar
+  + get
+    + downElement
+    + >>>, object
+    + filterType
+    + downField
+    + >>>, identity
+    + >>>, array, filterType
+    + >>>, combination of some methods of JsonCursor (second operand of >>> is complex)
+    + >>>, array, filterType (second operand of >>> is complex)
+  + merge
+    + object + object
+    + object, deep
+    + scalar
+    + array
+Execution took 0.13s
+37 tests, 37 passed
+All tests in zio.json.ast.JsonSpec passed
+
++ GeneratorSpec
+  + generates case classes from JSON strings
+    + parse types
+      + parses LocalDate and LocalDateTime and ZonedDateTime
+    + unify types
+      + unify Long and Int to Long
+      + unify nulls and present keys to Option
+      + unify double and int to double
+      + unify missing keys to Option
+    + simple object
+    + nested objects
+Execution took 71ms
+7 tests, 7 passed
+All tests in zio.json.codegen.GeneratorSpec passed
+
+355 tests passed. 0 tests failed. 1 tests ignored.
+
+Executed in 11 s 62 ms
+
+The test execution was successfully closed.
+====================================================================================================
+Total duration: 41s
+All 14 test suites passed.
+====================================================================================================

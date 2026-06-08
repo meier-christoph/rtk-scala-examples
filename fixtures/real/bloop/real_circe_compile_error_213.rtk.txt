@@ -1,0 +1,4 @@
+bloop compile: 41 sources, 1 error, 33 warnings (3.0s)
+═══════════════════════════════════════
+1. io/circe/Json.scala:722:46 — could not find implicit value for parameter instance: io.circe.Encoder[Thread]
+[full output: ~/.local/share/rtk/tee/1780935458_bloop_compile.log]

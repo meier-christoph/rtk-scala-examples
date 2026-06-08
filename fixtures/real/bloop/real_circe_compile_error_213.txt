@@ -1,0 +1,149 @@
+Compiling coreJVM (41 Scala sources)
+[W]  [E34] modules/core/shared/src/main/scala/io/circe/Printer.scala:96:29
+[W]        private class AppendableByteBufferFolder in class Printer is never used
+[W]        L96:   private[this] final class AppendableByteBufferFolder(
+[W]                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E33] modules/core/shared/src/main/scala/io/circe/Printer.scala:88:29
+[W]        private class StringBuilderFolder in class Printer is never used
+[W]        L88:   private[this] final class StringBuilderFolder(
+[W]                                         ^^^^^^^^^^^^^^^^^^^
+[W]  [E32] modules/core/shared/src/main/scala/io/circe/Printer.scala:432:23
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L432:         builder.append(s, lastNewLineIndex + 1, s.length)
+[W]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E31] modules/core/shared/src/main/scala/io/circe/Printer.scala:421:49
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L421:       if (lastNewLineIndex == -1) builder.append(s)
+[W]                                                ^^^^^^^^^^^^^^^^^
+[W]  [E30] modules/core/shared/src/main/scala/io/circe/Printer.scala:383:22
+[W]        discarded non-Unit value of type Appendable
+[W]        L383:         writer.append(p.rBrackets)
+[W]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E29] modules/core/shared/src/main/scala/io/circe/Printer.scala:367:39
+[W]        discarded non-Unit value of type Appendable
+[W]        L367:       if (value.isEmpty) writer.append(p.lrEmptyBrackets)
+[W]                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E28] modules/core/shared/src/main/scala/io/circe/Printer.scala:360:20
+[W]        discarded non-Unit value of type Appendable
+[W]        L360:       writer.append('"')
+[W]                    ^^^^^^^^^^^^^^^^^^
+[W]  [E27] modules/core/shared/src/main/scala/io/circe/Printer.scala:329:43
+[W]        discarded non-Unit value of type Appendable
+[W]        L329:     final def onNull: Unit = writer.append("null")
+[W]                                           ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E26] modules/core/shared/src/main/scala/io/circe/Printer.scala:316:14
+[W]        discarded non-Unit value of type Appendable
+[W]        L316:       .append(toHex(c & 15))
+[W]                           ^
+[W]  [E25] modules/core/shared/src/main/scala/io/circe/Printer.scala:104:64
+[W]        discarded non-Unit value of type Appendable
+[W]        L104:     final def onNumber(value: JsonNumber): Unit = writer.append(value.toString)
+[W]                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E24] modules/core/shared/src/main/scala/io/circe/Printer.scala:103:62
+[W]        discarded non-Unit value of type Appendable
+[W]        L103:     final def onBoolean(value: Boolean): Unit = writer.append(java.lang.Boolean.toString(value))
+[W]                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E23] modules/core/shared/src/main/scala/io/circe/Printer.scala:91:62
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L91:     final def onBoolean(value: Boolean): Unit = writer.append(value)
+[W]                                                             ^^^^^^^^^^^^^^^^^^^^
+[W]  [E22] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:150:15
+[W]        pattern var acc in value $anonfun is never used: use a wildcard `_` or suppress this warning with `acc@_`
+[W]        L150:         case (acc, invalid) =>
+[W]                            ^^^
+[W]  [E21] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:146:15
+[W]        pattern var acc in value $anonfun is never used: use a wildcard `_` or suppress this warning with `acc@_`
+[W]        L146:         case (acc, CursorOp.DeleteGoParent) =>
+[W]                            ^^^
+[W]  [E20] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:128:33
+[W]        pattern var name in value $anonfun is never used: use a wildcard `_` or suppress this warning with `name@_`
+[W]        L128:         case (_, CursorOp.Field(name)) =>
+[W]                                              ^^^^
+[W]  [E19] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:122:15
+[W]        pattern var acc in value $anonfun is never used: use a wildcard `_` or suppress this warning with `acc@_`
+[W]        L122:         case (acc, CursorOp.MoveUp) =>
+[W]                            ^^^
+[W]  [E18] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:114:15
+[W]        pattern var acc in value $anonfun is never used: use a wildcard `_` or suppress this warning with `acc@_`
+[W]        L114:         case (acc :+ PathElem.ArrayIndex(n), CursorOp.MoveRight) if n === Int.MaxValue =>
+[W]                            ^^^
+[W]  [E17] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala:108:15
+[W]        pattern var acc in value $anonfun is never used: use a wildcard `_` or suppress this warning with `acc@_`
+[W]        L108:         case (acc :+ PathElem.ArrayIndex(n), CursorOp.MoveLeft) if n <= 0 =>
+[W]                            ^^^
+[W]  [E16] modules/core/shared/src/main/scala/io/circe/JsonObject.scala:492:27
+[W]        discarded non-Unit value of type Appendable
+[W]        L492:       folder.writer.append(p.rBraces)
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E15] modules/core/shared/src/main/scala/io/circe/JsonObject.scala:385:27
+[W]        discarded non-Unit value of type Appendable
+[W]        L385:       folder.writer.append(p.rBraces)
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E14] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala:231:90
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L231:   private[circe] def appendToStringBuilder(builder: StringBuilder): Unit = builder.append(value)
+[W]                                                                                         ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E13] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala:202:90
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L202:   private[circe] def appendToStringBuilder(builder: StringBuilder): Unit = builder.append(value)
+[W]                                                                                         ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E12] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala:175:90
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L175:   private[circe] def appendToStringBuilder(builder: StringBuilder): Unit = builder.append(value)
+[W]                                                                                         ^^^^^^^^^^^^^^^^^^^^^
+[W]  [E11] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala:161:90
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L161:   private[circe] def appendToStringBuilder(builder: StringBuilder): Unit = builder.append(value.toString)
+[W]                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E10] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala:124:96
+[W]        discarded non-Unit value of type StringBuilder
+[W]        L124:   private[circe] final def appendToStringBuilder(builder: StringBuilder): Unit = builder.append(input)
+[W]                                                                                               ^^^^^^^^^^^^^^^^^^^^^
+[E] [E9] modules/core/shared/src/main/scala/io/circe/Json.scala:722:46
+[E]      could not find implicit value for parameter instance: io.circe.Encoder[Thread]
+[E]      L722:   val brokenSummon: Encoder[Thread] = Encoder[Thread]
+[E]                                                  ^^^^^^^^^^^^^^^
+[W]  [E8] modules/core/shared/src/main/scala/io/circe/Decoder.scala:1398:43
+[W]       parameter formatter in method decodeZoneOffsetWithFormatter is never used
+[W]       L1398:   final def decodeZoneOffsetWithFormatter(formatter: DateTimeFormatter): Decoder[ZoneOffset] =
+[W]                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E7] modules/core/shared/src/main/scala/io/circe/Decoder.scala:1243:51
+[W]       parameter name in class JavaTimeDecoder is never used
+[W]       L1243:   private[this] abstract class JavaTimeDecoder[A](name: String) extends Decoder[A] {
+[W]                                                                ^^^^^^^^^^^^
+[W]  [E6] modules/core/shared/src/main/scala/io/circe/Decoder.scala:1225:18
+[W]       pattern var rc in method apply is never used: use a wildcard `_` or suppress this warning with `rc@_`
+[W]       L1225:             case rc => failure(c)
+[W]                               ^^
+[W]  [E5] modules/core/shared/src/main/scala/io/circe/Decoder.scala:1212:18
+[W]       pattern var rc in method apply is never used: use a wildcard `_` or suppress this warning with `rc@_`
+[W]       L1212:             case rc =>
+[W]                               ^^
+[W]  [E4] modules/core/shared/src/main/scala/io/circe/ACursor.scala:295:18
+[W]       pattern var cursor in method loop is never used: use a wildcard `_` or suppress this warning with `cursor@_`
+[W]       L295:             case cursor: TopCursor =>
+[W]                              ^^^^^^^^^^^^^^^^^
+[W]  [E3] modules/core/shared/src/main/scala-2/io/circe/EnumerationEncoders.scala:28:49
+[W]       parameter enumeration in method encodeEnumeration is never used
+[W]       L28:   final def encodeEnumeration[E <: Enumeration](enumeration: E): Encoder[E#Value] = new Encoder[E#Value] {
+[W]                                                            ^^^^^^^^^^^^^^
+[W]  [E2] modules/core/shared/src/main/scala-2/io/circe/EnumerationCodecs.scala:36:22
+[W]       pattern var t in value $anonfun is never used: use a wildcard `_` or suppress this warning with `t@_`
+[W]       L36:         case Failure(t) =>
+[W]                                 ^
+[W]  [E1] modules/core/shared/src/main/scala-2.13+/io/circe/LiteralDecoders.scala:20:79
+[W]       parameter L in class LiteralDecoder is never used
+[W]       L20:   private[this] abstract class LiteralDecoder[A, L <: A](decodeA: Decoder[A], L: ValueOf[L]) extends Decoder[L] {
+[W]                                                                                          ^^^^^^^^^^^^^
+[E] modules/core/shared/src/main/scala/io/circe/JsonObject.scala: L385 [E15], L492 [E16]
+[E] modules/core/shared/src/main/scala/io/circe/ACursor.scala: L295 [E4]
+[E] modules/core/shared/src/main/scala/io/circe/JsonNumber.scala: L124 [E10], L161 [E11], L175 [E12], L202 [E13], L231 [E14]
+[E] modules/core/shared/src/main/scala-2.13+/io/circe/LiteralDecoders.scala: L20 [E1]
+[E] modules/core/shared/src/main/scala-2/io/circe/EnumerationEncoders.scala: L28 [E3]
+[E] modules/core/shared/src/main/scala-2/io/circe/EnumerationCodecs.scala: L36 [E2]
+[E] modules/core/shared/src/main/scala/io/circe/Json.scala: L722 [E9]
+[E] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala: L108 [E17], L114 [E18], L122 [E19], L128 [E20], L146 [E21], L150 [E22]
+[E] modules/core/shared/src/main/scala/io/circe/Printer.scala: L88 [E33], L91 [E23], L96 [E34], L103 [E24], L104 [E25], L316 [E26], L329 [E27], L360 [E28], L367 [E29], L383 [E30], L421 [E31], L432 [E32]
+[E] modules/core/shared/src/main/scala/io/circe/Decoder.scala: L1212 [E5], L1225 [E6], L1243 [E7], L1398 [E8]
+Compiled coreJVM (3002ms)
+[E] Failed to compile 'coreJVM'

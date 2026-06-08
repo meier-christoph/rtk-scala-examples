@@ -1,0 +1,9 @@
+bloop test: 1 passed, 1 failed (110ms)
+═══════════════════════════════════════
+  [FAIL] example.CalculatorSuite.add zero is identity
+         munit.FailException: CalculatorSuite.scala:20
+         Failing seed: TO7zgUWdv-WPJuetViT8r85tY3TprSjGhdyoESCTTkI=
+         Falsified after 0 passed tests.
+         > ARG_0: 0
+         > ARG_0_ORIGINAL: 2147483647
+[full output: ~/.local/share/rtk/tee/1780931653_bloop_test.log]

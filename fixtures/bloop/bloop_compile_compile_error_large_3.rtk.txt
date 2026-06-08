@@ -1,0 +1,9 @@
+bloop compile: 6 sources, 6 errors (2.3s)
+═══════════════════════════════════════
+1. example/Defect6.scala:5:21 — Found: ("not an int" : String) Required: Int
+2. example/Defect5.scala:5:21 — Found: ("not an int" : String) Required: Int
+3. example/Defect4.scala:5:21 — Found: ("not an int" : String) Required: Int
+4. example/Defect3.scala:5:21 — Found: ("not an int" : String) Required: Int
+5. example/Defect2.scala:5:21 — Found: ("not an int" : String) Required: Int
+6. example/Defect1.scala:5:21 — Found: ("not an int" : String) Required: Int
+[full output: ~/.local/share/rtk/tee/1780931446_bloop_compile.log]

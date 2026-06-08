@@ -1,0 +1,63 @@
+Compiling root (1 Scala source)
+Compiled root (1485ms)
+Compiling root-test (6 Scala sources)
+Compiled root-test (1599ms)
+CalculatorSuite1:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 11ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite1 passed
+
+CalculatorSuite2:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 0ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite2 passed
+
+CalculatorSuite3:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 0ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite3 passed
+
+CalculatorSuite4:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 1ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite4 passed
+
+CalculatorSuite5:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 0ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite5 passed
+
+CalculatorSuite6:
+- add returns the sum
+- sub returns the difference
+- mul returns the product
+- div returns the quotient
+Execution took 0ms
+4 tests, 4 passed
+All tests in example.CalculatorSuite6 passed
+
+====================================================================================================
+Total duration: 12ms
+All 6 test suites passed.
+====================================================================================================
+The test execution was successfully closed.
