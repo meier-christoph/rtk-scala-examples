@@ -11,4 +11,4 @@ bloop compile: 354 sources, 27 warnings (6 projects, 7.7s)
   play/core/parsers/Multipart.scala:191:31 value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
 
 … +17 more warnings
-  [full output: ~/.local/share/rtk/tee/1781019063_bloop-compile-warnings.log]
+[full output: ~/.local/share/rtk/tee/1781019063_bloop-compile-warnings.log]

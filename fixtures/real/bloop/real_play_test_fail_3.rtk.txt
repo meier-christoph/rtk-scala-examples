@@ -1,0 +1,4 @@
+bloop test: 1191 passed, 1 failed (23.0s)
+  [FAIL] read file content (3 ms)
+     'file content' != 'rtk injected failure' (PlayIOSpec.scala:21)
+[full output: ~/.local/share/rtk/tee/1781021421_bloop_test.log]

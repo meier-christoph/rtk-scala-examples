@@ -1,0 +1,2557 @@
+Compiling Play (177 Scala sources and 138 Java sources)
+[W]  [E23] core/play/src/main/scala/play/core/parsers/Multipart.scala:185:59
+[W]        match may not be exhaustive.
+[W]        It would fail on the following input: IOResult(_, _)
+[W]        L185:       Accumulator(FileIO.toPath(tempFile.path)).mapFuture {
+[W]                                                                        ^
+[W]  [E22] core/play/src/main/scala/play/api/i18n/Messages.scala:159:13
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L159:       parser(new CharSequenceReader(messageSource.read + "\n")) match {
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E21] core/play/src/main/scala/play/api/http/MediaRange.scala:122:23
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L122:       MediaRangeParser(new CharSequenceReader(mediaRanges)) match {
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E20] core/play/src/main/scala/play/api/http/MediaRange.scala:85:33
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L85:       MediaRangeParser.mediaType(new CharSequenceReader(mediaType)) match {
+[W]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E19] core/play/src/main/scala/play/api/http/AcceptEncoding.scala:162:25
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L162:     AcceptEncodingParser(new CharSequenceReader(acceptEncoding)) match {
+[W]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E18] core/play/src/main/scala/play/api/data/Form.scala:481:25
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: JsArray(_), JsFalse, JsNull, JsObject(_), JsTrue
+[W]        L481:             val value = simple match {
+[W]                                      ^^^^^^
+[W]  [E17] core/play/src/main/scala/play/utils/ExecCtxUtils.scala:16:29
+[W]        class ExecCtxUtils in package utils is deprecated
+[W]        L16: object ExecCtxUtils extends ExecCtxUtils
+[W]                                         ^^^^^^^^^^^^
+[W]  [E16] core/play/src/main/scala/play/core/parsers/Multipart.scala:191:31
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L191:         case r: IOResult if r.status.isSuccess =>
+[W]                                          ^^^^^^^^
+[W]  [E15] core/play/src/main/scala/play/core/parsers/Multipart.scala:190:67
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L190:         case r: IOResult if r.status.isFailure => Future.failed(r.status.failed.get)
+[W]                                                                              ^^^^^^^^
+[W]  [E14] core/play/src/main/scala/play/core/parsers/Multipart.scala:190:31
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L190:         case r: IOResult if r.status.isFailure => Future.failed(r.status.failed.get)
+[W]                                          ^^^^^^^^
+[W]  [E13] core/play/src/main/scala/play/api/mvc/BodyParsers.scala:1183:26
+[W]        overriding method onDownstreamFinish in trait OutHandler is deprecated (since Akka 2.6.0): Override `def onDownstreamFinish(cause: Throwable)`, instead.
+[W]        L1183:             override def onDownstreamFinish(): Unit = {
+[W]                                        ^^^^^^^^^^^^^^^^^^
+[W]  [E12] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala:305:30
+[W]        method stop in trait ApplicationLifecycle is deprecated (since 2.7.0): Do not invoke stop() directly. Instead, use CoordinatedShutdown.run to stop and release your resources.
+[W]        L305:         applicationLifecycle.stop().map(_ => Done)
+[W]                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E11] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala:112:50
+[W]        method applicationLifecycle in trait PekkoComponents is deprecated (since 2.7.0): Since Play 2.7.0 this is no longer required to create an ActorSystem.
+[W]        L112:     new CoordinatedShutdownProvider(actorSystem, applicationLifecycle).get
+[W]                                                               ^^^^^^^^^^^^^^^^^^^^
+[W]  [E10] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:51
+[W]        class DefaultJavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]        L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                                                               ^
+[W]  [E9] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:64
+[W]       class DefaultJavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E8] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:13
+[W]       trait JavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                        ^
+[W]  [E7] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:26
+[W]       trait JavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E6] core/play/src/main/scala/play/api/http/HttpErrorHandler.scala:353:32
+[W]       object JavaConverters in package collection is deprecated (since 2.13.0): Use `scala.jdk.CollectionConverters` instead
+[W]       L353:     Collections.synchronizedMap(new LinkedHashMap()).asScala
+[W]                                            ^
+[W]  [E5] core/play/src/main/scala/play/api/mvc/Binders.scala:293:55
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[java.util.UUID], which is not a function type but is SAM-convertible to java.util.UUID => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsString(value))` or `toJsString(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L293:   implicit def literalUUID: JavascriptLiteral[UUID] = toJsString
+[W]                                                                   ^^^^^^^^^^
+[W]  [E4] core/play/src/main/scala/play/api/mvc/Binders.scala:253:75
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Boolean], which is not a function type but is SAM-convertible to Boolean => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L253:   implicit def literalJavaBoolean: JavascriptLiteral[java.lang.Boolean] = toJsValue
+[W]                                                                                       ^^^^^^^^^
+[W]  [E3] core/play/src/main/scala/play/api/mvc/Binders.scala:243:69
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Long], which is not a function type but is SAM-convertible to Long => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L243:   implicit def literalJavaLong: JavascriptLiteral[java.lang.Long] = toJsValue
+[W]                                                                                 ^^^^^^^^^
+[W]  [E2] core/play/src/main/scala/play/api/mvc/Binders.scala:233:75
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Integer], which is not a function type but is SAM-convertible to Integer => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L233:   implicit def literalJavaInteger: JavascriptLiteral[java.lang.Integer] = toJsValue
+[W]                                                                                       ^^^^^^^^^
+[W]  [E1] core/play/src/main/scala/play/api/mvc/Binders.scala:223:59
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[String], which is not a function type but is SAM-convertible to String => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsString(value))` or `toJsString(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L223:   implicit def literalString: JavascriptLiteral[String] = toJsString
+[W]                                                                       ^^^^^^^^^^
+[W] core/play/src/main/scala/play/utils/ExecCtxUtils.scala: L16 [E17]
+[W] core/play/src/main/scala/play/api/i18n/Messages.scala: L159 [E22]
+[W] core/play/src/main/scala/play/api/mvc/Binders.scala: L223 [E1], L233 [E2], L243 [E3], L253 [E4], L293 [E5]
+[W] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala: L112 [E11], L305 [E12]
+[W] core/play/src/main/scala/play/api/http/MediaRange.scala: L85 [E20], L122 [E21]
+[W] core/play/src/main/scala/play/api/http/HttpErrorHandler.scala: L353 [E6]
+[W] core/play/src/main/scala/play/core/parsers/Multipart.scala: L185 [E23], L190 [E14], L190 [E15], L191 [E16]
+[W] core/play/src/main/scala/play/api/data/Form.scala: L481 [E18]
+[W] core/play/src/main/scala/play/api/inject/BuiltinModule.scala: L92 [E7], L92 [E8], L92 [E9], L92 [E10]
+[W] core/play/src/main/scala/play/api/http/AcceptEncoding.scala: L162 [E19]
+[W] core/play/src/main/scala/play/api/mvc/BodyParsers.scala: L1183 [E13]
+Compiled Play (19983ms)
+Compiling Play-test (5 Scala sources and 1 Java source)
+Compiled Play-test (3385ms)
+Test run play.core.PathsTest started
+Test play.core.PathsTest.relativePathReturnCurrentDirIncludeFourParentDirectories started
+Test play.core.PathsTest.canonicalPathHandlesMultipleDirectorySeparators started
+Test play.core.PathsTest.relativePathShouldReturnSiblingPathWithoutCommonRoot started
+Test play.core.PathsTest.relativePathShouldHaveTwoCommonRootSegmentsAndIncludeTwoParentDirectories started
+Test play.core.PathsTest.relativePathShouldIncludeOneParentDirectoryAndNoLastCommonElement started
+Test play.core.PathsTest.relativeIncludeOneParentDirAndLastCommonElementOfTargetRouteWithNoTrailingSlash started
+Test play.core.PathsTest.relativeShouldReturnSiblingPathWithoutCommonRoot started
+Test play.core.PathsTest.relativePathShouldRetainTrailingForwardSlashIfItExistsInCall started
+Test play.core.PathsTest.canonicalPathReturnHandlesParentDirectories started
+Test play.core.PathsTest.relativePathShouldNoCommonRootSegmentsAndIncludeThreeParentDirectories started
+Test play.core.PathsTest.relativePathReturnCurrentDir started
+Test play.core.PathsTest.relativePathShouldIncludeTwoParentDirectory started
+Test play.core.PathsTest.canonicalPathHandlesCurrentDirectories started
+Test run play.core.PathsTest finished: 0 failed, 0 ignored, 13 total, 0.024s
+Execution took 16ms
+13 tests, 13 passed
+All tests in play.core.PathsTest passed
+
+Test run play.i18n.MessagesTest started
+Test play.i18n.MessagesTest.testMessageCall started
+[E] WARNING: A Java agent has been loaded dynamically (/home/top/.cache/coursier/v1/https/nexus.foyer.lu/repository/mvn-all/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+[E] WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+[E] WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+[E] WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[E] OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Test run play.i18n.MessagesTest finished: 0 failed, 0 ignored, 1 total, 0.939s
+Execution took 0.94s
+1 tests, 1 passed
+All tests in play.i18n.MessagesTest passed
+
+Test run play.libs.concurrent.FuturesTest started
+Test play.libs.concurrent.FuturesTest.successfulDelayed started
+Test play.libs.concurrent.FuturesTest.testDelay started
+Test play.libs.concurrent.FuturesTest.successfulTimeout started
+Test play.libs.concurrent.FuturesTest.failedDelayed started
+Test play.libs.concurrent.FuturesTest.failedTimeout started
+Test run play.libs.concurrent.FuturesTest finished: 0 failed, 0 ignored, 5 total, 7.095s
+Execution took 7.09s
+5 tests, 5 passed
+All tests in play.libs.concurrent.FuturesTest passed
+
+Test run play.mvc.CallTest started
+Test play.mvc.CallTest.relativePathIncludesFragment started
+Test play.mvc.CallTest.absoluteURLWithHostAndSecureParameterIsFalseShouldHaveHTTPScheme started
+Test play.mvc.CallTest.webSocketURLWithRequestShouldHaveHTTPScheme started
+Test play.mvc.CallTest.relativePathTakesStartPathAsString started
+Test play.mvc.CallTest.relativePathTakesStartPathFromRequest started
+Test play.mvc.CallTest.webSocketURLWithRequestShouldHaveHTTPSScheme started
+Test play.mvc.CallTest.absoluteURLWithRequestShouldHaveHTTPScheme started
+Test play.mvc.CallTest.webSocketURLWithRequestAndSecureParameterIsFalseShouldHaveHTTPScheme started
+Test play.mvc.CallTest.webSocketURLWithHostAndSecureParameterIsTrueShouldHaveHTTPSScheme started
+Test play.mvc.CallTest.callShouldReturnCorrectUrlAndFragmentInPath started
+Test play.mvc.CallTest.calShouldReturnCorrectUrlInPath started
+Test play.mvc.CallTest.absoluteURLWithHostAndSecureParameterIsTrueShouldHaveHTTPSScheme started
+Test play.mvc.CallTest.absoluteUrlWithRequestAndSecureParameterIsTrueShouldHaveHTTPSScheme started
+Test play.mvc.CallTest.canonicalPathReturnedFromCall started
+Test play.mvc.CallTest.webSocketURLWithHostAndSecureParameterIsFalseShouldHaveHTTPScheme started
+Test play.mvc.CallTest.absoluteURLWithRequestAndSecureParameterIsFalseShouldHaveHTTPScheme started
+Test play.mvc.CallTest.absoluteURLWithRequestShouldHaveHTTPSScheme started
+Test play.mvc.CallTest.webSocketURLWithRequestAndSecureParameterIsTrueShouldHaveHTTPSScheme started
+Test run play.mvc.CallTest finished: 0 failed, 0 ignored, 18 total, 0.029s
+Execution took 29ms
+18 tests, 18 passed
+All tests in play.mvc.CallTest passed
+
+Test run play.mvc.CookieBuilderTest started
+Test play.mvc.CookieBuilderTest.createACookieWithNameAndValueAndKeepDefaults started
+Test play.mvc.CookieBuilderTest.createACookieWithNameAndValueAndChangeDomain started
+Test play.mvc.CookieBuilderTest.createACookieWithNameAndValueWithSecureAndHttpOnlyEqualToTrue started
+Test play.mvc.CookieBuilderTest.createACookieWithNameAndValueAndChangePath started
+Test run play.mvc.CookieBuilderTest finished: 0 failed, 0 ignored, 4 total, 0.001s
+Execution took 1ms
+4 tests, 4 passed
+All tests in play.mvc.CookieBuilderTest passed
+
+Test run play.mvc.RangeResultsTest started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForPathWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForStreamWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldRejectBrokenSourceFunction started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForFileWhenHeaderIsNotPresent started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForFileWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForSourceWhenHeaderIsNotPresent started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForFileWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForPathWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForSourceWhenHeaderIsPresentAndContentTypeWasSpecified started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForFile started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForPath started
+Test play.mvc.RangeResultsTest.shouldReturnPartialContentForInputStreamWithGivenEntityLength started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForStreamWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForFileWhenFilenameHasSpecialChars started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForInputStreamWhenHeaderIsNotPresent started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForFileWhenHeaderIsNotPresentWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldReturnPartialContentForInputStreamWithGivenNameAndContentType started
+Test play.mvc.RangeResultsTest.shouldHandleNoSeekingSource started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForInputStreamWhenHeaderIsPresentAndContentTypeWasSpecified started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForInputStreamWhenHeaderIsNotPresentWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForInputStreamWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForPathWhenHeaderIsNotPresent started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForPathWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldHandlePreSeekingSource started
+Test play.mvc.RangeResultsTest.shouldReturnRangeResultForSourceWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldReturnPartialContentForSourceWithGivenEntityLength started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForPathWhenHeaderIsNotPresentWithCustomFilename started
+Test play.mvc.RangeResultsTest.shouldNotReturnRangeResultForSourceWhenHeaderIsNotPresentWithCustomFilename started
+Test run play.mvc.RangeResultsTest finished: 0 failed, 0 ignored, 28 total, 0.287s
+Execution took 0.28s
+28 tests, 28 passed
+All tests in play.mvc.RangeResultsTest passed
+
+Test run play.mvc.ResultsTest started
+Test play.mvc.ResultsTest.sendFileWithFileName started
+Test play.mvc.ResultsTest.getOptionalCookie started
+Test play.mvc.ResultsTest.shouldCopyCookiesWhenCallingResultAs started
+Test play.mvc.ResultsTest.sendFileInlineWithoutFileName started
+Test play.mvc.ResultsTest.sendFileWithUnauthorizedStatus started
+Test play.mvc.ResultsTest.canAddAttributes started
+Test play.mvc.ResultsTest.keepAttributesWhenModifyingHeader started
+Test play.mvc.ResultsTest.sendPathWithOKStatus started
+Test play.mvc.ResultsTest.shouldCopySessionWhenCallingResultAs started
+Test play.mvc.ResultsTest.sendPathInlineWithoutFileName started
+Test play.mvc.ResultsTest.sendInputStreamHonoringOnClose started
+Test play.mvc.ResultsTest.shouldCopyFlashWhenCallingResultAs started
+Test play.mvc.ResultsTest.shouldThrowNullPointerExceptionIfPathIsNull started
+Test play.mvc.ResultsTest.sendPathWithFileNameHasSpecialChars started
+Test play.mvc.ResultsTest.sendFileWithOKStatus started
+Test play.mvc.ResultsTest.keepAttributesWhenModifyingSession started
+Test play.mvc.ResultsTest.sendPathInlineWithFileName started
+Test play.mvc.ResultsTest.sendFileWithFileNameHasSpecialChars started
+Test play.mvc.ResultsTest.keepAttributesWhenModifyingContentType started
+Test play.mvc.ResultsTest.sendFileAsAttachmentWithOkStatus started
+Test play.mvc.ResultsTest.shouldThrowNullPointerExceptionIfFileIsNull started
+Test play.mvc.ResultsTest.keepAttributesWhenModifyingFlash started
+Test play.mvc.ResultsTest.shouldCopyHeadersWhenCallingResultAs started
+Test play.mvc.ResultsTest.sendFileAsAttachmentWithUnauthorizedStatus started
+Test play.mvc.ResultsTest.sendPathAsAttachmentWithOkStatus started
+Test play.mvc.ResultsTest.sendInputStreamChunkedHonoringOnClose started
+Test play.mvc.ResultsTest.sendPathAsAttachmentWithUnauthorizedStatus started
+Test play.mvc.ResultsTest.sendPathAsAttachmentWithoutFileName started
+Test play.mvc.ResultsTest.redirectShouldAddQueryStringParamsToTheUrl started
+Test play.mvc.ResultsTest.sendPathWithUnauthorizedStatus started
+Test play.mvc.ResultsTest.sendFileHonoringOnClose started
+Test play.mvc.ResultsTest.sendFileAsAttachmentWithoutFileName started
+Test play.mvc.ResultsTest.sendPathHonoringOnClose started
+Test play.mvc.ResultsTest.sendFileInlineWithFileName started
+Test play.mvc.ResultsTest.sendPathWithFileName started
+Test play.mvc.ResultsTest.redirectShouldReturnTheSameUrlIfTheQueryStringParamsMapIsEmpty started
+Test play.mvc.ResultsTest.redirectAppendGivenQueryStringParamsToTheUrlIfUrlContainsQuestionMark started
+Test play.mvc.ResultsTest.sendResourceHonoringOnClose started
+Test run play.mvc.ResultsTest finished: 0 failed, 0 ignored, 38 total, 2.678s
+Execution took 2.68s
+38 tests, 38 passed
+All tests in play.mvc.ResultsTest passed
+
+Test run play.mvc.SecurityTest started
+Test play.mvc.SecurityTest.testUnauthorized started
+Test play.mvc.SecurityTest.testAuthorized started
+Test run play.mvc.SecurityTest finished: 0 failed, 0 ignored, 2 total, 0.044s
+Execution took 44ms
+2 tests, 2 passed
+All tests in play.mvc.SecurityTest passed
+
+GeneratedRouterSpec
+
+A GeneratedRouter should
+  + route requests to Scala controllers (30 ms)
+  + route requests to Java controllers (28 ms)
+
+
+Total for specification GeneratedRouterSpec
+Finished in 80 ms
+2 examples, 0 failure, 0 error
+
+Execution took 58ms
+2 tests, 2 passed
+All tests in play.core.routing.GeneratedRouterSpec passed
+
+AssetsDateParsingSpec
+
+Assets.parseModifiedDate should
+  + parse date from RFC2616 (16 ms)
+  + parse non-standard date without GMT (16 ms)
+  + parse date with extra length attribute (IE 9-11) (16 ms)
+  + parse non-standard date with timezone (Chrome 39/Windows 8.1) (16 ms)
+  + return None for improperly formatted date (7 ms)
+  + return None for invalid date (14 ms)
+  + not parse empty date header (6 ms)
+
+
+Total for specification AssetsDateParsingSpec
+Finished in 52 ms
+7 examples, 0 failure, 0 error
+
+Execution took 91ms
+7 tests, 7 passed
+All tests in controllers.AssetsDateParsingSpec passed
+
+AssetsSpec
+
+Assets controller should
+  + look up assets with the correct resource name (14 ms)
+  + not look up assets with Windows file separators (23 ms)
+  + not look up assets with Windows resource path separators encoded for Windows (23 ms)
+  + not look up assets with Windows resource path separators encoded for Linux (24 ms)
+  + not look up assets with Windows resource filename separators encoded for Windows (21 ms)
+  + not look up assets with Windows resource filename separators encoded for Linux (22 ms)
+  + look up assets without percent-decoding the base path (8 ms)
+  + look up assets with percent-encoded resource paths (6 ms)
+  + look up assets with percent-encoded file separators (6 ms)
+  + fail when looking up assets with invalid chars in the URL (10 ms)
+  + look up assets even if the file path is a valid URI (10 ms)
+  + look up assets with dot-segments in the path (16 ms)
+  + not look up assets with dot-segments that escape the parent path (11 ms)
+  + not look up assets with dot-segments that escape the parent path with a encoded separator for Windows (11 ms)
+  + not look up assets with dot-segments that escape the parent path with a encoded separator for Linux (9 ms)
+  + use the unescaped path when finding the last modified date of an asset (27 ms)
+
+
+Total for specification AssetsSpec
+Finished in 86 ms
+16 examples, 0 failure, 0 error
+
+Execution took 0.24s
+16 tests, 16 passed
+All tests in controllers.AssetsSpec passed
+
+ApplicationSpec
+
+Scala Application should
+  honors Environment mode
+    + Mode.Test (136 ms)
+    + Mode.Dev (138 ms)
+    + Mode.Prod (137 ms)
+  when converting to Java application should
+    preserve environment
+      + test mode (139 ms)
+      + dev mode (138 ms)
+      + prod mode (136 ms)
+    + preserve configuration (137 ms)
+
+
+Total for specification ApplicationSpec
+Finished in 175 ms
+7 examples, 0 failure, 0 error
+
+Execution took 0.96s
+7 tests, 7 passed
+All tests in play.api.ApplicationSpec passed
+
+BuiltInComponentsSpec
+
+BuiltinComponents should
+  + use the Environment ClassLoader for runtime injection (42 ms)
+
+
+Total for specification BuiltInComponentsSpec
+Finished in 52 ms
+1 example, 0 failure, 0 error
+
+Execution took 42ms
+1 tests, 1 passed
+All tests in play.api.BuiltInComponentsSpec passed
+
+LoggerConfiguratorSpec
+
+generateProperties should
+  + generate in the simplest case (16 ms)
+  + generate in the case of including string config property (23 ms)
+  + generate in the case of including integer config property (24 ms)
+  + generate in the case of including null config property (27 ms)
+  + generate in the case of direct properties (17 ms)
+  + generate a null using direct properties (16 ms)
+  + override config property with direct properties (16 ms)
+  + generate empty properties when configuration is empty (12 ms)
+
+
+Total for specification LoggerConfiguratorSpec
+Finished in 40 ms
+8 examples, 0 failure, 0 error
+
+Execution took 0.15s
+8 tests, 8 passed
+All tests in play.api.LoggerConfiguratorSpec passed
+
+LoggerSpec
+
+MarkerContext.apply should
+  + return some marker (1 ms)
+  + return a MarkerContext with None if passed null (1 ms)
+MarkerContext should
+  + implicitly convert a Marker to a MarkerContext (1 ms)
+DefaultMarkerContext should
+  + define a case object (1 ms)
+
+
+Total for specification LoggerSpec
+Finished in 22 ms
+4 examples, 0 failure, 0 error
+
+Execution took 4ms
+4 tests, 4 passed
+All tests in play.api.LoggerSpec passed
+
+PlayGlobalAppSpec
+
+play.api.Play should
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+  + start apps with global state enabled (30 ms)
+  + start apps with global state disabled (26 ms)
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+  + shut down the first app when starting a second app with global state enabled (48 ms)
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+  + start one app with global state after starting another without global state (44 ms)
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+  + start one app without global state after starting another with global state (48 ms)
+  + start multiple apps with global state disabled (51 ms)
+  + should stop an app with global state disabled (15 ms)
+WARN play.api.Play - 
+You are using the deprecated global state to set and access the current running application. If you
+need an instance of Application, set play.allowGlobalApplication = false and use Dependency Injection instead.
+        
+  + should unset current app when stopping with global state enabled (26 ms)
+
+
+Total for specification PlayGlobalAppSpec
+Finished in 331 ms
+8 examples, 0 failure, 0 error
+
+Execution took 0.29s
+8 tests, 8 passed
+All tests in play.api.PlayGlobalAppSpec passed
+
+FormSpec
+
+A form should
+  + have an error due to a malformed email (28 ms)
+  + be valid with a well-formed email (30 ms)
+  + bind params when POSTing a multipart body (29 ms)
+  + query params ignored when using POST (29 ms)
+  + query params ignored when using PUT (29 ms)
+  + query params ignored when using PATCH (29 ms)
+  + query params NOT ignored when using GET (29 ms)
+  + query params NOT ignored when using DELETE (29 ms)
+  + query params NOT ignored when using HEAD (29 ms)
+  + query params NOT ignored when using OPTIONS (29 ms)
+  + support mapping 22 fields (14 ms)
+  apply constraints on wrapped mappings
+    + when it binds data (30 ms)
+    + when it is filled with data (30 ms)
+  + apply constraints on longNumber fields (29 ms)
+  + apply constraints on shortNumber fields (29 ms)
+  + apply constraints on byteNumber fields (28 ms)
+  + apply constraints on char fields (3 ms)
+  + not even attempt to validate on fill (3 ms)
+WARN p.api.data.Form - Binding json field from form with a hardcoded max size of 102400 bytes. This is deprecated. Use bind(JsValue, Int) instead.
+WARN p.api.data.Form - Binding json field from form with a hardcoded max size of 102400 bytes. This is deprecated. Use bind(JsValue, Int) instead.
++ render form using field[Type] syntax (14 ms)
+WARN p.api.data.Form - Binding json field from form with a hardcoded max size of 102400 bytes. This is deprecated. Use bind(JsValue, Int) instead.
++ support default values (17 ms)
++ support repeated values (10 ms)
++ support repeated values with set (14 ms)
++ support repeated values with indexedSeq (10 ms)
++ support repeated values with vector (17 ms)
++ render a form with max 18 fields (14 ms)
++ reject input if it contains global errors (8 ms)
++ find nested error on unbind (9 ms)
++ support boolean binding from json (18 ms)
++ reject boolean binding from an invalid json (19 ms)
++ correctly lookup error messages when using errorsAsJson (17 ms)
++ correctly format error messages with arguments (13 ms)
++ render form using java.time.LocalDate (14 ms)
++ render form using java.time.LocalDate with format(15/6/2016) (1 ms)
++ render form using java.time.LocalDateTime (2 ms)
++ render form using java.time.LocalDateTime with format(17/06/2016T17:15:33) (1 ms)
++ render form using java.time.LocalTime (1 ms)
++ render form using java.time.LocalTime with format(HH-mm-ss) (2 ms)
++ render form using java.sql.Date (2 ms)
++ render form using java.sql.Date with format(dd-MM-yyyy) (2 ms)
++ render form using java.sql.Timestamp (2 ms)
++ render form using java.sql.Date with format(dd/MM/yyyy HH-mm-ss) (2 ms)
++ render form using java.time.Timestamp with format(17/06/2016T17:15:33) (2 ms)
+
+
+Total for specification FormSpec
+Finished in 124 ms
+42 examples, 0 failure, 0 error
+
+Execution took 0.67s
+42 tests, 42 passed
+All tests in play.api.data.FormSpec passed
+
+FormUtilsSpec
+
+FormUtils.fromJson should
+  + convert a complex json structure to a map (9 ms)
+  + not stack overflow when converting heavily nested arrays (91 ms)
+  + parse normally when the input is small enough (5 ms)
+  + abort parsing when maximum memory is used (3 ms)
+  + abort parsing when maximum memory is used (17 ms)
+  + not run out of heap when converting arrays with very long keys (12 ms)
+  + allow parsing array up to max depth (20 ms)
+  + abort parsing array when max depth is exceeded (21 ms)
+  + allow parsing object up to max depth (20 ms)
+  + abort parsing object when max depth is exceeded (21 ms)
+
+
+Total for specification FormUtilsSpec
+Finished in 119 ms
+10 examples, 0 failure, 0 error
+
+Execution took 0.22s
+10 tests, 10 passed
+All tests in play.api.data.FormUtilsSpec passed
+
+FormatSpec
+
+A java.sql.Date format should
+  + support formatting with a pattern (6 ms)
+  + use yyyy-MM-dd as the default format (6 ms)
+  + fails when form data is using the wrong pattern (4 ms)
+  + fails with the correct message key when using the wrong pattern (6 ms)
+  + convert raw data to form data using the given pattern (3 ms)
+  + convert raw data to form data using the default pattern (2 ms)
+A java.sql.Timestamp format should
+  + support formatting with a pattern (7 ms)
+  + use yyyy-MM-dd HH:ss:mm as the default format (8 ms)
+  + fails when form data is using the wrong pattern (4 ms)
+  + fails with the correct message key when using the wrong pattern (6 ms)
+  + convert raw data to form data using the given pattern (2 ms)
+  + convert raw data to form data using the default pattern (2 ms)
+dateFormat should
+  + support custom time zones (8 ms)
+java.time Types should
+  + support LocalDateTime formatting with a pattern (4 ms)
+  + support LocalDateTime formatting with default pattern (4 ms)
+A simple mapping of BigDecimalFormat should
+  + return a BigDecimal (6 ms)
+A complex mapping of BigDecimalFormat should
+  + 12.23 must be a valid bigDecimal(10,2) (1 ms)
+  + 12.23 must not be a valid bigDecimal(10,1) : Too many decimals (2 ms)
+  + 12111.23 must not be a valid bigDecimal(5,2) : Too many digits (2 ms)
+A UUID mapping should
+  + return a proper UUID when given one (2 ms)
+  + give an error when an invalid UUID is passed in (2 ms)
+A char mapping should
+  + return a proper Char when given one (2 ms)
+  + give an error when an empty string is passed in (6 ms)
+String parsing utility function should
+  + parse an integer from a string (2 ms)
+  + register a field error if string not parseable into an Int (1 ms)
+  + register a field error if unexpected exception encountered during parsing (2 ms)
+
+
+Total for specification FormatSpec
+Finished in 87 ms
+26 examples, 0 failure, 0 error
+
+Execution took 0.1s
+26 tests, 26 passed
+All tests in play.api.data.format.FormatSpec passed
+
+PlayDateSpec
+
+PlayDate.toZonedDateTime(ZoneId) should
+  + return a valid date (3 ms)
+
+
+Total for specification PlayDateSpec
+Finished in 5 ms
+1 example, 0 failure, 0 error
+
+Execution took 3ms
+1 tests, 1 passed
+All tests in play.api.data.format.PlayDateSpec passed
+
+ValidationSpec
+
+text should
+  + throw an IllegalArgumentException if maxLength is negative (1 ms)
+  + return a bound form with error if input is null, even if maxLength=0  (3 ms)
+  + throw an IllegalArgumentException if minLength is negative (2 ms)
+  + return a bound form with error if input is null, even if minLength=0 (3 ms)
+nonEmptyText should
+  + return a bound form with error if input is null (3 ms)
+Constraints.pattern should
+  + throw an IllegalArgumentException if regex is null (2 ms)
+  + throw an IllegalArgumentException if name is null (3 ms)
+  + throw an IllegalArgumentException if error is null (3 ms)
+Email constraint should
+  + validate valid addresses (3 ms)
+  + invalidate invalid addresses (2 ms)
+Min and max constraint on an Int should
+  + 5 must be a valid number(1,10) (3 ms)
+  + 15 must not be a valid number(1,10) (3 ms)
+Min and max constraint on a Long should
+  + 12345678902 must be a valid longNumber(1,10) (3 ms)
+  + 2345678902 must not be a valid longNumber(1,10) (3 ms)
+Min constraint should now work on a String should
+  + Toto must be over CC (3 ms)
+  + AA must not be over CC (3 ms)
+Max constraint should now work on a Double should
+  + 10.2 must be under 100.1 (4 ms)
+  + 110.3 must not be over 100.1 (3 ms)
+Min and max can now be strict should
+  + 5 must be a valid number(1,10, strict = true) (1 ms)
+  + 5 must still be a valid number(5,10) (3 ms)
+  + 5 must not be a valid number(5,10, strict = true) (1 ms)
+  + Text containing whitespace only should be rejected by nonEmptyText (2 ms)
+ParameterValidator should
+  + accept a valid value (2 ms)
+  + refuse a value out of range (2 ms)
+  + validate multiple values (2 ms)
+  + validate multiple string values and multiple validation errors (2 ms)
+  ValidationError should
+    + Preserve varargs when converting a JsonValidationError to a Play ValidationError (3 ms)
+
+
+Total for specification ValidationSpec
+Finished in 87 ms
+27 examples, 0 failure, 0 error
+
+Execution took 68ms
+27 tests, 27 passed
+All tests in play.api.data.validation.ValidationSpec passed
+
+AcceptEncodingSpec
+
+AcceptEncoding.parseHeader should
+  + parse simple Accept-Encoding headers (19 ms)
+  + parse Accept-Encoding headers with q-values (18 ms)
+  + parse Accept-Encoding headers with wildcard (18 ms)
+  + sort in correct order (18 ms)
+  + handle invalid parts gracefully (18 ms)
+AcceptEncoding#preferred should
+  + get preferred encoding with one available encoding (22 ms)
+  + get preferred encoding with no q-values (22 ms)
+  + match uppercase encoding names (22 ms)
+  + match uppercase Q (22 ms)
+  + get preferred encoding with q-values (20 ms)
+  + get identity encoding with no available encodings (16 ms)
+  + get identity encoding with no matching encodings (17 ms)
+  + get no encoding with no matching encodings and explicit identity;q=0 (17 ms)
+  + get preferred encoding with multiple headers (22 ms)
+  + get preferred encoding with duplicate headers (22 ms)
+  + get preferred encoding with duplicate headers (22 ms)
+  + get less preferred encoding when it's the only one we support (2 ms)
+  + get identity encoding when only * matches (2 ms)
+
+
+Total for specification AcceptEncodingSpec
+Finished in 29 ms
+18 examples, 0 failure, 0 error
+
+Execution took 0.32s
+18 tests, 18 passed
+All tests in play.api.http.AcceptEncodingSpec passed
+
+EnabledFiltersSpec
+
+EnabledFilters should
+  + work when defined (5 ms)
+  + work when set to null explicitly (2 ms)
+  + work when undefined (2 ms)
+  + throw config exception when using class that does not exist (5 ms)
+  + work with disabled filter (5 ms)
+
+
+Total for specification EnabledFiltersSpec
+Finished in 11 ms
+5 examples, 0 failure, 0 error
+
+Execution took 19ms
+5 tests, 5 passed
+All tests in play.api.http.EnabledFiltersSpec passed
+
+HttpConfigurationSpec
+
+HttpConfiguration should
+  + configure a context (2 ms)
+  + throw an error when context does not starts with / (2 ms)
+  + configure a session path (5 ms)
+  + throw an error when session path does not starts with / (2 ms)
+  + configure a flash path (5 ms)
+  + throw an error when flash path does not starts with / (2 ms)
+  + throw an error when context includes a mimetype config setting (1 ms)
+  + configure max memory buffer (2 ms)
+  + configure max memory buffer to be more than Integer.MAX_VALUE (5 ms)
+  + configure max disk buffer (5 ms)
+  + configure empty file uploads (2 ms)
+  + configure cookies encoder/decoder (2 ms)
+  configure session should set
+    + cookie name (2 ms)
+    + cookie security (2 ms)
+    + cookie maxAge (5 ms)
+    + cookie httpOnly (2 ms)
+    + cookie domain (5 ms)
+    + cookie samesite (6 ms)
+  configure flash should set
+    + cookie name (3 ms)
+    + cookie security (4 ms)
+    + cookie httpOnly (1 ms)
+    + cookie samesite (5 ms)
+  configure action composition
+    + controller annotations first (1 ms)
+    + execute request handler action first (1 ms)
+    + include WebSocket actions (1 ms)
+  configure mime types
+    + for server encoder (3 ms)
+Cookies configuration should
+  be configured as strict
+    + for server encoder (4 ms)
+    + for server decoder (1 ms)
+    + for client encoder (1 ms)
+    + for client decoder (4 ms)
+  be configured as lax
+    + for server encoder (1 ms)
+    + for server decoder (1 ms)
+    + for client encoder (1 ms)
+    + for client decoder (1 ms)
+
+
+Total for specification HttpConfigurationSpec
+Finished in 62 ms
+34 examples, 0 failure, 0 error
+
+Execution took 90ms
+34 tests, 34 passed
+All tests in play.api.http.HttpConfigurationSpec passed
+
+MediaRangeSpec
+
+A MediaRange should
+  + accept all media types (9 ms)
+  + accept a range of media types (10 ms)
+  + accept a media type (11 ms)
+  + allow media types with slashes in the parameters (8 ms)
+  + not choke on invalid media types (6 ms)
+  + allow anything in a quoted string (9 ms)
+  + allow valueless parameters (8 ms)
+  + extract the qvalue from the parameters (9 ms)
+  + differentiate between media type parameters and accept extensions (8 ms)
+  + support non spec compliant everything media ranges (8 ms)
+  + maintain the original order of media ranges in the accept header (11 ms)
+  + order by q value (11 ms)
+  + order by specificity (11 ms)
+  + order by parameters (11 ms)
+  + just order it all damn it (12 ms)
+  + be able to be convert back to a string (8 ms)
+  + gracefully handle empty parts (2 ms)
+  + gracefully handle invalid characters in tokens (10 ms)
+  + gracefully handle invalid q values (3 ms)
+MediaRange.preferred should
+  + get preferred media type for a web browser (3 ms)
+  + get preferred media type for a JSON API client (3 ms)
+  + handle equal preference by returning the first in the list (3 ms)
+  + handle wildcard ranges by returning the first in the list (3 ms)
+  + return None when no type is acceptable (2 ms)
+
+
+Total for specification MediaRangeSpec
+Finished in 44 ms
+24 examples, 0 failure, 0 error
+
+Execution took 0.18s
+24 tests, 24 passed
+All tests in play.api.http.MediaRangeSpec passed
+
+SecretConfigurationParserSpec
+
+Secret config parser should
+  parse the secret
+    + load a configured secret in prod (3 ms)
+    + load a configured secret in dev (4 ms)
+    + throw an exception if secret is too short in prod (7 ms)
+    + throw an exception if secret is too short in dev (7 ms)
+    + throw an exception if secret is ok for session cookie but too short for flash cookie in prod (7 ms)
+    + throw an exception if secret is ok for session cookie but too short for flash cookie in dev (7 ms)
+    + throw an exception if secret is changeme in prod (4 ms)
+    + throw an exception if no secret in prod (4 ms)
+    + throw an exception if secret is blank in prod (4 ms)
+    + throw an exception if secret is empty in prod (4 ms)
+    + generate a secret if secret is changeme in dev (6 ms)
+    + generate a secret if no secret in dev (7 ms)
+    + generate a secret if secret is blank in dev (7 ms)
+    + generate a secret if secret is empty in dev (6 ms)
+    + generate a stable secret in dev (7 ms)
+
+
+Total for specification SecretConfigurationParserSpec
+Finished in 21 ms
+15 examples, 0 failure, 0 error
+
+Execution took 84ms
+15 tests, 15 passed
+All tests in play.api.http.SecretConfigurationParserSpec passed
+
+WriteableSpec
+
+Writeable
+  of multipart should
+    + work for temporary files (14 ms)
+    + work composing with another writeable (14 ms)
+    + escape 'name' and 'filename' params (14 ms)
+    + use multipart/form-data content-type (8 ms)
+  of urlEncodedForm should
+    + encode keys and values (5 ms)
+
+
+Total for specification WriteableSpec
+Finished in 29 ms
+5 examples, 0 failure, 0 error
+
+Execution took 55ms
+5 tests, 5 passed
+All tests in play.api.http.WriteableSpec passed
+
+Lang
+
+Lang should
+  be fr-FR
+    + and written as JSON object (11 ms)
+    + be read as JSON object (4 ms)
+  be fr-CA
+    + and written as JSON object (10 ms)
+    + be read as JSON object (4 ms)
+  be fr
+    + and written as JSON object (10 ms)
+    + be read as JSON object (4 ms)
+  be fr-Latn-FR-polyton-a-foo-b-bar-u-bar-foo-ka-ipsum-kb-value
+    + and written as JSON object (11 ms)
+    + be read as JSON object (7 ms)
+  be fr-FR
+    + and written as JSON string (tag) (10 ms)
+    + be read from JSON string (tag) (5 ms)
+  be fr-CA
+    + and written as JSON string (tag) (10 ms)
+    + be read from JSON string (tag) (5 ms)
+  be fr
+    + and written as JSON string (tag) (10 ms)
+    + be read from JSON string (tag) (5 ms)
+  be fr-Latn-FR-polyton-a-foo-b-bar-u-bar-foo-ka-ipsum-kb-value
+    + and written as JSON string (tag) (10 ms)
+    + be read from JSON string (tag) (6 ms)
+
+
+Total for specification Lang
+Finished in 38 ms
+16 examples, 0 failure, 0 error
+
+Execution took 0.12s
+16 tests, 16 passed
+All tests in play.api.i18n.LangSpec passed
+
+MessagesSpec
+WARN p.a.h.HttpConfiguration - Assuming play.i18n.langCookieSameSite = null, since "foo" is not a valid SameSite value (Strict, Lax, None)
+
+MessagesApi should
+  + fall back to less specific translation (16 ms)
+  + support setting the language on a result (2 ms)
+  + use transient cookies by default for the language cookie's MaxAge attribute (11 ms)
+  + correctly pick up the config for the language cookie's MaxAge attribute (11 ms)
+  + default for the language cookie's SameSite attribute is Lax (13 ms)
+  + correctly pick up the config for the language cookie's SameSite attribute (13 ms)
+  + not have a value for the language cookie's SameSite attribute when misconfigured (10 ms)
+  support getting a preferred lang from a Scala request
+    + when an accepted lang is available (10 ms)
+    + when an accepted lang is not available (9 ms)
+    + when the lang cookie available (10 ms)
+    + when the lang cookie is not available (9 ms)
+    + when a cookie and an acceptable lang are available (10 ms)
+  + report error for invalid lang (6 ms)
+MessagesPlugin should
+  + parse file (15 ms)
+
+
+Total for specification MessagesSpec
+Finished in 34 ms
+14 examples, 0 failure, 0 error
+
+Execution took 0.14s
+14 tests, 14 passed
+All tests in play.api.i18n.MessagesSpec passed
+
+DefaultApplicationLifecycleSpec
+
+DefaultApplicationLifecycle should
+ERROR p.a.i.DefaultApplicationLifecycle - Error executing stop hook
+java.lang.RuntimeException: Failed stop hook
+	at play.api.inject.DefaultApplicationLifecycleSpec.$anonfun$new$24(DefaultApplicationLifecycleSpec.scala:49)
+ERROR p.a.i.DefaultApplicationLifecycle - Error executing stop hook
+java.lang.RuntimeException: Failed stop hook
+	at play.api.inject.DefaultApplicationLifecycleSpec.$anonfun$new$15(DefaultApplicationLifecycleSpec.scala:38)
+  + stop all the hooks in the correct order (7 ms)
+  + continue when a hook returns a failed future (7 ms)
+  + continue when a hook throws an exception (7 ms)
+  + runs stop() only once (6 ms)
+
+
+Total for specification DefaultApplicationLifecycleSpec
+Finished in 12 ms
+4 examples, 0 failure, 0 error
+
+Execution took 27ms
+4 tests, 4 passed
+All tests in play.api.inject.DefaultApplicationLifecycleSpec passed
+
+CometSpec
+
+play comet should
+  + work with string (41 ms)
+  + work with json (41 ms)
+
+
+Total for specification CometSpec
+Finished in 44 ms
+2 examples, 0 failure, 0 error
+
+Execution took 82ms
+2 tests, 2 passed
+All tests in play.api.libs.CometSpec passed
+
+EventSourceSpec
+
+EventSource event formatter should
+  + format an event (1 ms)
+  + format an event with an id (1 ms)
+  + format an event with a name (1 ms)
+  + split data by lines (3 ms)
+  + support '\r' as an end of line (3 ms)
+  + support '\r\n' as an end of line (3 ms)
+  + support trailing newline (3 ms)
+EventSource.Event should
+  + be writeable as a response body using an Pekko Source (4 ms)
+
+
+Total for specification EventSourceSpec
+Finished in 12 ms
+8 examples, 0 failure, 0 error
+
+Execution took 19ms
+8 tests, 8 passed
+All tests in play.api.libs.EventSourceSpec passed
+
+FileMimeTypesSpec
+
+Mime types should
+  + choose the correct mime type for file with lowercase extension (1 ms)
+  + choose the correct mime type for file with uppercase extension (1 ms)
+
+
+Total for specification FileMimeTypesSpec
+Finished in 10 ms
+2 examples, 0 failure, 0 error
+
+Execution took 2ms
+2 tests, 2 passed
+All tests in play.api.libs.FileMimeTypesSpec passed
+
+TemporaryFileCreatorSpec
+
+DefaultTemporaryFileCreator should
+  + not have a race condition when creating temporary files (59 ms)
+  + recreate directory if it is deleted (7 ms)
+  when copying file
+    + copy when destination does not exists and replace disabled (4 ms)
+    + copy when destination does not exists and replace enabled (4 ms)
+    + copy when destination exists and replace enabled (4 ms)
+    + do not copy when destination exists and replace disabled (3 ms)
+    + delete source file has no impact on the destination file (3 ms)
+  when moving file
+    + move when destination does not exists and replace disabled (3 ms)
+    + move when destination does not exists and replace enabled (3 ms)
+    + move when destination exists and replace enabled (3 ms)
+    + do not move when destination exists and replace disabled (2 ms)
+    + move a file atomically with replace enabled (3 ms)
+  when moving file with the deprecated API
+    + move when destination does not exists and replace disabled (3 ms)
+    + move when destination does not exists and replace enabled (3 ms)
+    + move when destination exists and replace enabled (3 ms)
+    + do not move when destination exists and replace disabled (3 ms)
+    + move a file atomically with replace enabled (3 ms)
+  + works when using compile time dependency injection (28 ms)
+  + works when using custom temporary file directory (5 ms)
+
+
+Total for specification TemporaryFileCreatorSpec
+Finished in 203 ms
+19 examples, 0 failure, 0 error
+
+Execution took 0.15s
+19 tests, 19 passed
+All tests in play.api.libs.TemporaryFileCreatorSpec passed
+
+TemporaryFileReaperSpec
+
+DefaultTemporaryFileReaper should
+  + Find an expired file (12 ms)
+  + Not reap a non-expired file (3 ms)
+  + Disable the reaper if set in config (11 ms)
+  + Enable the reaper if set in config (4 ms)
+TemporaryFileReaperConfiguration should
+  + read configuration successfully (2 ms)
+
+
+Total for specification TemporaryFileReaperSpec
+Finished in 58 ms
+5 examples, 6 expectations, 0 failure, 0 error
+
+Execution took 32ms
+5 tests, 5 passed
+All tests in play.api.libs.TemporaryFileReaperSpec passed
+
+ActorSystemProviderSpec
+
+ActorSystemProvider should
+ERROR p.a.l.c.ActorSystemProvider - Can't start Play: detected "pekko.coordinated-shutdown.exit-jvm = on". Using "pekko.coordinated-shutdown.exit-jvm = on" in Play may cause a deadlock when shutting down. Please set "pekko.coordinated-shutdown.exit-jvm = off"
+  + use 'play.pekko.shutdown-timeout' (30 ms)
+  + use Pekko's max duration if 'play.pekko.shutdown-timeout = null'  (25 ms)
+  + use Pekko's max duration when no 'play.pekko.shutdown-timeout' is defined, ignoring 'pekko.coordinated-shutdown.phases.actor-system-terminate.timeout' (25 ms)
+  + use Pekko's max duration when 'play.pekko.shutdown-timeout = null', ignoring 'pekko.coordinated-shutdown.phases.actor-system-terminate.timeout' (35 ms)
+  + fail to start if 'pekko.coordinated-shutdown.exit-jvm = on' (5 ms)
+  + start as expected if 'pekko.coordinated-shutdown.exit-jvm = off' (35 ms)
+  + start as expected with the default configuration for pekko.coordinated-shutdown.exit-jvm (26 ms)
+  + run all the phases for coordinated shutdown (37 ms)
+
+
+Total for specification ActorSystemProviderSpec
+Finished in 41 ms
+8 examples, 0 failure, 0 error
+
+Execution took 0.22s
+8 tests, 8 passed
+All tests in play.api.libs.concurrent.ActorSystemProviderSpec passed
+
+FuturesSpec
+
+Futures should
+  + time out if duration is too small (133 ms)
+  + succeed eventually with the raw calculation (334 ms)
+  + succeed with a timeout duration (335 ms)
+  + succeed with delay (1 second, 33 ms)
+Future enriched with FutureOps implicit class should
+  + timeout with a duration (133 ms)
+  + succeed with a duration (334 ms)
+  + timeout with an implicit org.apache.pekko.util.Timeout (133 ms)
+  + succeed with an implicit org.apache.pekko.util.Timeout (334 ms)
+
+
+Total for specification FuturesSpec
+Finished in 1 second, 43 ms
+8 examples, 0 failure, 0 error
+
+Execution took 2.77s
+8 tests, 8 passed
+All tests in play.api.libs.concurrent.FuturesSpec passed
+
+CSRFTokenSignerSpec
+
+tokenSigner.generateToken should
+  + be successful (1 ms)
+tokenSigner.signToken should
+  + be successful (22 ms)
+tokenSigner.compareSignedTokens should
+  + be successful (22 ms)
+
+
+Total for specification CSRFTokenSignerSpec
+Finished in 27 ms
+3 examples, 0 failure, 0 error
+
+Execution took 45ms
+3 tests, 3 passed
+All tests in play.api.libs.crypto.CSRFTokenSignerSpec passed
+
+CookieSignerSpec
+
+signer.sign should
+  + be able to sign input using HMAC-SHA1 using the config secret (1 ms)
+  + be able to sign input using HMAC-SHA1 using an explicitly passed in key (1 ms)
+  + be able to sign input using HMAC-SHA1 using an explicitly passed in key (same as secret) (1 ms)
+
+
+Total for specification CookieSignerSpec
+Finished in 6 ms
+3 examples, 0 failure, 0 error
+
+Execution took 3ms
+3 tests, 3 passed
+All tests in play.api.libs.crypto.CookieSignerSpec passed
+
+BindersSpec
+
+UUID path binder should
+  + Unbind UUID as string (2 ms)
+  + Bind parameter to UUID (2 ms)
+  + Fail on unparseable UUID (3 ms)
+UUID query string binder should
+  + Unbind UUID as string (2 ms)
+  + Bind parameter to UUID (4 ms)
+  + Fail on unparseable UUID (4 ms)
+  + Unbind with keys needing encode (2 ms)
+URL Path string binder should
+  + Unbind Path string as string (2 ms)
+  + Bind Path string as string without any decoding (2 ms)
+QueryStringBindable.bindableString should
+  + unbind with null values (3 ms)
+  + unbind with keys and values needing encode String (3 ms)
+QueryStringBindable.bindableSeq should
+  + propagate errors that occur during bind (4 ms)
+  + preserve the order of bound parameters (4 ms)
+  + return the empty list when the key is not found (3 ms)
+URL QueryStringBindable Char should
+  + Unbind query string char as string (4 ms)
+  + Bind query string as char (4 ms)
+  + Fail on length > 1 (2 ms)
+  + Be None on empty (1 ms)
+  + Unbind with keys needing encode (2 ms)
+URL QueryStringBindable Java Character should
+  + Unbind query string char as string (2 ms)
+  + Bind query string as char (3 ms)
+  + Fail on length > 1 (3 ms)
+  + Be None on empty (3 ms)
+  + Unbind with keys needing encode (2 ms)
+URL QueryStringBindable Short should
+  + Unbind query string short as string (3 ms)
+  + Bind query string as short (2 ms)
+  + Fail on value must contain only digits (3 ms)
+  + Fail on value < -32768 (3 ms)
+  + Fail on value > 32767 (3 ms)
+  + Be None on empty (4 ms)
+  + Unbind with keys needing encode (2 ms)
+URL PathBindable Char should
+  + Unbind Path char as string (3 ms)
+  + Bind Path string as char (1 ms)
+  + Fail on length > 1 (1 ms)
+  + Fail on empty (1 ms)
+URL PathBindable Java Character should
+  + Unbind Path char as string (1 ms)
+  + Bind Path string as char (1 ms)
+  + Fail on length > 1 (1 ms)
+  + Fail on empty (2 ms)
+AnyVal PathBindable should
+  + Bind Long String as Demo (4 ms)
+  + Unbind Hase as String (1 ms)
+  + JavaScript Unbind Hase as String (3 ms)
+  + JavaScript Unbind Pferd as String which is a Boolean and uses special js unbind (3 ms)
+AnyVal QueryStringBindable should
+  + Bind Long String as Demo (4 ms)
+  + Unbind with keys needing encode (String) (3 ms)
+  + Unbind Hase as String (3 ms)
+  + JavaScript Unbind Hase as String (1 ms)
+  + JavaScript Unbind Pferd as String which is a Boolean and uses special js unbind (3 ms)
+  + Unbind with keys and values needing encode (String) (2 ms)
+URL QueryStringBindable Int should
+  + Unbind query string int as string (2 ms)
+  + Bind query string as int (2 ms)
+  + Fail on value must contain only digits (2 ms)
+  + Fail on value < -2147483648 (2 ms)
+  + Fail on value > 2147483647 (2 ms)
+  + Be None on empty (1 ms)
+
+
+Total for specification BindersSpec
+Finished in 97 ms
+55 examples, 0 failure, 0 error
+
+Execution took 0.14s
+55 tests, 55 passed
+All tests in play.api.mvc.BindersSpec passed
+
+ByteRangeSpec
+
+Distance
+  + Between 0-10 and 20-30 is 10 (0 ms)
+  + Between 0-10 and 10-20 is zero (0 ms)
+  + Between 0-10 and 5-15 is zero (1 ms)
+  + Between 0-100 and 20-80 is zero (0 ms)
+
+
+Total for specification ByteRangeSpec
+Finished in 7 ms
+4 examples, 0 failure, 0 error
+
+Execution took 1ms
+4 tests, 4 passed
+All tests in play.api.mvc.ByteRangeSpec passed
+
+CookiesSpec
+
+object Cookies#fromCookieHeader should
+  + create new Cookies instance with cookies (5 ms)
+  + should create an empty Cookies instance with no header (28 ms)
+trait CookieHeaderEncoding#decodeSetCookieHeader should
+  + parse empty string without exception  (2 ms)
+ServerCookieEncoder should
+  + properly encode ! character (1 ms)
+  + properly encode all special characters (1 ms)
+  + properly encode field name which starts with $ (1 ms)
+  + properly encode discarded cookies (13 ms)
+trait Cookies#get should
+  + get a cookie (25 ms)
+  + return none if no cookie (1 ms)
+trait Cookies#apply should
+  + apply for a cookie (2 ms)
+  + throw error if no cookie (3 ms)
+trait Cookies#traversable should
+  + be empty for no cookies (2 ms)
+  + contain elements for some cookies (14 ms)
+  + run a foreach for a cookie (1 ms)
+object Cookies#decodeSetCookieHeader should
+  + parse empty string without exception  (1 ms)
+  + handle __Host cookies properly (2 ms)
+  + handle __Secure cookies properly (2 ms)
+  + handle SameSite cookies properly (2 ms)
+  + handle SameSite=None cookie properly (1 ms)
+  + handle SameSite=Lax cookie properly (1 ms)
+merging cookies should
+  + replace old cookies with new cookies of the same name (3 ms)
+  + return one cookie for each name (1 ms)
+trait JWTCookieData should
+  + encode map to string (34 ms)
+  + decode string to map (14 ms)
+WARN p.a.m.CookiesSpec$TestJWTCookieDataCodec - decode: could not decode JWT: JWT String argument cannot be null or empty.
+java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:132)
+  + decode empty string to map (1 ms)
+  + encode and decode in a round trip (2 ms)
+WARN p.a.m.CookiesSpec$TestJWTCookieDataCodec - decode: could not decode JWT: JWT string has a digest/signature, but the header does not reference a valid signature algorithm.
+io.jsonwebtoken.MalformedJwtException: JWT string has a digest/signature, but the header does not reference a valid signature algorithm.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:336)
+  + return empty map given a bad string (1 ms)
+WARN p.a.m.CookiesSpec$$anon$1 - decode: could not decode JWT: JWT string has a digest/signature, but the header does not reference a valid signature algorithm.
+io.jsonwebtoken.MalformedJwtException: JWT string has a digest/signature, but the header does not reference a valid signature algorithm.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:336)
+  + return empty map given a JWT with a bad signatureAlgorithm (2 ms)
+WARN p.a.m.CookiesSpec$$anon$3 - decode: expired JWT found! id = null, message = JWT expired at 1970-01-01T00:00:05Z. Current time: 1970-01-01T00:01:20Z, a difference of 15000 milliseconds.  Allowed clock skew: 60000 milliseconds.
+  + return empty map given an expired JWT outside of clock skew (5 ms)
+  + return value given an expired JWT inside of clock skew (3 ms)
+WARN p.a.m.CookiesSpec$TestJWTCookieDataCodec - decode: premature JWT found! id = null, message = JWT must not be accepted before 1970-01-01T00:01:20Z. Current time: 1970-01-01T00:00:00Z, a difference of 50000 milliseconds.  Allowed clock skew: 30000 milliseconds.
+  + return empty map given a not before JWT outside of clock skew (4 ms)
+  + return value given a not before JWT inside of clock skew (4 ms)
+DefaultSessionCookieBaker should
+  + decode a signed cookie encoding (2 ms)
+  + decode a JWT cookie encoding (3 ms)
+WARN p.a.m.DefaultUrlEncodedCookieDataCodec - Cookie failed message authentication check
+  + decode an empty cookie (2 ms)
+WARN p.a.m.DefaultUrlEncodedCookieDataCodec - Cookie failed message authentication check
+  + decode an empty legacy session (1 ms)
+  + encode to JWT (1 ms)
+LegacySessionCookieBaker should
+  + encode to a signed string (3 ms)
+object Cookie.SameSite#parse should
+  + successfully parse SameSite.None value (2 ms)
+  + successfully parse SameSite.Lax value (1 ms)
+  + successfully parse SameSite.Strict value (1 ms)
+  + return Option.None for unknown SameSite value (1 ms)
+
+
+Total for specification CookiesSpec
+Finished in 344 ms
+42 examples, 0 failure, 0 error
+
+Execution took 0.2s
+42 tests, 42 passed
+All tests in play.api.mvc.CookiesSpec passed
+
+DefaultBodyParserSpec
+
+Default Body Parser should
+  + handle 'Content-Length: 0' header as empty body (containing AnyContentAsEmpty) (8 ms)
+  + handle 'Content-Length: 1' header as non-empty body (18 ms)
+  + handle null body without Content-Length and Transfer-Encoding headers as empty body (containing AnyContentAsEmpty) (8 ms)
+  + handle missing Content-Length and Transfer-Encoding headers as empty body (containing AnyContentAsEmpty) (8 ms)
+
+
+Total for specification DefaultBodyParserSpec
+Finished in 22 ms
+4 examples, 5 expectations, 0 failure, 0 error
+
+Execution took 42ms
+4 tests, 4 passed
+All tests in play.api.mvc.DefaultBodyParserSpec passed
+
+FlashCookieSpec
+
+Flash cookies should
+  + bake in a header and value (4 ms)
+  + bake in multiple headers and values (7 ms)
+  + bake in a header an empty value (3 ms)
+  + bake in a header a Unicode value (5 ms)
+  + bake in an empty map (4 ms)
+  + encode values such that no extra keys can be created (3 ms)
+  + specifically exclude control chars (49 ms)
+  + specifically exclude special cookie chars (8 ms)
+  + decode values of the previously supported format (1 ms)
+  + decode values of the previously supported format with the new delimiters in them (1 ms)
+  + decode values with gibberish in them (1 ms)
+  + put disallows null values (2 ms)
+  + be insecure by default (2 ms)
+  + decode pair with value including '=' (2 ms)
+
+
+Total for specification FlashCookieSpec
+Finished in 57 ms
+14 examples, 0 failure, 0 error
+
+Execution took 92ms
+14 tests, 14 passed
+All tests in play.api.mvc.FlashCookieSpec passed
+
+MaxLengthBodyParserSpec
+
+Max length body handling should
+  + be exceeded when using the default max length handling (10 ms)
+  + be exceeded when using the maxLength body parser (10 ms)
+  + be exceeded when using the maxLength body parser and an equal enforceMaxLength (10 ms)
+  + be exceeded when using the maxLength body parser and a longer enforceMaxLength (10 ms)
+  + be exceeded when using enforceMaxLength and a longer maxLength body parser (10 ms)
+  + not be exceeded when nothing is exceeded (13 ms)
+  not run body parser when existing Content-Length header exceeds maxLength 
+    + BodyParser(text) (7 ms)
+    + BodyParser(text, maxLength=15) (7 ms)
+    + BodyParser(byteString, maxLength=15) (7 ms)
+    + BodyParser(conditional, wrapping=BodyParser(xml, maxLength=15)) (7 ms)
+    + BodyParser(xml, maxLength=15) (7 ms)
+    + BodyParser(conditional, wrapping=BodyParser(json, maxLength=15)) (7 ms)
+    + BodyParser(json, maxLength=15) (7 ms)
+    + BodyParser((no name)) (8 ms)
+    + BodyParser(conditional, wrapping=BodyParser(formUrlEncoded, maxLength=15)) (7 ms)
+    + BodyParser(formUrlEncoded, maxLength=15) (7 ms)
+    + BodyParser(multipartFormData) (17 ms)
+    + BodyParser(raw, memoryThreshold=102400) (3 ms)
+    + BodyParser(file, to=/tmp/requestBody346624403466405292asTemporaryFile) (4 ms)
+    + BodyParser(temporaryFile) (1 ms)
+    + BodyParser(maxLength=15, wrapping=BodyParser((no name))) (1 ms)
+  run body parser when existing Content-Length header does not exceed maxLength 
+    + BodyParser(text) (8 ms)
+    + BodyParser(text, maxLength=15) (9 ms)
+    + BodyParser(byteString, maxLength=15) (4 ms)
+    + BodyParser(conditional, wrapping=BodyParser(xml, maxLength=15)) (18 ms)
+    + BodyParser(xml, maxLength=15) (18 ms)
+    + BodyParser(conditional, wrapping=BodyParser(json, maxLength=15)) (3 ms)
+    + BodyParser(json, maxLength=15) (3 ms)
+    + BodyParser((no name)) (3 ms)
+    + BodyParser(conditional, wrapping=BodyParser(formUrlEncoded, maxLength=15)) (4 ms)
+    + BodyParser(formUrlEncoded, maxLength=15) (3 ms)
+    + BodyParser(multipartFormData) (24 ms)
+    + BodyParser(raw, memoryThreshold=102400) (2 ms)
+    + BodyParser(file, to=/tmp/requestBody346624403466405292asTemporaryFile) (6 ms)
+    + BodyParser(temporaryFile) (7 ms)
+    + BodyParser(maxLength=15, wrapping=BodyParser((no name))) (5 ms)
+  run body parser when no Content-Length header exists and actual body size does not exceed maxLength
+    + BodyParser(text) (3 ms)
+    + BodyParser(text, maxLength=15) (3 ms)
+    + BodyParser(byteString, maxLength=15) (4 ms)
+    + BodyParser(conditional, wrapping=BodyParser(xml, maxLength=15)) (4 ms)
+    + BodyParser(xml, maxLength=15) (3 ms)
+    + BodyParser(conditional, wrapping=BodyParser(json, maxLength=15)) (3 ms)
+    + BodyParser(json, maxLength=15) (4 ms)
+    + BodyParser((no name)) (3 ms)
+    + BodyParser(conditional, wrapping=BodyParser(formUrlEncoded, maxLength=15)) (3 ms)
+    + BodyParser(formUrlEncoded, maxLength=15) (3 ms)
+    + BodyParser(multipartFormData) (3 ms)
+    + BodyParser(raw, memoryThreshold=102400) (3 ms)
+    + BodyParser(file, to=/tmp/requestBody346624403466405292asTemporaryFile) (7 ms)
+    + BodyParser(temporaryFile) (10 ms)
+    + BodyParser(maxLength=15, wrapping=BodyParser((no name))) (4 ms)
+  run body parser when no Content-Length header exists and actual body size exceeds maxLength
+    + BodyParser(text) (3 ms)
+    + BodyParser(text, maxLength=15) (6 ms)
+    + BodyParser(byteString, maxLength=15) (3 ms)
+    + BodyParser(conditional, wrapping=BodyParser(xml, maxLength=15)) (3 ms)
+    + BodyParser(xml, maxLength=15) (5 ms)
+    + BodyParser(conditional, wrapping=BodyParser(json, maxLength=15)) (3 ms)
+    + BodyParser(json, maxLength=15) (3 ms)
+    + BodyParser((no name)) (3 ms)
+    + BodyParser(conditional, wrapping=BodyParser(formUrlEncoded, maxLength=15)) (5 ms)
+    + BodyParser(formUrlEncoded, maxLength=15) (4 ms)
+    + BodyParser(multipartFormData) (6 ms)
+    + BodyParser(raw, memoryThreshold=102400) (4 ms)
+    + BodyParser(file, to=/tmp/requestBody346624403466405292asTemporaryFile) (4 ms)
+    + BodyParser(temporaryFile) (2 ms)
+    + BodyParser(maxLength=15, wrapping=BodyParser((no name))) (2 ms)
+
+
+Total for specification MaxLengthBodyParserSpec
+Finished in 127 ms
+66 examples, 67 expectations, 0 failure, 0 error
+
+Execution took 0.39s
+66 tests, 66 passed
+All tests in play.api.mvc.MaxLengthBodyParserSpec passed
+
+MultipartBodyParserSpec
+
+Multipart body parser should
+  + return an error if temporary file creation fails (22 ms)
+
+
+Total for specification MultipartBodyParserSpec
+Finished in 24 ms
+1 example, 0 failure, 0 error
+
+Execution took 22ms
+1 tests, 1 passed
+All tests in play.api.mvc.MultipartBodyParserSpec passed
+
+RangeResultSpec
+
+Result should
+  + have status ok when there is no range (2 ms)
+  + have headers (4 ms)
+  + support Content-Disposition header (2 ms)
+  + support non-ISO-8859-1 filename in Content-Disposition header (4 ms)
+  + support first byte position (17 ms)
+  + support last byte position (17 ms)
+  + support last byte position without entity length (23 ms)
+  + support a Source function that handles pre-seeking (17 ms)
+  + support a Source function that ignores pre-seeking (17 ms)
+  + throw error when Source function pre-seeks too far (5 ms)
+  + support sending path (3 ms)
+  + support sending file (3 ms)
+  + support sending an input stream without entity length (3 ms)
+  + support sending an input stream with the entity length (3 ms)
+
+
+Total for specification RangeResultSpec
+Finished in 30 ms
+14 examples, 0 failure, 0 error
+
+Execution took 0.12s
+14 tests, 14 passed
+All tests in play.api.mvc.RangeResultSpec passed
+
+RangeSetSpec
+
+Satisfiable range sets
+  + bytes=0-5,100-110 (2 ms)
+  + bytes=0-0,-1 (2 ms)
+  + bytes=500-600,801-999 (12 ms)
+  Normalize
+    + bytes=500-600,601-650,1000-1100 to bytes=500-650,1000-1100 (2 ms)
+    + bytes=500-600,601-650,680-700,1000-1100 to bytes=500-700,1000-1100 (2 ms)
+    + bytes=500-600,400-650,680-700,1000- to bytes=400-700,1000-1199 (2 ms)
+    + bytes=500-600 to bytes=500-600 (3 ms)
+  + No header present (2 ms)
+Unsatisfiable range sets
+  + When last-byte-pos less than first-byte-pos (11 ms)
+  + When first-byte-pos more than entity length (2 ms)
+Without Entity Length
+  + Unsatisfiable when range first-byte-pos is not specified (2 ms)
+  + Unsatisfiable when range last-byte-pos is not specified (2 ms)
+  + Satisfiable when both first-byte-pos and last-byte-pos are specified and first-byte-pos is less last-byte-pos (2 ms)
+
+
+Total for specification RangeSetSpec
+Finished in 26 ms
+13 examples, 0 failure, 0 error
+
+Execution took 46ms
+13 tests, 13 passed
+All tests in play.api.mvc.RangeSetSpec passed
+
+RangeSpec
+
+Satisfiable ranges
+  + 0-10 (3 ms)
+  + 80-100 (4 ms)
+  + 80- (4 ms)
+  + \-100 (3 ms)
+  Ending ranges
+    + The last -20 bytes (3 ms)
+  Replaces the value of last-byte-pos with one less than the current length
+    + When last-byte-pos value is absent (3 ms)
+    + When last-byte-pos value is greater than entity length (3 ms)
+    + When last-byte-pos value is equal to entity length (3 ms)
+Unsatisfiable ranges
+  + When both first and last bytes are not specified (3 ms)
+  + When range header is empty (3 ms)
+Ordering ranges
+  + by first byte (4 ms)
+  + by last byte when first bytes are equals (4 ms)
+  when first byte is not specified
+    + first the range with a first byte specified (4 ms)
+    + first the range that selects more bytes starting from the end (4 ms)
+Content length
+  + 500-999 has content-length = 500 (3 ms)
+  + 0-499 has content-length = 500 (2 ms)
+  + 0-10 has content-length = 11 (2 ms)
+  + with range 9500- and 10000 bytes available has content-length = 500 (2 ms)
++ Merge ranges (4 ms)
+Validate ranges
+  Invalid when
+    + last-byte-pos value less than its first-byte-pos (2 ms)
+    + first-byte-pos greater than entity length (2 ms)
+  Valid
+    + last-byte-pos is equal to first-byte-pos (2 ms)
+    + first-byte-pos is less than entity length (2 ms)
+Ranges without Entity Length
+  Invalid when
+    + last-byte-pos value less than its first-byte-pos (2 ms)
+    + start value is not present (2 ms)
+    + end value is not present (2 ms)
+  Valid
+    + last-byte-pos is equal to first-byte-pos (2 ms)
+    + first-byte-pos is less than entity length (3 ms)
+
+
+Total for specification RangeSpec
+Finished in 58 ms
+28 examples, 0 failure, 0 error
+
+Execution took 80ms
+28 tests, 28 passed
+All tests in play.api.mvc.RangeSpec passed
+
+RawBodyParserSpec
+
+Raw Body Parser should
+  + parse a strict body (3 ms)
+  parse a simple body
+    + successfully (3 ms)
+    + using a future (5 ms)
+  + close the raw buffer after parsing the body (3 ms)
+  + fail to parse longer than allowed body (2 ms)
+
+
+Total for specification RawBodyParserSpec
+Finished in 16 ms
+5 examples, 6 expectations, 0 failure, 0 error
+
+Execution took 16ms
+5 tests, 5 passed
+All tests in play.api.mvc.RawBodyParserSpec passed
+
+RawBufferSpec
+
+RawBuffer should
+  + work in memory (2 ms)
+  + write out to a file (2 ms)
+  + extend the size by a small amount (12 ms)
+  + extend the size by a large amount (12 ms)
+  + allow something that fits in memory to be accessed as a file (1 ms)
+
+
+Total for specification RawBufferSpec
+Finished in 19 ms
+5 examples, 0 failure, 0 error
+
+Execution took 29ms
+5 tests, 5 passed
+All tests in play.api.mvc.RawBufferSpec passed
+
+RequestHeaderSpec
+
+request header should
+  convert to java
+    + keep all the headers (1 ms)
+    + keep the headers accessible case insensitively (1 ms)
+  have typed attributes
+    + can set and get a single attribute (2 ms)
+    + can set two attributes and get one back (1 ms)
+    + getting a set attribute should be Some (1 ms)
+    + getting a nonexistent attribute should be None (1 ms)
+    + can add single attribute (1 ms)
+    + keep current attributes when adding a new one (1 ms)
+    + overrides current attribute value (1 ms)
+    + can add multiple attributes (1 ms)
+    + keep current attributes when adding multiple ones (2 ms)
+    + overrides current attribute value when adding multiple attributes (2 ms)
+    + can set two attributes and get both back (2 ms)
+    + can set two attributes and remove one of them (2 ms)
+    + can set two attributes and remove both again (1 ms)
+    handle empty attributes
+      + always return (at least an empty) cookies (2 ms)
+      + always return (at least an empty) session (2 ms)
+      + always return (at least an empty) flash (2 ms)
+  + handle transient lang (4 ms)
+  handle host
+    + relative uri with host header (2 ms)
+    + absolute uri (1 ms)
+    + absolute uri with port (1 ms)
+    + absolute uri with port and invalid characters (1 ms)
+    + relative uri with invalid characters (2 ms)
+  parse accept languages
+    + return an empty sequence when no accept languages specified (2 ms)
+    + parse a single accept language (3 ms)
+    + parse a single accept language and country (3 ms)
+    + parse multiple accept languages (2 ms)
+    + sort accept languages by quality (3 ms)
+    + default accept language quality to 1 (3 ms)
+  have request id
+    + generated if it does not exist yet (4 ms)
+    + not generated if one exists in the attrs already (2 ms)
+
+
+Total for specification RequestHeaderSpec
+Finished in 40 ms
+32 examples, 0 failure, 0 error
+
+Execution took 59ms
+32 tests, 32 passed
+All tests in play.api.mvc.RequestHeaderSpec passed
+
+RequestSpec
+
+request should
+  have typed attributes
+    + can set and get a single attribute (1 ms)
+    + can set two attributes and get one back (0 ms)
+    + getting a set attribute should be Some (0 ms)
+    + getting a nonexistent attribute should be None (0 ms)
+    + can add single attribute (0 ms)
+    + keep current attributes when adding a new one (0 ms)
+    + overrides current attribute value (1 ms)
+    + can add multiple attributes (1 ms)
+    + keep current attributes when adding multiple ones (0 ms)
+    + overrides current attribute value when adding multiple attributes (1 ms)
+    + can set two attributes and get both back (1 ms)
+    + can set two attributes and remove one of them (1 ms)
+    + can set two attributes and remove both again (1 ms)
+  correctly handle asJava
+    + when body is null (1 ms)
+    + when body is Java RequestBody that contains String (1 ms)
+    + when body is Java RequestBody that contains null (1 ms)
+    + when body of Scala request is not RequestBody but asJava should convert it into one (1 ms)
+
+
+Total for specification RequestSpec
+Finished in 32 ms
+17 examples, 0 failure, 0 error
+
+Execution took 11ms
+17 tests, 17 passed
+All tests in play.api.mvc.RequestSpec passed
+
+ResultsSpec
+
+Result should
+  + have status (1 ms)
+  + support Content-Type overriding (1 ms)
+  + support headers manipulation (4 ms)
+  + support date headers manipulation (2 ms)
+  + support cookies helper (29 ms)
+  + properly add and discard cookies (5 ms)
+  + provide convenience method for setting cookie header (26 ms)
+  + support clearing a language cookie using withoutLang (27 ms)
+  + allow discarding a cookie by deprecated names method (26 ms)
+  + allow discarding multiple cookies by deprecated names method (27 ms)
+  + support sending a file with Ok status (4 ms)
+  + support sending a file with Unauthorized status (6 ms)
+  + support sending a file attached with Unauthorized status (5 ms)
+  + support sending a file with PaymentRequired status (6 ms)
+  + support sending a file attached with PaymentRequired status (7 ms)
+  + support sending a file with filename (6 ms)
+  + support sending a file without filename (4 ms)
+  + support sending a file attached without filename (4 ms)
+  + support sending a path with Ok status (4 ms)
+  + support sending a path with Unauthorized status (4 ms)
+  + support sending a path attached with Unauthorized status (4 ms)
+  + support sending a path with filename (4 ms)
+  + support sending a path without filename (5 ms)
+  + support sending a path attached without filename (4 ms)
+  + allow checking content length (3 ms)
+  + sendFile should honor onClose (524 ms)
+  + sendPath should honor onClose (524 ms)
+  + sendResource should honor onClose (524 ms)
+  + support redirects for reverse routed calls (9 ms)
+  + support redirects for reverse routed calls with custom statuses (9 ms)
+  + redirect with a fragment (3 ms)
+  + redirect with a query string (2 ms)
+  + redirect with a fragment and status (1 ms)
+  + brew coffee with a teapot, short and stout (1 ms)
+  + brew coffee with a teapot, long and sweet (1 ms)
+  have typed attributes
+    + empty by default (0 ms)
+    + can set and get a single attribute (1 ms)
+    + can set two attributes and get one back (0 ms)
+    + getting a set attribute should be Some (1 ms)
+    + getting a nonexistent attribute should be None (1 ms)
+    + can add single attribute (0 ms)
+    + keep current attributes when adding a new one (1 ms)
+    + overrides current attribute value (1 ms)
+    + can add multiple attributes (1 ms)
+    + keep current attributes when adding multiple ones (1 ms)
+    + overrides current attribute value when adding multiple attributes (2 ms)
+    + can set two attributes and get both back (2 ms)
+    + can set two attributes and remove one of them (2 ms)
+WARN play - You are using status code '200' with flashing, which should only be used with a redirect status!
+    + can set two attributes and remove both again (2 ms)
+    + can convert the result into a java result and keep the attributes (1 ms)
+    + keep current attributes when modifying result session (1 ms)
+    + keep current attributes when modifying result headers (1 ms)
+    + keep current attributes when modifying result flash (2 ms)
+    + keep current attributes when modifying result content type (1 ms)
+
+
+Total for specification ResultsSpec
+Finished in 596 ms
+54 examples, 0 failure, 0 error
+
+Execution took 1.84s
+54 tests, 54 passed
+All tests in play.api.mvc.ResultsSpec passed
+
+TextBodyParserSpec
+
+Text Body Parser should
+  parse text
+    + as UTF-8 if defined (5 ms)
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - Text body parser tried to parse request 666 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset UTF-8, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.a.m.PlayBodyParsers - TolerantText body parser tried to parse request 666 as text body with charset UTF-8, but it contains invalid characters!
+    + as the declared charset if defined (11 ms)
+    + as US-ASCII if not defined (5 ms)
+    + as US-ASCII if not defined even if UTF-8 characters are provided (8 ms)
+TolerantText Body Parser should
+  parse text
+    + as the declared charset if defined (11 ms)
+    + as US-ASCII if charset is not explicitly defined (5 ms)
+    + as UTF-8 for undefined if ASCII encoding is insufficient (9 ms)
+    + as ISO-8859-1 for undefined if UTF-8 is insufficient (9 ms)
+    + as UTF-8 for undefined even if US-ASCII could parse a prefix (9 ms)
+    + as UTF-8 even if the guessed encoding is utterly wrong (11 ms)
+
+
+Total for specification TextBodyParserSpec
+Finished in 26 ms
+10 examples, 11 expectations, 0 failure, 0 error
+
+Execution took 83ms
+10 tests, 10 passed
+All tests in play.api.mvc.TextBodyParserSpec passed
+
+JavaScriptReverseRouterSpec
+
+JavaScriptReverseRouter should
+  + Create a JavaScript router with the right script (4 ms)
+
+
+Total for specification JavaScriptReverseRouterSpec
+Finished in 5 ms
+1 example, 0 failure, 0 error
+
+Execution took 4ms
+1 tests, 1 passed
+All tests in play.api.routing.JavaScriptReverseRouterSpec passed
+
+RouterSpec
+
+Routers should
+  be composable
+    + find handler from first router (8 ms)
+    + find handler from second router (8 ms)
+    + none when handler is not present in any of the routers (8 ms)
+    + prefer first router if both match (8 ms)
+    + withPrefix should be applied recursively (9 ms)
+    + withPrefix should work with or without trailing slash if the prefix has no trailing slash (9 ms)
+    + withPrefix should work only with a trailing slash if the prefix has a trailing slash (8 ms)
+    + documentation should be concatenated (1 ms)
+
+
+Total for specification RouterSpec
+Finished in 19 ms
+8 examples, 0 failure, 0 error
+
+Execution took 59ms
+8 tests, 8 passed
+All tests in play.api.routing.RouterSpec passed
+
+DslSpec
+
+Play routing DSL should
+  support extracting GET requests
+    + match (2 ms)
+    + no match (3 ms)
+  support extracting POST requests
+    + match (3 ms)
+    + no match (3 ms)
+  support extracting PUT requests
+    + match (2 ms)
+    + no match (3 ms)
+  support extracting DELETE requests
+    + match (2 ms)
+    + no match (3 ms)
+  support extracting PATCH requests
+    + match (2 ms)
+    + no match (3 ms)
+  support extracting OPTIONS requests
+    + match (2 ms)
+    + no match (3 ms)
+  support extracting HEAD requests
+    + match (2 ms)
+    + no match (3 ms)
+  + allow combining method and path matchers (5 ms)
+  + support extracting query strings (7 ms)
+  extract ints from query strings
+    + match (2 ms)
+    + no match (2 ms)
+  extract optional ints from query strings
+    + match (2 ms)
+    + no match (2 ms)
+    + none (2 ms)
+  extract many ints from query strings
+    + match (2 ms)
+    + no match (2 ms)
+    + none (2 ms)
+
+
+Total for specification DslSpec
+Finished in 45 ms
+24 examples, 0 failure, 0 error
+
+Execution took 64ms
+24 tests, 24 passed
+All tests in play.api.routing.sird.DslSpec passed
+
+UrlContextSpec
+
+path interpolation should
+  match a plain path
+    + match (3 ms)
+    + no match (2 ms)
+  match a parameterized path
+    + match (4 ms)
+    + no match (4 ms)
+    + decoded (4 ms)
+  match a regex path
+    + match (4 ms)
+    + no match (3 ms)
+    + raw (3 ms)
+  match a star path
+    + match (3 ms)
+    + no match (3 ms)
+    + raw (3 ms)
+  match a path with a nested extractor
+    + match (3 ms)
+    + no match (3 ms)
+  + match a request (4 ms)
+  + match a uri (4 ms)
+  + match a url (4 ms)
+query string interpolation should
+  allow required parameter extraction
+    + match (3 ms)
+    + no match (2 ms)
+  allow optional parameter extraction
+    + existing (3 ms)
+    + not existing (3 ms)
+  allow seq parameter extraction
+    + none (3 ms)
+    + one (3 ms)
+    + many (3 ms)
+
+
+Total for specification UrlContextSpec
+Finished in 40 ms
+23 examples, 0 failure, 0 error
+
+Execution took 74ms
+23 tests, 23 passed
+All tests in play.api.routing.sird.UrlContextSpec passed
+
+TemplatesSpec
+
+toHtmlArgs should
+  + escape attribute values (0 ms)
+translate should
+  + handle String (0 ms)
+  + handle Html (0 ms)
+  + handle Option[String] (0 ms)
+  + handle Option[Html] (0 ms)
+  + handle Optional[String] (0 ms)
+  + handle Optional[Html] (1 ms)
+  + handle Seq[String, Html, Option[String], Option[Html]] (0 ms)
+  + handle Java List[String, Html, Optional[String], Optional[Html]] (2 ms)
+  + handle array (1 ms)
+  + handle String that can't be found in messages (1 ms)
+  + handle Html that can't be found in messages (1 ms)
+  + handle String that can't be found in messages wrapped in Option (1 ms)
+  + handle Html that can't be found in messages wrapped in Option (1 ms)
+  + handle String that can't be found in messages wrapped in Optional (1 ms)
+  + handle Html that can't be found in messages wrapped in Optional (1 ms)
+  + handle non String / non Html (1 ms)
+  + handle non String / non Html wrapped in Option (1 ms)
+  + handle non String / non Html wrapped in Optional (1 ms)
+Xml should
+  + have body trimmed by implicit Writeable (1 ms)
+  + have Scala result body trimmed (1 ms)
+  + have Java result body trimmed (2 ms)
+
+
+Total for specification TemplatesSpec
+Finished in 36 ms
+22 examples, 0 failure, 0 error
+
+Execution took 17ms
+22 tests, 22 passed
+All tests in play.api.templates.TemplatesSpec passed
+
+FormUrlEncodedParserSpec
+
+FormUrlEncodedParser should
+  + decode forms (1 ms)
+  + decode forms with semicolons (1 ms)
+  + decode forms with ampersands and semicolons (1 ms)
+  + decode form elements with multiple values (1 ms)
+  + decode fields with empty names (1 ms)
+  + decode fields with empty values (1 ms)
+  + decode fields with no value (1 ms)
+  + decode single field with no value (1 ms)
+  + decode when there are no fields (2 ms)
+  + ensure field order is retained, when requested (2 ms)
+
+
+Total for specification FormUrlEncodedParserSpec
+Finished in 12 ms
+10 examples, 0 failure, 0 error
+
+Execution took 12ms
+10 tests, 10 passed
+All tests in play.core.parsers.FormUrlEncodedParserSpec passed
+
+RouterSpec
+
+Router dynamic string builder should
+  + handle empty parts (1 ms)
+  + handle simple parts (1 ms)
+  + handle parts containing backslashes (1 ms)
+  + handle parts containing spaces (1 ms)
+  + handle parts containing pluses (1 ms)
+  + handle parts with unicode characters (1 ms)
+Router queryString builder should
+  + build a query string (1 ms)
+  + ignore none values (2 ms)
+  + ignore empty values (2 ms)
+  + produce nothing if no values (2 ms)
+PathPattern should
+  + Bind Path string as string (3 ms)
+  + Bind Path with incorrectly encoded string as string (3 ms)
+  + Bind Path with incorrectly encoded string as string (3 ms)
+  + Fail on unparseable Path string (3 ms)
+  + multipart path is not decoded (3 ms)
+SimpleRouter should
+  + work (2 ms)
+  + add prefix (2 ms)
+  + add prefix multiple times (2 ms)
+
+
+Total for specification RouterSpec
+Finished in 31 ms
+18 examples, 0 failure, 0 error
+
+Execution took 34ms
+18 tests, 18 passed
+All tests in play.core.routing.RouterSpec passed
+
+HttpHeaderParameterEncodingSpec
+
+HttpHeaderParameterEncoding.encode should
+  support RFC6266 examples
+    + encode (filename, example.html) with a regular parameter only (0 ms)
+    + encode (filename, € rates) with both regular and extended parameters (0 ms)
+  support RFC5987 example
+    + Encode (title, € exchange rates) with both regular and extended parameters (0 ms)
+  support examples from http://greenbytes.de/tech/tc2231/
+    + encode (filename, foo-ä-€.html) with both regular and extended parameters (0 ms)
+    + encode (filename, foo-ä.html) with both regular and extended parameters (0 ms)
+    + encode (filename, A-%41.html) with both regular and extended parameters (0 ms)
+    + encode (filename, \foo.html) with both regular and extended parameters (0 ms)
+    + encode (filename, Here's a semicolon;.html) with a regular parameter only (0 ms)
+  support examples from https://github.com/jshttp/content-disposition
+    + encode (filename, планы.pdf) with both regular and extended parameters (0 ms)
+    + encode (filename, £ and € rates.pdf) with both regular and extended parameters (0 ms)
+    + encode (filename, €\'*%().pdf) with both regular and extended parameters (0 ms)
+    + encode (filename, the%20plans.pdf) with both regular and extended parameters (0 ms)
+    + encode (filename, Here's a semicolon;.html) with a regular parameter only (0 ms)
+  support misc examples
+    + encode (filename, README.md) with a regular parameter only (0 ms)
+    + encode (filename, READM•.md) with both regular and extended parameters (0 ms)
+    + encode (filename, test.tmp) with a regular parameter only (0 ms)
+    + encode (filename, video.mp4) with a regular parameter only (1 ms)
+    + encode (filename, 测 试.tmp) with both regular and extended parameters (1 ms)
+    + encode (filename, Museum 博物馆.jpg) with both regular and extended parameters (1 ms)
+  handle some special cases properly
+    + encode (foo, <empty>) with a regular parameter only (1 ms)
+    + encode (foo, <space>) with a regular parameter only (1 ms)
+    + encode (foo, =) with a regular parameter only (1 ms)
+    + encode (foo, ') with a regular parameter only (1 ms)
+    + encode (foo, %) with both regular and extended parameters (1 ms)
+    + encode (foo, ") with both regular and extended parameters (1 ms)
+    + encode (foo, ;) with a regular parameter only (1 ms)
+    + encode (foo, 0x80) with both regular and extended parameters (1 ms)
+
+
+Total for specification HttpHeaderParameterEncodingSpec
+Finished in 35 ms
+27 examples, 0 failure, 0 error
+
+Execution took 11ms
+27 tests, 27 passed
+All tests in play.core.utils.HttpHeaderParameterEncodingSpec passed
+
+ThreadsSpec
+
+Threads should
+  restore the correct class loader
+    + if the block returns successfully (1 ms)
+    + if the block throws an exception (1 ms)
+
+
+Total for specification ThreadsSpec
+Finished in 5 ms
+2 examples, 0 failure, 0 error
+
+Execution took 2ms
+2 tests, 2 passed
+All tests in play.core.utils.ThreadsSpec passed
+
+FTupleSpec
+
+Tuple equality should
+  + be commutative (62 ms)
+  + be reflexive (62 ms)
+  + check for null (62 ms)
+  + check object type (62 ms)
+  + obey hashCode contract (62 ms)
+Tuple3 equality should
+  + be commutative (61 ms)
+  + be reflexive (62 ms)
+  + check for null (62 ms)
+  + check object type (62 ms)
+  + obey hashCode contract (62 ms)
+Tuple4 equality should
+  + be commutative (61 ms)
+  + be reflexive (62 ms)
+  + check for null (62 ms)
+  + check object type (62 ms)
+  + obey hashCode contract (62 ms)
+Tuple5 equality should
+  + be commutative (62 ms)
+  + be reflexive (3 ms)
+  + check for null (3 ms)
+  + check object type (3 ms)
+  + obey hashCode contract (3 ms)
+
+
+Total for specification FTupleSpec
+Finished in 28 ms
+20 examples, 2000 expectations, 0 failure, 0 error
+
+Execution took 1s
+20 tests, 20 passed
+All tests in play.libs.FTupleSpec passed
+
+XMLSpec
+
+The Java XML support should
+  + parse XML bodies (12 ms)
+[E] [Fatal Error] :2:11: DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
+[E] [Fatal Error] :2:11: DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
+[E] [Fatal Error] :2:11: DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
+[E] [Fatal Error] :2:11: DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
+  + parse XML bodies without loading in a related schema (20 ms)
+  + parse XML bodies without loading in a related schema from a parameter (20 ms)
+  + gracefully fail when there are too many nested entities (20 ms)
+  + gracefully fail when an entity expands to be very large (20 ms)
+
+
+Total for specification XMLSpec
+Finished in 25 ms
+5 examples, 0 failure, 0 error
+
+Execution took 92ms
+5 tests, 5 passed
+All tests in play.libs.XMLSpec passed
+
+Java DefaultBodyParserSpec
+
+Default Body Parser should
+  + handle 'Content-Length: 0' header as empty body (containing Optional.empty) (4 ms)
+  + handle 'Content-Length: 1' header as non-empty body (11 ms)
+  + handle RequestBody containing null as empty body (containing Optional.empty) (4 ms)
+  + handle missing Content-Length and Transfer-Encoding headers as empty body (containing Optional.empty) (4 ms)
+
+
+Total for specification Java DefaultBodyParserSpec
+Finished in 16 ms
+4 examples, 5 expectations, 0 failure, 0 error
+
+Execution took 23ms
+4 tests, 4 passed
+All tests in play.mvc.DefaultBodyParserSpec passed
+
+Java MaxLengthBodyParserSpec
+
+Max length body handling should
+  not run body parser when existing Content-Length header exceeds maxLength 
+    + play.mvc.BodyParser$Text@64237e1d (3 ms)
+    + play.mvc.BodyParser$TolerantText@6f569853 (3 ms)
+    + play.mvc.BodyParser$Bytes@697d27e3 (3 ms)
+    + play.mvc.BodyParser$Xml@16517f47 (3 ms)
+    + play.mvc.BodyParser$TolerantXml@3f91de6c (3 ms)
+    + play.mvc.BodyParser$Json@645e5dcd (3 ms)
+    + play.mvc.BodyParser$TolerantJson@641c3c9a (3 ms)
+    + play.mvc.BodyParser$FormUrlEncoded@792acc19 (3 ms)
+    + play.mvc.BodyParser$MultipartFormData@48791fee (3 ms)
+    + play.mvc.DummyDelegatingMultipartFormDataBodyParser@5edf9319 (3 ms)
+    + play.mvc.BodyParser$Raw@5b228cb4 (3 ms)
+    + play.mvc.BodyParser$ToFile@7447c9cd (3 ms)
+    + play.mvc.BodyParser$TemporaryFile@74412ec4 (3 ms)
+  run body parser when existing Content-Length header does not exceed maxLength 
+    + play.mvc.BodyParser$Text@64237e1d (4 ms)
+    + play.mvc.BodyParser$TolerantText@6f569853 (4 ms)
+    + play.mvc.BodyParser$Bytes@697d27e3 (4 ms)
+    + play.mvc.BodyParser$Xml@16517f47 (3 ms)
+    + play.mvc.BodyParser$TolerantXml@3f91de6c (5 ms)
+    + play.mvc.BodyParser$Json@645e5dcd (8 ms)
+    + play.mvc.BodyParser$TolerantJson@641c3c9a (8 ms)
+    + play.mvc.BodyParser$FormUrlEncoded@792acc19 (3 ms)
+    + play.mvc.BodyParser$MultipartFormData@48791fee (2 ms)
+    + play.mvc.DummyDelegatingMultipartFormDataBodyParser@5edf9319 (4 ms)
+    + play.mvc.BodyParser$Raw@5b228cb4 (2 ms)
+    + play.mvc.BodyParser$ToFile@7447c9cd (8 ms)
+    + play.mvc.BodyParser$TemporaryFile@74412ec4 (8 ms)
+  run body parser when no Content-Length header exists and actual body size does not exceed maxLength
+    + play.mvc.BodyParser$Text@64237e1d (5 ms)
+    + play.mvc.BodyParser$TolerantText@6f569853 (3 ms)
+    + play.mvc.BodyParser$Bytes@697d27e3 (4 ms)
+    + play.mvc.BodyParser$Xml@16517f47 (4 ms)
+    + play.mvc.BodyParser$TolerantXml@3f91de6c (6 ms)
+    + play.mvc.BodyParser$Json@645e5dcd (8 ms)
+    + play.mvc.BodyParser$TolerantJson@641c3c9a (3 ms)
+    + play.mvc.BodyParser$FormUrlEncoded@792acc19 (4 ms)
+    + play.mvc.BodyParser$MultipartFormData@48791fee (4 ms)
+    + play.mvc.DummyDelegatingMultipartFormDataBodyParser@5edf9319 (3 ms)
+    + play.mvc.BodyParser$Raw@5b228cb4 (2 ms)
+    + play.mvc.BodyParser$ToFile@7447c9cd (3 ms)
+    + play.mvc.BodyParser$TemporaryFile@74412ec4 (3 ms)
+  run body parser when no Content-Length header exists and actual body size exceeds maxLength
+    + play.mvc.BodyParser$Text@64237e1d (3 ms)
+    + play.mvc.BodyParser$TolerantText@6f569853 (4 ms)
+    + play.mvc.BodyParser$Bytes@697d27e3 (4 ms)
+    + play.mvc.BodyParser$Xml@16517f47 (3 ms)
+    + play.mvc.BodyParser$TolerantXml@3f91de6c (4 ms)
+    + play.mvc.BodyParser$Json@645e5dcd (2 ms)
+    + play.mvc.BodyParser$TolerantJson@641c3c9a (4 ms)
+    + play.mvc.BodyParser$FormUrlEncoded@792acc19 (2 ms)
+    + play.mvc.BodyParser$MultipartFormData@48791fee (3 ms)
+    + play.mvc.DummyDelegatingMultipartFormDataBodyParser@5edf9319 (2 ms)
+    + play.mvc.BodyParser$Raw@5b228cb4 (2 ms)
+    + play.mvc.BodyParser$ToFile@7447c9cd (2 ms)
+    + play.mvc.BodyParser$TemporaryFile@74412ec4 (2 ms)
+
+
+Total for specification Java MaxLengthBodyParserSpec
+Finished in 81 ms
+52 examples, 53 expectations, 0 failure, 0 error
+
+Execution took 0.19s
+52 tests, 52 passed
+All tests in play.mvc.MaxLengthBodyParserSpec passed
+
+Java RawBodyParserSpec
+
+Raw Body Parser should
+  parse a simple body
+    + successfully (2 ms)
+    + using a future (13 ms)
+    + close the raw buffer after parsing the body (2 ms)
+    + fail to parse longer than allowed body (2 ms)
+
+
+Total for specification Java RawBodyParserSpec
+Finished in 20 ms
+4 examples, 5 expectations, 0 failure, 0 error
+
+Execution took 19ms
+4 tests, 4 passed
+All tests in play.mvc.RawBodyParserSpec passed
+
+RequestHeaderSpec
+
+RequestHeader should
+  headers
+    + check if the header exists (2 ms)
+    + get a single header value (2 ms)
+    + get all header values (2 ms)
+    handle header names case insensitively
+      + when getting the header (3 ms)
+      + when checking if the header exists (2 ms)
+    + can add new headers (3 ms)
+    + can add new headers with a list of values (3 ms)
+    + remove a header (3 ms)
+  has body
+    + when there is a content-length greater than zero (2 ms)
+    + when there is a transfer-encoding header (1 ms)
+  has no body
+    + when there is not a content-length greater than zero (2 ms)
+    + when there is not a transfer-encoding header (2 ms)
+
+
+Total for specification RequestHeaderSpec
+Finished in 16 ms
+12 examples, 0 failure, 0 error
+
+Execution took 27ms
+12 tests, 12 passed
+All tests in play.mvc.RequestHeaderSpec passed
+
+ResponseHeaderSpec
+
+ResponseHeader should
+  + create with status and headers (1 ms)
+  + create with status, headers and a reason phrase (1 ms)
+  + get all headers (1 ms)
+  + get a single header (1 ms)
+  + add a single new header (1 ms)
+  + preserve existing headers when adding a single new header (2 ms)
+  + add multiple new headers (1 ms)
+  + be convertible to a Scala ResponseHeader (2 ms)
+  handle header names case insensitively
+    + when adding a single header (2 ms)
+    + when adding multiple headers (2 ms)
+    + when getting the header (1 ms)
+
+
+Total for specification ResponseHeaderSpec
+Finished in 13 ms
+11 examples, 0 failure, 0 error
+
+Execution took 15ms
+11 tests, 11 passed
+All tests in play.mvc.ResponseHeaderSpec passed
+
+ResultSpec
+
+Result should
+  + allow sending JSON as UTF-16LE (4 ms)
+  + test for cookies (1 ms)
+  + get charset correctly (1 ms)
+  + get the location header (1 ms)
+
+
+Total for specification ResultSpec
+Finished in 7 ms
+4 examples, 0 failure, 0 error
+
+Execution took 7ms
+4 tests, 4 passed
+All tests in play.mvc.ResultSpec passed
+
+StatusHeaderSpec
+
+StatusHeader should
+  + use factory attached to Json.mapper() when serializing Json (2 ms)
+
+
+Total for specification StatusHeaderSpec
+Finished in 19 ms
+1 example, 3 expectations, 0 failure, 0 error
+
+Execution took 2ms
+1 tests, 1 passed
+All tests in play.mvc.StatusHeaderSpec passed
+
+Java TextBodyParserSpec
+
+Text Body Parser should
+WARN p.m.BodyParser$Text - Parser tried to parse request 123 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 126 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 128 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 128 as text body with charset UTF-8, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 124 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 127 as text body with charset US-ASCII, but it contains invalid characters!
+WARN p.m.BodyParser$TolerantText - Parser tried to parse request 127 as text body with charset UTF-8, but it contains invalid characters!
+  parse text
+    + as US-ASCII if not defined (4 ms)
+    + as UTF-8 if defined (7 ms)
+    + as US-ASCII if not defined even if UTF-8 characters are provided (3 ms)
+TolerantText Body Parser should
+  parse text
+    + as the declared charset if defined (3 ms)
+    + as US-ASCII if charset is not explicitly defined (4 ms)
+    + as UTF-8 for undefined if ASCII encoding is insufficient (4 ms)
+    + as ISO-8859-1 for undefined if UTF-8 is insufficient (4 ms)
+    + as UTF-8 for undefined even if US-ASCII could parse a prefix (4 ms)
+    + as UTF-8 even if the guessed encoding is utterly wrong (3 ms)
+
+
+Total for specification Java TextBodyParserSpec
+Finished in 20 ms
+9 examples, 10 expectations, 0 failure, 0 error
+
+Execution took 36ms
+9 tests, 9 passed
+All tests in play.mvc.TextBodyParserSpec passed
+
+DefaultDeserializerSpec
+
+A default Jackson ObjectMapper
+  + parse numbers as primitives (21 ms)
+  + parse numbers as BigDecimal/Integer (implicitly) (23 ms)
+  + parse numbers as BigDecimal/Integer (explicitly) (18 ms)
+  + read Float (2 ms)
+  + read Double (2 ms)
+  + read Double as BigDecimal (3 ms)
+  + read NaN as Double (2 ms)
+  + read Int (2 ms)
+  + read Int as Long (2 ms)
+  + read Int as BigInteger (2 ms)
+  + read Long (2 ms)
+  + read BigInteger (2 ms)
+  + not advance the cursor excessively when re/entering tine Deserializer from a custom Deserializer on the Child of a Parent/Child class hierarchy (19 ms)
+
+
+Total for specification DefaultDeserializerSpec
+Finished in 31 ms
+13 examples, 0 failure, 0 error
+
+Execution took 0.1s
+13 tests, 13 passed
+All tests in play.utils.DefaultDeserializerSpec passed
+
+JsonNodeDeserializerSpec
+
+A JsonNodeDeserializer Jackson ObjectMapper
+  + parse numbers as primitives (2 ms)
+  + parse numbers as BigDecimal/Integer (implicitly) (3 ms)
+  + parse numbers as BigDecimal/Integer (explicitly) (4 ms)
+  + read Float (1 ms)
+  + read Double (2 ms)
+  + read Double as BigDecimal (2 ms)
+  + read NaN as Double (1 ms)
+  + read Int (2 ms)
+  + read Int as Long (2 ms)
+  + read Int as BigInteger (2 ms)
+  + read Long (1 ms)
+  + read BigInteger (2 ms)
+  + not advance the cursor excessively when re/entering tine Deserializer from a custom Deserializer on the Child of a Parent/Child class hierarchy (2 ms)
+
+
+Total for specification JsonNodeDeserializerSpec
+Finished in 12 ms
+13 examples, 0 failure, 0 error
+
+Execution took 26ms
+13 tests, 13 passed
+All tests in play.utils.JsonNodeDeserializerSpec passed
+
+PlayIOSpec
+
+PlayIO should
+  + read file content (1 ms)
+  + read file content as a String (1 ms)
+  + read url content as a String (1 ms)
+
+
+Total for specification PlayIOSpec
+Finished in 12 ms
+3 examples, 0 failure, 0 error
+
+Execution took 3ms
+3 tests, 3 passed
+All tests in play.utils.PlayIOSpec passed
+
+ResourcesSpec
+
+resources isDirectory should
+  + return true for a directory resource URL with the 'file' protocol (1 ms)
+  + return false for a file resource URL with the 'file' protocol (0 ms)
+  + return true for a directory resource URL that contains spaces with the 'file' protocol (1 ms)
+  + return true for a directory resource URL with the 'jar' protocol (1 ms)
+  + return true for a directory resource URL that contains spaces in the jar path with the 'jar' protocol (1 ms)
+  + return true for a directory resource URL that contains spaces in the file path with the 'jar' protocol (1 ms)
+  + return false for a file resource URL with the 'jar' protocol (0 ms)
+  + return true for a directory resource URL with the 'bundle' and 'bundleresource' protocols (2 ms)
+  + return true for a directory resource URL that contains spaces with the 'bundle' and 'bundleresource' protocols (2 ms)
+  + return false for a file resource URL with the 'bundle' and 'bundleresource' protocols (1 ms)
+  + return true for a directory resource URL with the 'resource' protocol (1 ms)
+  + return true for a directory resource URL that contains space with the 'resource' protocol (1 ms)
+  + return false for a file resource URL with the 'resource' protocol (1 ms)
+  + return true for a directory resource URL with the 'zip' protocol (1 ms)
+  + return true for a directory resource URL that contains spaces in the zip path with the 'zip' protocol (1 ms)
+  + return true for a directory resource URL that contains spaces in the file path with the 'zip' protocol (1 ms)
+  + return false for a file resource URL with the 'zip' protocol (1 ms)
+  + throw an exception for a URL with a protocol other than 'file'/'jar'/'zip' / 'bundle' (2 ms)
+
+
+Total for specification ResourcesSpec
+Finished in 51 ms
+18 examples, 20 expectations, 0 failure, 0 error
+
+Execution took 19ms
+18 tests, 18 passed
+All tests in play.utils.ResourcesSpec passed
+
+UriEncodingSpec
+
+Path segment encoding and decoding should
+  + percent-encode reserved characters that aren't allowed in a path segment (5 ms)
+  + not percent-encode reserved characters that are allowed in a path segment (6 ms)
+  + not percent-encode unreserved characters (5 ms)
+  + percent-encode any characters that aren't specifically allowed in a path segment (6 ms)
+  + percent-encode UTF-8 strings by encoding each octet not allowed in a path segment (4 ms)
+  + percent-encode to triplets with upper-case hex (3 ms)
+  + handle strings of different lengths (4 ms)
+  + handle strings needing partial percent-encoding (3 ms)
+  + percent-encode spaces, but not + characters (5 ms)
+  + decode characters percent-encoded with upper and lowercase hex digits (4 ms)
+  + decode percent-encoded characters that don't really need to be encoded (5 ms)
+Path decoding should
+  + decode basic paths (3 ms)
+  + decode paths with encoded characters (1 ms)
+  + decode encoded slashes (although they can't be distinguished from unencoded slashes) (3 ms)
+  + not decode badly encoded paths (2 ms)
+  + not perform normalization of dot-segments (2 ms)
+  + not perform normalization of duplicate slashes (1 ms)
+  + decode complex UTF-8 octets (1 ms)
+Internal UriEncoding methods should
+  + know how to split strings (1 ms)
+
+
+Total for specification UriEncodingSpec
+Finished in 22 ms
+19 examples, 0 failure, 0 error
+
+Execution took 64ms
+19 tests, 19 passed
+All tests in play.utils.UriEncodingSpec passed
+
+HelpersSpec
+
+@inputText should
+  + allow setting a custom id (11 ms)
+  + default to a type of text (9 ms)
+  + allow setting a custom type (11 ms)
+@checkbox should
+  + translate the _text argument (10 ms)
+  + translate the _text argument but keep raw html (10 ms)
+@checkboxGroup should
+  + allow to check more than one checkbox (11 ms)
+@select should
+  + allow setting a custom id (11 ms)
+  + allow setting custom data attributes (11 ms)
+  + Work as a simple select (11 ms)
+  + Work as a multiple select (11 ms)
+  + allow disabled options (11 ms)
+  + translate default option (10 ms)
+  + translate default option but keep raw html (10 ms)
+@repeat should
+  + render a sequence of fields (3 ms)
+  + render a sequence of fields in an unfilled form (3 ms)
+  + fill the fields out if less than the min (3 ms)
+  + fill the fields out if less than the min but the maximum is high (2 ms)
+  + render the right number of fields if there's multiple sub fields at a given index when filled (3 ms)
+  + render fill the right number of fields out if there's multiple sub fields at a given index when bound (2 ms)
+  + work with i18n (2 ms)
+helpers should
+  + correctly lookup and escape constraint, error and format messages (2 ms)
+  + correctly lookup _label in messages (2 ms)
+  + correctly lookup _label in messages but keep raw html (2 ms)
+  + correctly lookup _name in messages (2 ms)
+  + correctly lookup _name in messages but keep raw html (2 ms)
+  + correctly lookup _help in messages (2 ms)
+  + correctly lookup _help in messages but keep raw html (2 ms)
+  + correctly display an error when _error is supplied as String (2 ms)
+  + correctly lookup error in messages when _error is supplied as String (2 ms)
+  + correctly lookup error in messages when _error is supplied as String but keep raw html (2 ms)
+  + correctly display an error when _error is supplied as Option[String] (2 ms)
+  + correctly lookup error in messages when _error is supplied as Option[String] (2 ms)
+  + correctly lookup error in messages when _error is supplied as Option[String] but keep raw html (1 ms)
+  + correctly lookup error in messages when _error is supplied as Optional[String] (1 ms)
+  + correctly lookup error in messages when _error is supplied as Optional[String] but keep raw html (1 ms)
+  + correctly display an error when _error is supplied as Option[FormError] (1 ms)
+  + correctly lookup error in messages when _error is supplied as FormError (1 ms)
+  + correctly lookup error in messages when _error is supplied as Option[FormError] (1 ms)
+  + don't display an error when _error is supplied but is None (1 ms)
+
+
+Total for specification HelpersSpec
+Finished in 53 ms
+39 examples, 0 failure, 0 error
+
+Execution took 0.19s
+39 tests, 39 passed
+All tests in views.html.helper.HelpersSpec passed
+
+HelpersSpec
+
+@json should
+  + Produce valid JavaScript strings (1 ms)
+  + Properly escape quotes (1 ms)
+  + Not escape HTML entities (1 ms)
+  + Produce valid JavaScript literal objects (1 ms)
+  + Produce valid JavaScript arrays (1 ms)
+
+
+Total for specification HelpersSpec
+Finished in 6 ms
+5 examples, 0 failure, 0 error
+
+Execution took 5ms
+5 tests, 5 passed
+All tests in views.js.helper.HelpersSpec passed
+
+================================================================================
+Total duration: 23s
+All 81 test suites passed.
+================================================================================

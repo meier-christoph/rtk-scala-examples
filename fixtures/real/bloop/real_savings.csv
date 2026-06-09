@@ -19,3 +19,5 @@ real_cats-effect_test_error_3,888,76,247,21,72.4
 real_cats-effect_compile_error_3,397,39,124,12,69.2
 real_play_compile_error_3,12838,1081,367,40,96.3
 real_play_compile_warn_3,13044,1078,1558,182,83.1
+real_play_test_pass_3,107815,14814,43,7,100.0
+real_play_test_fail_3,108031,14843,208,23,99.8

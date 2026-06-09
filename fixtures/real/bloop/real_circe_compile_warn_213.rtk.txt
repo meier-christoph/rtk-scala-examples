@@ -11,4 +11,4 @@ bloop compile: 41 sources, 37 warnings (3.2s)
   io/circe/Printer.scala:367:39 discarded non-Unit value of type Appendable
 
 … +27 more warnings
-  [full output: ~/.local/share/rtk/tee/1781017433_bloop-compile-warnings.log]
+[full output: ~/.local/share/rtk/tee/1781017433_bloop-compile-warnings.log]
