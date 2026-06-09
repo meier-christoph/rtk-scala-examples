@@ -1,38 +1,38 @@
-bloop test: 12 passed, 12 failed (68ms)
-═══════════════════════════════════════
+bloop test: 12 passed, 12 failed (55ms)
   [FAIL] example.CalculatorSuite1.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite1.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite1.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite1.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite1.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite1.scala:18
+     expected 4, obtained 5
   [FAIL] example.CalculatorSuite2.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite2.scala:10
+     munit.ComparisonFailException: CalculatorSuite2.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite2.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite2.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite2.scala:18
+     expected 4, obtained 5
   [FAIL] example.CalculatorSuite3.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite3.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite3.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite3.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite3.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite3.scala:18
+     expected 4, obtained 5
   [FAIL] example.CalculatorSuite4.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite4.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite4.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite4.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite4.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite4.scala:18
+     expected 4, obtained 5
   [FAIL] example.CalculatorSuite5.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite5.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite5.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite5.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite5.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite5.scala:18
+     expected 4, obtained 5
   [FAIL] example.CalculatorSuite6.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite6.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite6.scala:10
+     expected 7, obtained 6
   [FAIL] example.CalculatorSuite6.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite6.scala:18
-         expected 4, obtained 5
-[full output: ~/.local/share/rtk/tee/1780935233_bloop_test.log]
+     munit.ComparisonFailException: CalculatorSuite6.scala:18
+     expected 4, obtained 5
+[full output: ~/.local/share/rtk/tee/1781012550_bloop_test.log]

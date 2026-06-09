@@ -1,27 +1,26 @@
-bloop test: 12 passed, 12 failed (31ms)
-═══════════════════════════════════════
+bloop test: 12 passed, 12 failed (26ms)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite1.scala:12)
+     6 did not equal 7 (CalculatorSuite1.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite1.scala:20)
+     5 did not equal 4 (CalculatorSuite1.scala:20)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite2.scala:12)
+     6 did not equal 7 (CalculatorSuite2.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite2.scala:20)
+     5 did not equal 4 (CalculatorSuite2.scala:20)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite3.scala:12)
+     6 did not equal 7 (CalculatorSuite3.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite3.scala:20)
+     5 did not equal 4 (CalculatorSuite3.scala:20)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite4.scala:12)
+     6 did not equal 7 (CalculatorSuite4.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite4.scala:20)
+     5 did not equal 4 (CalculatorSuite4.scala:20)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite5.scala:12)
+     6 did not equal 7 (CalculatorSuite5.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite5.scala:20)
+     5 did not equal 4 (CalculatorSuite5.scala:20)
   [FAIL] sub returns the difference
-         6 did not equal 7 (CalculatorSuite6.scala:12)
+     6 did not equal 7 (CalculatorSuite6.scala:12)
   [FAIL] div returns the quotient
-         5 did not equal 4 (CalculatorSuite6.scala:20)
-[full output: ~/.local/share/rtk/tee/1780931767_bloop_test.log]
+     5 did not equal 4 (CalculatorSuite6.scala:20)
+[full output: ~/.local/share/rtk/tee/1781012762_bloop_test.log]

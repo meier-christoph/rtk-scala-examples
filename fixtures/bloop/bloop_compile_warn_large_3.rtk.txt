@@ -1,8 +1,7 @@
-bloop compile: 6 sources, 6 warnings (1.9s)
-═══════════════════════════════════════
-1. example/Defect6.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
-2. example/Defect5.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
-3. example/Defect4.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
-4. example/Defect3.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
-5. example/Defect2.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
-6. example/Defect1.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
+bloop compile: 6 sources, 6 warnings (1.8s)
+  example/Defect6.scala:6:39 match may not be exhaustive. It would fail on pattern case: None
+  example/Defect5.scala:6:39 match may not be exhaustive. It would fail on pattern case: None
+  example/Defect4.scala:6:39 match may not be exhaustive. It would fail on pattern case: None
+  example/Defect3.scala:6:39 match may not be exhaustive. It would fail on pattern case: None
+  example/Defect2.scala:6:39 match may not be exhaustive. It would fail on pattern case: None
+  example/Defect1.scala:6:39 match may not be exhaustive. It would fail on pattern case: None

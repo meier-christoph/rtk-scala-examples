@@ -1,1 +1,1 @@
-bloop test: 2 passed, 2 ignored (1 suites, 10ms)
+bloop test: 2 passed, 2 ignored (1 suites, 12ms)

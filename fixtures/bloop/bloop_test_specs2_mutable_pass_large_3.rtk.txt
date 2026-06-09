@@ -1,1 +1,1 @@
-bloop test: 24 passed (6 suites, 51ms)
+bloop test: 24 passed (6 suites, 47ms)

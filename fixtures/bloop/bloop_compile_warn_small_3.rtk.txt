@@ -1,3 +1,2 @@
-bloop compile: 1 sources, 1 warning (1.6s)
-═══════════════════════════════════════
-1. example/Defect1.scala:6:39 — match may not be exhaustive. It would fail on pattern case: None
+bloop compile: 1 sources, 1 warning (1.7s)
+  example/Defect1.scala:6:39 match may not be exhaustive. It would fail on pattern case: None

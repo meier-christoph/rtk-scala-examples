@@ -1,7 +1,6 @@
-bloop test: 2 passed, 2 failed (37ms)
-═══════════════════════════════════════
+bloop test: 2 passed, 2 failed (36ms)
   [FAIL] sub returns the difference
-         6 != 7 (CalculatorSpec.scala:11)
+     6 != 7 (CalculatorSpec.scala:11)
   [FAIL] div returns the quotient
-         5 != 4 (CalculatorSpec.scala:17)
-[full output: ~/.local/share/rtk/tee/1780931975_bloop_test.log]
+     5 != 4 (CalculatorSpec.scala:17)
+[full output: ~/.local/share/rtk/tee/1781012969_bloop_test.log]

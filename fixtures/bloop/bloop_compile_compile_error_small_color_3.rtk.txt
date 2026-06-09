@@ -1,0 +1,2 @@
+bloop compile: 1 sources (368ms)
+[full output: ~/.local/share/rtk/tee/1781016174_bloop_compile.log]

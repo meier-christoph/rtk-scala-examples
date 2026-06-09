@@ -1,0 +1,3 @@
+bloop test: 2 passed, 2 failed (40ms)
+═══════════════════════════════════════
+[full output: ~/.local/share/rtk/tee/1781016232_bloop_test.log]

@@ -1,7 +1,6 @@
-bloop test: 2 passed, 2 failed (25ms)
-═══════════════════════════════════════
+bloop test: 2 passed, 2 failed (31ms)
   [FAIL] Scenario: sub returns the difference
-         6 did not equal 7 (CalculatorSuite.scala:18)
+     6 did not equal 7 (CalculatorSuite.scala:18)
   [FAIL] Scenario: div returns the quotient
-         5 did not equal 4 (CalculatorSuite.scala:30)
-[full output: ~/.local/share/rtk/tee/1780931680_bloop_test.log]
+     5 did not equal 4 (CalculatorSuite.scala:30)
+[full output: ~/.local/share/rtk/tee/1781012675_bloop_test.log]

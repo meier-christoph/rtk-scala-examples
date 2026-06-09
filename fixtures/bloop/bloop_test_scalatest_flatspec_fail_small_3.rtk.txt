@@ -1,7 +1,6 @@
-bloop test: 2 passed, 2 failed (25ms)
-═══════════════════════════════════════
+bloop test: 2 passed, 2 failed (24ms)
   [FAIL] should sub returns the difference
-         6 did not equal 7 (CalculatorSuite.scala:12)
+     6 did not equal 7 (CalculatorSuite.scala:12)
   [FAIL] should div returns the quotient
-         5 did not equal 4 (CalculatorSuite.scala:20)
-[full output: ~/.local/share/rtk/tee/1780931694_bloop_test.log]
+     5 did not equal 4 (CalculatorSuite.scala:20)
+[full output: ~/.local/share/rtk/tee/1781012689_bloop_test.log]

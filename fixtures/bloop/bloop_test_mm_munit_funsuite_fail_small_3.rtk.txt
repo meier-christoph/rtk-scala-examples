@@ -1,15 +1,14 @@
-bloop test: 4 passed, 4 failed (76ms)
-═══════════════════════════════════════
+bloop test: 4 passed, 4 failed (84ms)
   [FAIL] example.util.CalculatorSuite.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite.scala:10
+     expected 7, obtained 6
   [FAIL] example.util.CalculatorSuite.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite.scala:18
-         expected 4, obtained 5
+     munit.ComparisonFailException: CalculatorSuite.scala:18
+     expected 4, obtained 5
   [FAIL] example.core.CalculatorSuite.sub returns the difference
-         munit.ComparisonFailException: CalculatorSuite.scala:10
-         expected 7, obtained 6
+     munit.ComparisonFailException: CalculatorSuite.scala:10
+     expected 7, obtained 6
   [FAIL] example.core.CalculatorSuite.div returns the quotient
-         munit.ComparisonFailException: CalculatorSuite.scala:18
-         expected 4, obtained 5
-[full output: ~/.local/share/rtk/tee/1780931498_bloop_test.log]
+     munit.ComparisonFailException: CalculatorSuite.scala:18
+     expected 4, obtained 5
+[full output: ~/.local/share/rtk/tee/1781012494_bloop_test.log]

@@ -1,11 +1,10 @@
-bloop test: 2 passed, 2 failed (26ms)
-═══════════════════════════════════════
+bloop test: 2 passed, 2 failed (28ms)
   [FAIL] example.CalculatorSuite.sub returns the difference
-         munit.FailException: CalculatorSuite.scala:10
-         Calculator.sub(10, 4): Int = 6
-         7: Int = 7
+     munit.FailException: CalculatorSuite.scala:10
+     Calculator.sub(10, 4): Int = 6
+     7: Int = 7
   [FAIL] example.CalculatorSuite.div returns the quotient
-         munit.FailException: CalculatorSuite.scala:18
-         Calculator.div(20, 4): Int = 5
-         4: Int = 4
-[full output: ~/.local/share/rtk/tee/1780931512_bloop_test.log]
+     munit.FailException: CalculatorSuite.scala:18
+     Calculator.div(20, 4): Int = 5
+     4: Int = 4
+[full output: ~/.local/share/rtk/tee/1781012507_bloop_test.log]

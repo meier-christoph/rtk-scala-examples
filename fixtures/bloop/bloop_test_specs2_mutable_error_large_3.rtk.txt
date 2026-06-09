@@ -1,5 +1,4 @@
-bloop test: 18 passed, 6 failed (45ms)
-═══════════════════════════════════════
+bloop test: 18 passed, 6 failed (60ms)
   [FAIL] div returns the quotient (×6)
-         java.lang.ArithmeticException: / by zero (Calculator.scala:8)
-[full output: ~/.local/share/rtk/tee/1780931930_bloop_test.log]
+     java.lang.ArithmeticException: / by zero (Calculator.scala:8)
+[full output: ~/.local/share/rtk/tee/1781012924_bloop_test.log]
