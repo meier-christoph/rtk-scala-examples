@@ -1,7 +1,7 @@
 Compiling testsJVM (4 Scala sources)
-Compiled testsJVM (549ms)
+Compiled testsJVM (489ms)
 Compiling testsJVM-test (1 Scala source)
-Compiled testsJVM-test (361ms)
+Compiled testsJVM-test (336ms)
 ExitCodeSpec
 
 [E] x ExitCode.unapply is exhaustive
@@ -10,14 +10,14 @@ ExitCodeSpec
 
 
 Total for specification ExitCodeSpec
-Finished in 241 ms
+Finished in 211 ms
 1 example, 3 expectations, 1 failure, 0 error
 
-Execution took 14ms
+Execution took 21ms
 1 tests, 1 failed
 
 ====================================================================================================
-Total duration: 14ms
+Total duration: 21ms
 1 failed
 
 Failed:

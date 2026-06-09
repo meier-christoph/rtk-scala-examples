@@ -1,4 +1,3 @@
-bloop compile: 30 sources, 2 warnings (4.1s)
-═══════════════════════════════════════
-1. zio/json/JsonEncoder.scala:366:29 — evidence parameter evidence$12 of type Ordering[A] in method sortedSet is never used
-2. zio/JsonPackagePlatformSpecific.scala:45:8 — a type was inferred to be `Any`; this may indicate a programming error.
+bloop compile: 30 sources, 2 warnings (1.8s)
+  zio/json/JsonEncoder.scala:366:29 evidence parameter evidence$12 of type Ordering[A] in method sortedSet is never used
+  zio/JsonPackagePlatformSpecific.scala:45:8 a type was inferred to be `Any`; this may indicate a programming error.

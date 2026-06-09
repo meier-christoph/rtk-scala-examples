@@ -1,7 +1,7 @@
 Compiling coreJVM (8 Scala sources)
-Compiled coreJVM (1857ms)
+Compiled coreJVM (432ms)
 Compiling coreJVM-test (16 Scala sources)
-Compiled coreJVM-test (2467ms)
+Compiled coreJVM-test (1241ms)
 EnumSpec:
 no values
 - should result in findValues finding nothing *** FAILED ***
@@ -86,7 +86,7 @@ extraNamesToValuesMap
 - should return a value for a legacy name
 Scala2 in
 - should fail to compile if either enum in the parameter list is not instance of the same enum type as the checked one
-Execution took 71ms
+Execution took 83ms
 53 tests, 52 passed, 1 failed
 
 ValueEnumSpec:
@@ -275,12 +275,12 @@ compilation failures
   - should fail to compile for unsealed abstract classes
   - should fail to compile for classes
   - should fail to compile if the enum is not an object
-Execution took 28ms
+Execution took 23ms
 129 tests, 129 passed
 All tests in enumeratum.values.ValueEnumSpec passed
 
 ====================================================================================================
-Total duration: 99ms
+Total duration: 0.11s
 1 passed, 1 failed
 
 Failed:

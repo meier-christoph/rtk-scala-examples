@@ -1,5 +1,4 @@
-bloop test: 181 passed, 1 failed (110ms)
-═══════════════════════════════════════
+bloop test: 181 passed, 1 failed (97ms)
   [FAIL] should result in findValues finding nothing
-         0 was not equal to 1 (EnumSpec.scala:11)
-[full output: ~/.local/share/rtk/tee/1780935475_bloop_test.log]
+     0 was not equal to 1 (EnumSpec.scala:11)
+[full output: ~/.local/share/rtk/tee/1781018440_bloop_test.log]

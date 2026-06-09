@@ -145,5 +145,5 @@ Compiling coreJVM (41 Scala sources)
 [E] modules/core/shared/src/main/scala/io/circe/PathToRoot.scala: L108 [E17], L114 [E18], L122 [E19], L128 [E20], L146 [E21], L150 [E22]
 [E] modules/core/shared/src/main/scala/io/circe/Printer.scala: L88 [E33], L91 [E23], L96 [E34], L103 [E24], L104 [E25], L316 [E26], L329 [E27], L360 [E28], L367 [E29], L383 [E30], L421 [E31], L432 [E32]
 [E] modules/core/shared/src/main/scala/io/circe/Decoder.scala: L1212 [E5], L1225 [E6], L1243 [E7], L1398 [E8]
-Compiled coreJVM (3002ms)
+Compiled coreJVM (2875ms)
 [E] Failed to compile 'coreJVM'

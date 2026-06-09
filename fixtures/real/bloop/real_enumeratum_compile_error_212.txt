@@ -4,5 +4,5 @@ Compiling coreJVM (8 Scala sources)
 [E]      L14:   val broken = undefinedSymbolReference
 [E]                          ^
 [E] enumeratum-core/src/main/scala/enumeratum/NoSuchMember.scala: L14 [E1]
-Compiled coreJVM (267ms)
+Compiled coreJVM (184ms)
 [E] Failed to compile 'coreJVM'

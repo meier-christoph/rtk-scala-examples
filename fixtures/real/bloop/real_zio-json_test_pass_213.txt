@@ -9,7 +9,7 @@ Compiling zioJsonJVM (30 Scala sources)
 [W]                   ^
 [W] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala: L45 [E1]
 [W] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala: L366 [E2]
-Compiled zioJsonJVM (9160ms)
+Compiled zioJsonJVM (9249ms)
 Compiling zioJsonJVM-test (19 Scala sources)
 [W]  [E41] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala:233:58
 [W]        Block result was adapted via implicit conversion (method apply) taking a by-name parameter
@@ -180,60 +180,60 @@ Compiling zioJsonJVM-test (19 Scala sources)
 [W] zio-json/jvm/src/test/scala-2/zio/json/data/Twitter.scala: L23 [E26], L25 [E27], L36 [E28], L38 [E29], L50 [E30], L52 [E31], L71 [E32], L73 [E33], L129 [E34], L131 [E35], L148 [E36], L150 [E37], L189 [E38], L191 [E39], L231 [E40], L233 [E41]
 [W] zio-json/jvm/src/test/scala-2/zio/json/data/GeoJSON.scala: L47 [E10], L49 [E11], L73 [E12], L75 [E13], L248 [E14], L250 [E15], L359 [E16], L361 [E17]
 [W] zio-json/jvm/src/test/scala-2/zio/json/data/GoogleMaps.scala: L34 [E18], L36 [E19], L67 [E20], L69 [E21], L83 [E22], L85 [E23], L101 [E24], L103 [E25]
-Compiled zioJsonJVM-test (22319ms)
+Compiled zioJsonJVM-test (20558ms)
 + Carter
-  + simple left
+  + case class 1 field
   + simple right
   + https://github.com/zio/zio-json/issues/209
-  + case class 1 field
+  + simple left
   + whitespace showing no retract call
 + CodecSpec
+Execution took 0.35s
   + Codec regressions
-Execution took 0.34s
 5 tests, 5 passed
 All tests in testzio.json.CarterSpec passed
 
     + option in recursive structure
   + Decoding
-    + empty
-    + sum encoding
-    + primitives
-    + eithers
     + java.util.Currency
     + parameterless products
-    + no extra fields
+    + primitives
+    + eithers
     + sum encoding with hint names
+    + sum encoding
+    + empty
+    + no extra fields
     + sum alternative encoding
     + sum alternative encoding with hint names
     + unicode
     + Seq
-    + Vector
     + key transformation - except native
+    + Vector
     + SortedSet
     + HashSet
+    + key transformation
     + Set
     + Map
-    + key transformation
     + zio.Chunk
   + Encode -> Decode
     + control chars
-      + carriage return
       + form feed
-      + newline
+      + carriage return
       + tab
-      + quote
+      + newline
       + escape
+      + quote
       + backspace
-Execution took 0.54s
+Execution took 0.69s
 28 tests, 28 passed
 All tests in testzio.json.CodecSpec passed
 
 + Decoder
   + excessively nested structures
   + googleMapsError
-  + googleMapsNormal
   + googleMapsExtra
   + googleMapsCompact
+  + googleMapsNormal
   + googleMapsAst
   + twitter
   + geojson1 alt
@@ -247,12 +247,12 @@ All tests in testzio.json.CodecSpec passed
     + qux2
     + bla25
     + ugh10k
-  + geojson2 lowlevel
   + geojson1
+  + geojson2 lowlevel
   + geojson2
   + ZIO Streams integration
-    + decodes an encoded stream of bytes
     + decodes a stream of chars
+    + decodes an encoded stream of bytes
     + combinators
       + test hand-coded alternative in `orElse` comment
       + test JsonDecoder.orElse
@@ -262,17 +262,17 @@ All tests in testzio.json.CodecSpec passed
     + decodeJsonPipeline
       + Array delimited
         + empty array
-        + handles whitespace leniently
-        + decodes multiple elements
         + decodes single elements
-      + Newline delimited
-        + accepts trailing NL
         + decodes multiple elements
+        + handles whitespace leniently
+      + Newline delimited
         + decodes multiple elements when fed in smaller chunks
+        + decodes multiple elements
+        + accepts trailing NL
         + decodes single elements
         + errors
         + is interruptible
-Execution took 4.12s
+Execution took 4.35s
 36 tests, 36 passed
 All tests in testzio.json.DecoderPlatformSpecificSpec passed
 
@@ -282,63 +282,63 @@ All tests in testzio.json.DecoderPlatformSpecificSpec passed
     + eithers
     + BigDecimal
     + parameterless products
-    + typical
     + no extra fields
-    + collections
     + aliases
-    + aliases - alias collides with field name
+    + typical
+    + collections
     + aliases - alias collides with another alias
-    + option
     + aliases - double alias
-    + option - fromJsonAST
+    + aliases - alias collides with field name
+    + option
     + default field value
-    + sum encoding with hint names
-    + sum alternative encoding
+    + option - fromJsonAST
     + sum encoding
-    + sum alternative encoding with hint names
+    + sum alternative encoding
     + unicode
+    + sum alternative encoding with hint names
+    + sum encoding with hint names
     + Seq
     + Option: .map on derived JsonDecoder with missing value
-    + Vector
     + SortedSet
+    + Vector
     + HashSet
     + Set
     + Map
     + Map with unicode keys
     + zio.Chunk
+    + Map with UUID keys
     + zio.NonEmptyChunk
     + zio.NonEmptyChunk failure
-    + Map with UUID keys
     + java.util.Currency
     + java.util.UUID
     + java.time.Duration
     + java.time.ZonedDateTime
   + fromJsonAST
     + BigDecimal
-    + parameterless products
     + no extra fields
+    + parameterless products
     + eithers
+    + sum encoding
     + preserve error path
     + default field value
     + aliases
-    + sum alternative encoding
-    + sum encoding
-    + IndexedSeq
     + Seq
     + LinearSeq
+    + sum alternative encoding
     + TreeSet
     + ListSet
-    + Vector
-    + Set
+    + IndexedSeq
     + HashSet
+    + Set
     + SortedSet
+    + Vector
+    + Map, custom keys
     + Map
     + zio.Chunk
     + SortedMap
-    + Map, custom keys
     + zio.NonEmptyChunk
     + java.util.UUID
-Execution took 0.45s
+Execution took 0.51s
 59 tests, 59 passed
 All tests in testzio.json.DecoderSpec passed
 
@@ -346,44 +346,44 @@ All tests in testzio.json.DecoderSpec passed
   + toJson
     + primitives
       + char
-      + strings
       + boolean
       + other numerics
-      + float
+      + strings
       + double
-    + options
+      + float
     + eithers
-    + exclude fields
+    + options
     + Map, custom keys
     + Map, UUID keys
     + java.util.UUID
-    + collections
     + java.util.Currency
+    + aliases
     + parameterless products
     + tuples
     + sum encoding
     + products
     + sum alternative encoding
-    + aliases
+    + collections
+    + exclude fields
   + toJsonAST
     + options
     + eithers
+    + java.util.UUID
+    + parameterless products
     + collections
     + primitives
-      + char
-      + boolean
       + strings
+      + boolean
       + numerics
-    + java.util.UUID
+      + char
     + tuples
-    + parameterless products
     + sum encoding
     + sum encoding with hint names
     + products
     + sum alternative encoding
-    + alias
     + sum alternative encoding with hint names
-Execution took 0.34s
+    + alias
+Execution took 0.41s
 36 tests, 36 passed
 All tests in testzio.json.EncoderSpec passed
 
@@ -391,83 +391,83 @@ All tests in testzio.json.EncoderSpec passed
   + Decoder
     + DayOfWeek
     + Duration
-    + LocalDate
-    + LocalDateTime
     + LocalTime
     + Instant
-    + OffsetDateTime
-    + MonthDay
+    + LocalDate
+    + LocalDateTime
     + Month
+    + MonthDay
+    + OffsetDateTime
     + OffsetTime
-    + Year
-    + Period
     + YearMonth
+    + Period
+    + Year
     + ZonedDateTime
     + ZoneId
     + ZoneOffset
   + Decoder Sad Path
     + DayOfWeek
-    + LocalDate
     + Duration
+    + LocalDate
     + LocalTime
+    + Instant
     + Month
     + MonthDay
     + LocalDateTime
-    + Instant
     + OffsetTime
-    + Period
     + Year
     + OffsetDateTime
-    + ZoneId
+    + Period
     + YearMonth
+    + ZoneId
     + ZoneOffset
     + ZonedDateTime
   + Encoder
     + Instant
     + DayOfWeek
     + Duration
-    + LocalDateTime
     + LocalTime
-    + Month
-    + MonthDay
     + LocalDate
-    + OffsetTime
-    + Period
+    + LocalDateTime
+    + MonthDay
     + OffsetDateTime
-    + Year
-    + YearMonth
-    + ZoneId
+    + OffsetTime
+    + Month
     + ZonedDateTime
+    + Year
+    + Period
+    + YearMonth
     + ZoneOffset
-Execution took 0.6s
+    + ZoneId
+Execution took 0.62s
 48 tests, 48 passed
 All tests in testzio.json.JavaTimeSpec passed
 
 + JsonTestSuite
   - passes all tests - ignored: 1
-Execution took 2ms
+Execution took 3ms
 1 tests, 1 ignored
 All tests in testzio.json.JsonTestSuiteSpec passed
 
 + RoundTrip
-  + bytes
   + booleans
-  + ints
+  + bytes
   + shorts
+  + ints
   + longs
   + AST
   + java.time
     + DayOfWeek
     + Duration
     + Instant
+    + LocalDate
     + Month
     + MonthDay
-    + LocalDate
     + LocalTime
     + LocalDateTime
-    + Year
     + Period
     + OffsetTime
+    + Year
     + ZoneId
     + ZoneOffset
     + YearMonth
@@ -476,7 +476,7 @@ All tests in testzio.json.JsonTestSuiteSpec passed
   + floats
   + doubles
   + bigInts
-Execution took 7s
+Execution took 6.63s
 25 tests, 25 passed
 All tests in testzio.json.RoundTripSpec passed
 
@@ -485,45 +485,45 @@ All tests in testzio.json.RoundTripSpec passed
   + valid BigInteger edge cases
   + valid big decimal edge cases
   + valid big decimals
-  + valid big Integer
   + invalid BigInteger edge cases
+  + valid big Integer
   + invalid BigDecimal text
-  + invalid Byte (numbers)
   + valid Byte
   + Double
-    + invalid edge cases
-    + valid (from Int)
+  + invalid Byte (numbers)
     + valid (from Long)
+    + valid (from Int)
+    + invalid edge cases
     + valid
-    + valid edge cases
     + valid magic doubles
-    + invalid doubles (text)
-  + Long
-    + in valid edge cases
-    + valid
     + valid edge cases
-    + invalid (out of range)
-    + invalid (text)
+    + invalid doubles (text)
   + Short
     + invalid (out of range)
     + valid
     + invalid (text)
   + invalid BigInteger
   + invalid Byte (text)
+  + Float
+    + large mantissa
+    + invalid edge cases
+    + valid (from Long)
+    + valid (from Int)
+    + valid edge cases
+    + valid (from Double)
+    + valid
+    + invalid float (text)
   + Int
     + invalid (out of range)
     + valid
     + invalid (text)
-  + Float
-    + large mantissa
-    + valid (from Int)
-    + valid (from Long)
+  + Long
+    + in valid edge cases
     + valid edge cases
-    + invalid edge cases
     + valid
-    + valid (from Double)
-    + invalid float (text)
-Execution took 0.45s
+    + invalid (out of range)
+    + invalid (text)
+Execution took 0.39s
 37 tests, 37 passed
 All tests in testzio.json.internal.SafeNumbersSpec passed
 
@@ -531,118 +531,118 @@ All tests in testzio.json.internal.SafeNumbersSpec passed
   + basic positive succeeds
   + trivial
   + exact match is a substring
-  + positive succeeds
   + negative fails
+  + positive succeeds
   + first resolves to field index
   + substring fails
   + alias trivial
   + alias exact match is a substring
-  + alias negative fails
   + alias positive succeeds
   + alias substring fails
+  + alias negative fails
   + alias first resolves to aliased field index
-Execution took 27s
+Execution took 26s
 13 tests, 13 passed
 All tests in testzio.json.internal.StringMatrixSpec passed
 
 + ConfigurableDeriveCodecSpec
-  + overrides
-    + AST
-      + should prevent extra fields
-      + should override field name mapping
-      + should specify discriminator
-    + string
-      + should override field name mapping
-      + should prevent extra fields
-      + should specify discriminator
-      + should override sum type mapping
-  + explicit nulls
-    + write null if configured
   + defaults
     + string
       + should allow extra fields by default
       + should not map field names by default
       + should not use discriminator by default
     + AST
-      + should allow extra fields by default
       + should not map field names by default
       + should not use discriminator by default
-Execution took 0.12s
+      + should allow extra fields by default
+  + explicit nulls
+    + write null if configured
+  + overrides
+    + AST
+      + should prevent extra fields
+      + should override field name mapping
+      + should specify discriminator
+    + string
+      + should prevent extra fields
+      + should override field name mapping
+      + should specify discriminator
+      + should override sum type mapping
+Execution took 72ms
 14 tests, 14 passed
 All tests in zio.json.ConfigurableDeriveCodecSpec passed
 
 + Encoder
   + roundtrip
     + google_maps_api_response
-    + twitter_api_response
     + che.geo
+    + twitter_api_response
   + helpers in zio.json
     + writeJsonLines writes JSON lines
   + ZIO Streams integration
     + encodeJsonLinesPipeline
-    + encodes into a ZStream of Char
     + encodeJsonLinesPipeline handles elements which take up > DefaultChunkSize to encode
+    + encodes into a ZStream of Char
     + encodes values that yield a result of length > DefaultChunkSize
     + encodeJsonArrayPipeline XYZ
     + encodeJsonArrayPipeline, empty stream
-Execution took 0.12s
+Execution took 0.16s
 10 tests, 10 passed
 All tests in zio.json.EncoderPlatformSpecificSpec passed
 
 + Json
-  + equals
-    + equality fails for different objects of different sizes
-    + equality fails for different objects of the same size with different keys
-    + object order does not matter for equality
-    + mismatched Json subtypes
-  + hashCode
-    + objects with the same elements regardless of order have the same hashCode
-  + foldUp
-    + folds the structure bottom-up (starting at the leaves)
-  + foldDown
-    + folds the structure top-down (starting at the root)
+  + delete
+    + scalar
+      + failure
+      + success
+    + nested
+      + failure
+      + success
   + relocate
     + nested
       + failure - from
       + failure - to
       + success
   + transformAt
-    + scalar
-      + failure
-      + success
     + nested
       + failure
       + success
+    + scalar
+      + success
+      + failure
+  + hashCode
+    + objects with the same elements regardless of order have the same hashCode
+  + foldUp
+    + folds the structure bottom-up (starting at the leaves)
+  + foldDown
+    + folds the structure top-down (starting at the root)
+  + equals
+    + equality fails for different objects of different sizes
+    + object order does not matter for equality
+    + equality fails for different objects of the same size with different keys
+    + mismatched Json subtypes
   + arrays with the same elements in a different order will not have the same hashCode
-  + delete
-    + scalar
-      + failure
-      + success
-    + nested
-      + success
-      + failure
   + arrays with the same elements in the same order will have the same hashCode
-  + intersect
+  + merge
+    + scalar
     + object + object
     + array
     + object, deep
+  + get
+    + >>>, object
+    + downElement
+    + >>>, array, filterType
+    + filterType
+    + >>>, array, filterType (second operand of >>> is complex)
+    + >>>, identity
+    + >>>, combination of some methods of JsonCursor (second operand of >>> is complex)
+    + downField
+  + intersect
+    + array
+    + object, deep
+    + object + object
     + array - duplicates
     + scalar
-  + get
-    + downElement
-    + >>>, object
-    + filterType
-    + downField
-    + >>>, identity
-    + >>>, array, filterType
-    + >>>, combination of some methods of JsonCursor (second operand of >>> is complex)
-    + >>>, array, filterType (second operand of >>> is complex)
-  + merge
-    + object + object
-    + object, deep
-    + scalar
-    + array
-Execution took 0.13s
+Execution took 0.12s
 37 tests, 37 passed
 All tests in zio.json.ast.JsonSpec passed
 
@@ -651,22 +651,22 @@ All tests in zio.json.ast.JsonSpec passed
     + parse types
       + parses LocalDate and LocalDateTime and ZonedDateTime
     + unify types
+      + unify double and int to double
       + unify Long and Int to Long
       + unify nulls and present keys to Option
-      + unify double and int to double
       + unify missing keys to Option
     + simple object
     + nested objects
-Execution took 71ms
+Execution took 52ms
 7 tests, 7 passed
 All tests in zio.json.codegen.GeneratorSpec passed
 
 355 tests passed. 0 tests failed. 1 tests ignored.
 
-Executed in 11 s 62 ms
+Executed in 10 s 831 ms
 
 The test execution was successfully closed.
 ====================================================================================================
-Total duration: 41s
+Total duration: 40s
 All 14 test suites passed.
 ====================================================================================================

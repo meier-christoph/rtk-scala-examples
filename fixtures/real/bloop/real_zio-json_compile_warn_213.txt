@@ -9,4 +9,4 @@ Compiling zioJsonJVM (30 Scala sources)
 [W]                   ^
 [W] zio-json/jvm/src/main/scala/zio/JsonPackagePlatformSpecific.scala: L45 [E1]
 [W] zio-json/shared/src/main/scala/zio/json/JsonEncoder.scala: L366 [E2]
-Compiled zioJsonJVM (3985ms)
+Compiled zioJsonJVM (1945ms)

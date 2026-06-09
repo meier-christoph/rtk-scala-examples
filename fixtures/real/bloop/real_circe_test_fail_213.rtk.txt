@@ -1,10 +1,9 @@
 bloop test: 1836 passed, 1 failed (36.0s)
-═══════════════════════════════════════
   [FAIL] io.circe.JsonSuite.deepDropNullValues should remove null value for JsonArray
-         munit.ComparisonFailException: JsonSuite.scala:187
-         => Diff (- obtained, + expected)
-         JString(
-         -      value = "a"
-         +      value = "REGRESSION"
-         )
-[full output: ~/.local/share/rtk/tee/1780935453_bloop_test.log]
+     munit.ComparisonFailException: JsonSuite.scala:187
+     => Diff (- obtained, + expected)
+     JString(
+     -      value = "a"
+     +      value = "REGRESSION"
+     )
+[full output: ~/.local/share/rtk/tee/1781017312_bloop_test.log]

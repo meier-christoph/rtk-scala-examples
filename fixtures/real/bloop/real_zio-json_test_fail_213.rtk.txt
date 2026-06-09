@@ -1,5 +1,4 @@
-bloop test: 354 passed, 1 failed, 1 ignored (42.0s)
-═══════════════════════════════════════
+bloop test: 354 passed, 1 failed, 1 ignored (39.0s)
   [FAIL] boolean
-         "true" was not equal to "TRUE" (EncoderSpec.scala:27)
-[full output: ~/.local/share/rtk/tee/1780935559_bloop_test.log]
+     "true" was not equal to "TRUE" (EncoderSpec.scala:27)
+[full output: ~/.local/share/rtk/tee/1781018332_bloop_test.log]

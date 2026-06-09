@@ -1,14 +1,14 @@
-bloop compile: 41 sources, 37 warnings (5.4s)
-═══════════════════════════════════════
-1. io/circe/Decoder.scala:1063:91 — match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
-2. io/circe/Decoder.scala:1054:75 — match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
-3. io/circe/Decoder.scala:1022:91 — match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
-4. io/circe/Decoder.scala:1007:75 — match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
-5. io/circe/Printer.scala:96:29 — private class AppendableByteBufferFolder in class Printer is never used
-6. io/circe/Printer.scala:88:29 — private class StringBuilderFolder in class Printer is never used
-7. io/circe/Printer.scala:432:23 — discarded non-Unit value of type StringBuilder
-8. io/circe/Printer.scala:421:49 — discarded non-Unit value of type StringBuilder
-9. io/circe/Printer.scala:383:22 — discarded non-Unit value of type Appendable
-10. io/circe/Printer.scala:367:39 — discarded non-Unit value of type Appendable
+bloop compile: 41 sources, 37 warnings (3.2s)
+  io/circe/Decoder.scala:1063:91 match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
+  io/circe/Decoder.scala:1054:75 match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
+  io/circe/Decoder.scala:1022:91 match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
+  io/circe/Decoder.scala:1007:75 match may not be exhaustive. It would fail on the following input: (x: io.circe.ACursor forSome x not in (io.circe.FailedCursor, io.circe.HCursor))
+  io/circe/Printer.scala:96:29 private class AppendableByteBufferFolder in class Printer is never used
+  io/circe/Printer.scala:88:29 private class StringBuilderFolder in class Printer is never used
+  io/circe/Printer.scala:432:23 discarded non-Unit value of type StringBuilder
+  io/circe/Printer.scala:421:49 discarded non-Unit value of type StringBuilder
+  io/circe/Printer.scala:383:22 discarded non-Unit value of type Appendable
+  io/circe/Printer.scala:367:39 discarded non-Unit value of type Appendable
 
-... +27 more warnings
+… +27 more warnings
+  [full output: ~/.local/share/rtk/tee/1781017433_bloop-compile-warnings.log]
