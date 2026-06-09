@@ -1,0 +1,14 @@
+bloop compile: 354 sources, 27 warnings (6 projects, 7.7s)
+  play/api/libs/streams/ActorFlow.scala:48:12 method actorRef in object Sink is deprecated (since Akka 2.6.0): Use variant accepting both on complete and on failure message
+  play/api/libs/streams/ActorFlow.scala:43:8 method actorRef in object Source is deprecated (since Akka 2.6.0): Use variant accepting completion and failure matchers instead
+  play/core/parsers/Multipart.scala:185:59 match may not be exhaustive. It would fail on the following input: IOResult(_, _)
+  play/api/i18n/Messages.scala:159:13 match may not be exhaustive. It would fail on the following inputs: Error(_, _), Failure(_, _)
+  play/api/http/MediaRange.scala:122:23 match may not be exhaustive. It would fail on the following inputs: Error(_, _), Failure(_, _)
+  play/api/http/MediaRange.scala:85:33 match may not be exhaustive. It would fail on the following inputs: Error(_, _), Failure(_, _)
+  play/api/http/AcceptEncoding.scala:162:25 match may not be exhaustive. It would fail on the following inputs: Error(_, _), Failure(_, _)
+  play/api/data/Form.scala:481:25 match may not be exhaustive. It would fail on the following inputs: JsArray(_), JsFalse, JsNull, JsObject(_), JsTrue
+  play/utils/ExecCtxUtils.scala:16:29 class ExecCtxUtils in package utils is deprecated
+  play/core/parsers/Multipart.scala:191:31 value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+
+… +17 more warnings
+  [full output: ~/.local/share/rtk/tee/1781019063_bloop-compile-warnings.log]

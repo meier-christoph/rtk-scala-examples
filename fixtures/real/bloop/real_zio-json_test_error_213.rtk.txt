@@ -1,0 +1,4 @@
+bloop test: 354 passed, 1 failed, 1 ignored (40.0s)
+  [FAIL] boolean
+     ERROR: java.lang.RuntimeException: rtk injected defect (EncoderSpec.scala:27)
+[full output: ~/.local/share/rtk/tee/1781018386_bloop_test.log]

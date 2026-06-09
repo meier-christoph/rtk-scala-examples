@@ -1,0 +1,156 @@
+Compiling Play-Exceptions (2 Java sources)
+Compiling Play-Streams (6 Scala sources and 2 Java sources)
+Compiled Play-Exceptions (588ms)
+Compiling Play-Configuration (3 Scala sources and 2 Java sources)
+Compiling Play-Build-Link (5 Java sources)
+Compiled Play-Build-Link (127ms)
+[W]  [E2] core/play-streams/src/main/scala/play/api/libs/streams/ActorFlow.scala:48:12
+[W]       method actorRef in object Sink is deprecated (since Akka 2.6.0): Use variant accepting both on complete and on failure message
+[W]       L48:       Sink.actorRef(
+[W]                  ^^^^^^^^^^^^^
+[W]  [E1] core/play-streams/src/main/scala/play/api/libs/streams/ActorFlow.scala:43:8
+[W]       method actorRef in object Source is deprecated (since Akka 2.6.0): Use variant accepting completion and failure matchers instead
+[W]       L43:       .actorRef[Out](bufferSize, overflowStrategy)
+[W]                   ^
+[W] core/play-streams/src/main/scala/play/api/libs/streams/ActorFlow.scala: L43 [E1], L48 [E2]
+Compiled Play-Configuration (2441ms)
+Compiled Play-Streams (3348ms)
+Compiling Play (177 Scala sources and 138 Java sources)
+[W]  [E23] core/play/src/main/scala/play/core/parsers/Multipart.scala:185:59
+[W]        match may not be exhaustive.
+[W]        It would fail on the following input: IOResult(_, _)
+[W]        L185:       Accumulator(FileIO.toPath(tempFile.path)).mapFuture {
+[W]                                                                        ^
+[W]  [E22] core/play/src/main/scala/play/api/i18n/Messages.scala:159:13
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L159:       parser(new CharSequenceReader(messageSource.read + "\n")) match {
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E21] core/play/src/main/scala/play/api/http/MediaRange.scala:122:23
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L122:       MediaRangeParser(new CharSequenceReader(mediaRanges)) match {
+[W]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E20] core/play/src/main/scala/play/api/http/MediaRange.scala:85:33
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L85:       MediaRangeParser.mediaType(new CharSequenceReader(mediaType)) match {
+[W]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E19] core/play/src/main/scala/play/api/http/AcceptEncoding.scala:162:25
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: Error(_, _), Failure(_, _)
+[W]        L162:     AcceptEncodingParser(new CharSequenceReader(acceptEncoding)) match {
+[W]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E18] core/play/src/main/scala/play/api/data/Form.scala:481:25
+[W]        match may not be exhaustive.
+[W]        It would fail on the following inputs: JsArray(_), JsFalse, JsNull, JsObject(_), JsTrue
+[W]        L481:             val value = simple match {
+[W]                                      ^^^^^^
+[W]  [E17] core/play/src/main/scala/play/utils/ExecCtxUtils.scala:16:29
+[W]        class ExecCtxUtils in package utils is deprecated
+[W]        L16: object ExecCtxUtils extends ExecCtxUtils
+[W]                                         ^^^^^^^^^^^^
+[W]  [E16] core/play/src/main/scala/play/core/parsers/Multipart.scala:191:31
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L191:         case r: IOResult if r.status.isSuccess =>
+[W]                                          ^^^^^^^^
+[W]  [E15] core/play/src/main/scala/play/core/parsers/Multipart.scala:190:67
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L190:         case r: IOResult if r.status.isFailure => Future.failed(r.status.failed.get)
+[W]                                                                              ^^^^^^^^
+[W]  [E14] core/play/src/main/scala/play/core/parsers/Multipart.scala:190:31
+[W]        value status in class IOResult is deprecated (since Akka 2.6.0): status is always set to Success(Done)
+[W]        L190:         case r: IOResult if r.status.isFailure => Future.failed(r.status.failed.get)
+[W]                                          ^^^^^^^^
+[W]  [E13] core/play/src/main/scala/play/api/mvc/BodyParsers.scala:1183:26
+[W]        overriding method onDownstreamFinish in trait OutHandler is deprecated (since Akka 2.6.0): Override `def onDownstreamFinish(cause: Throwable)`, instead.
+[W]        L1183:             override def onDownstreamFinish(): Unit = {
+[W]                                        ^^^^^^^^^^^^^^^^^^
+[W]  [E12] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala:305:30
+[W]        method stop in trait ApplicationLifecycle is deprecated (since 2.7.0): Do not invoke stop() directly. Instead, use CoordinatedShutdown.run to stop and release your resources.
+[W]        L305:         applicationLifecycle.stop().map(_ => Done)
+[W]                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E11] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala:112:50
+[W]        method applicationLifecycle in trait PekkoComponents is deprecated (since 2.7.0): Since Play 2.7.0 this is no longer required to create an ActorSystem.
+[W]        L112:     new CoordinatedShutdownProvider(actorSystem, applicationLifecycle).get
+[W]                                                               ^^^^^^^^^^^^^^^^^^^^
+[W]  [E10] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:51
+[W]        class DefaultJavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]        L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                                                               ^
+[W]  [E9] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:64
+[W]       class DefaultJavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E8] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:13
+[W]       trait JavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                        ^
+[W]  [E7] core/play/src/main/scala/play/api/inject/BuiltinModule.scala:92:26
+[W]       trait JavaContextComponents in package j is deprecated (since 2.8.0): Inject MessagesApi, Langs, FileMimeTypes or HttpConfiguration instead
+[W]       L92:         bind[play.core.j.JavaContextComponents].to[play.core.j.DefaultJavaContextComponents],
+[W]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[W]  [E6] core/play/src/main/scala/play/api/http/HttpErrorHandler.scala:353:32
+[W]       object JavaConverters in package collection is deprecated (since 2.13.0): Use `scala.jdk.CollectionConverters` instead
+[W]       L353:     Collections.synchronizedMap(new LinkedHashMap()).asScala
+[W]                                            ^
+[W]  [E5] core/play/src/main/scala/play/api/mvc/Binders.scala:293:55
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[java.util.UUID], which is not a function type but is SAM-convertible to java.util.UUID => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsString(value))` or `toJsString(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L293:   implicit def literalUUID: JavascriptLiteral[UUID] = toJsString
+[W]                                                                   ^^^^^^^^^^
+[W]  [E4] core/play/src/main/scala/play/api/mvc/Binders.scala:253:75
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Boolean], which is not a function type but is SAM-convertible to Boolean => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L253:   implicit def literalJavaBoolean: JavascriptLiteral[java.lang.Boolean] = toJsValue
+[W]                                                                                       ^^^^^^^^^
+[W]  [E3] core/play/src/main/scala/play/api/mvc/Binders.scala:243:69
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Long], which is not a function type but is SAM-convertible to Long => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L243:   implicit def literalJavaLong: JavascriptLiteral[java.lang.Long] = toJsValue
+[W]                                                                                 ^^^^^^^^^
+[W]  [E2] core/play/src/main/scala/play/api/mvc/Binders.scala:233:75
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[Integer], which is not a function type but is SAM-convertible to Integer => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsValue(value))` or `toJsValue(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L233:   implicit def literalJavaInteger: JavascriptLiteral[java.lang.Integer] = toJsValue
+[W]                                                                                       ^^^^^^^^^
+[W]  [E1] core/play/src/main/scala/play/api/mvc/Binders.scala:223:59
+[W]       Eta-expansion to expected type play.api.mvc.JavascriptLiteral[String], which is not a function type but is SAM-convertible to String => String.
+[W]       trait JavascriptLiteral should be annotated with `@FunctionalInterface` if eta-expansion is desired.
+[W]       Avoid eta-expansion by writing the function literal `((value: AnyRef) => toJsString(value))` or `toJsString(_)`.
+[W]       This warning can be filtered with `-Wconf:cat=lint-eta-sam`.
+[W]       L223:   implicit def literalString: JavascriptLiteral[String] = toJsString
+[W]                                                                       ^^^^^^^^^^
+[W] core/play/src/main/scala/play/utils/ExecCtxUtils.scala: L16 [E17]
+[W] core/play/src/main/scala/play/api/i18n/Messages.scala: L159 [E22]
+[W] core/play/src/main/scala/play/api/mvc/Binders.scala: L223 [E1], L233 [E2], L243 [E3], L253 [E4], L293 [E5]
+[W] core/play/src/main/scala/play/api/libs/concurrent/Pekko.scala: L112 [E11], L305 [E12]
+[W] core/play/src/main/scala/play/api/http/MediaRange.scala: L85 [E20], L122 [E21]
+[W] core/play/src/main/scala/play/api/http/HttpErrorHandler.scala: L353 [E6]
+[W] core/play/src/main/scala/play/core/parsers/Multipart.scala: L185 [E23], L190 [E14], L190 [E15], L191 [E16]
+[W] core/play/src/main/scala/play/api/data/Form.scala: L481 [E18]
+[W] core/play/src/main/scala/play/api/inject/BuiltinModule.scala: L92 [E7], L92 [E8], L92 [E9], L92 [E10]
+[W] core/play/src/main/scala/play/api/http/AcceptEncoding.scala: L162 [E19]
+[W] core/play/src/main/scala/play/api/mvc/BodyParsers.scala: L1183 [E13]
+Compiled Play (13153ms)
+Compiling Play-Server (23 Scala sources and 1 Java source)
+[E] [E1] transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala:17:26
+[E]      overloaded method max with alternatives:
+[E]        (x: Double,y: Double)Double <and>
+[E]        (x: Float,y: Float)Float <and>
+[E]        (x: Long,y: Long)Long <and>
+[E]        (x: Int,y: Int)Int
+[E]       cannot be applied to (Int)
+[E]      L17:   val broken: Int = math.max(1)
+[E]                               ^^^^^^^^
+[E] transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala: L17 [E1]
+Compiled Play-Server (832ms)
+[E] Failed to compile 'Play-Netty-Server','Play-Server'

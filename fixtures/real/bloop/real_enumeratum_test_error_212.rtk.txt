@@ -1,0 +1,4 @@
+bloop test: 181 passed, 1 failed (89ms)
+  [FAIL] should result in findValues finding nothing
+     java.util.NoSuchElementException: rtk-missing is not a member of Enum ()
+[full output: ~/.local/share/rtk/tee/1781018447_bloop_test.log]

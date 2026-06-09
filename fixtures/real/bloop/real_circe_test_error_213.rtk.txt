@@ -1,0 +1,5 @@
+bloop test: 1836 passed, 1 failed (37.0s)
+  [FAIL] io.circe.JsonSuite.deepDropNullValues should remove null value for JsonArray
+     java.util.NoSuchElementException: rtk injected defect: [
+     at io.circe.JsonSuite.$anonfun$new$99(JsonSuite.scala:187)
+[full output: ~/.local/share/rtk/tee/1781017415_bloop_test.log]

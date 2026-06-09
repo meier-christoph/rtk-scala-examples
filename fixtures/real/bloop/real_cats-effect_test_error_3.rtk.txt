@@ -1,0 +1,4 @@
+bloop test: 0 passed, 1 failed (13ms)
+  [FAIL] ExitCode.unapply is exhaustive
+     java.lang.IllegalArgumentException: requirement failed: rtk injected defect (ExitCodeSpec.scala:23)
+[full output: ~/.local/share/rtk/tee/1781018521_bloop_test.log]

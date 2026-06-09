@@ -1,0 +1,27 @@
+Compiling testsJVM (4 Scala sources)
+Compiled testsJVM (449ms)
+Compiling testsJVM-test (1 Scala source)
+Compiled testsJVM-test (313ms)
+ExitCodeSpec
+
+[E] ! ExitCode.unapply is exhaustive
+[E]  java.lang.IllegalArgumentException: requirement failed: rtk injected defect (ExitCodeSpec.scala:23)
+[E] cats.effect.ExitCodeSpec.$init$$$anonfun$1(ExitCodeSpec.scala:23)
+
+
+
+Total for specification ExitCodeSpec
+Finished in 208 ms
+1 example, 3 expectations, 0 failure, 1 error
+
+Execution took 11ms
+1 tests, 1 errors
+
+====================================================================================================
+Total duration: 11ms
+1 failed
+
+Failed:
+- cats.effect.ExitCodeSpec:
+  * ExitCode.unapply is exhaustive - java.lang.IllegalArgumentException: requirement failed: rtk injected defect
+====================================================================================================

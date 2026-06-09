@@ -1,0 +1,3 @@
+bloop compile: 347 sources, 1 error, 25 warnings (5 projects, 8.4s)
+  play/core/server/ServerStartException.scala:17:26 overloaded method max with alternatives: (x: Double,y: Double)Double <and> (x: Float,y: Float)Float <and> (x: Long,y: Long)Long <and> (x: Int,y: Int)Int cannot be applied to (Int)
+[full output: ~/.local/share/rtk/tee/1781019044_bloop_compile.log]
