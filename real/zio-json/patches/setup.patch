@@ -1,0 +1,10 @@
+diff --git a/project/plugins.sbt b/project/plugins.sbt
+index e62b4e0..8563c74 100644
+--- a/project/plugins.sbt
++++ b/project/plugins.sbt
+@@ -14,3 +14,5 @@ addSbtPlugin("dev.zio"            % "zio-sbt-website"               % "0.4.0-alp
+ addSbtPlugin("dev.zio"            % "zio-sbt-website"               % "0.4.0-alpha.27")
+ 
+ libraryDependencies += "org.snakeyaml" % "snakeyaml-engine" % "2.7"
++
++addSbtPlugin("ch.epfl.scala" % "sbt-bloop" % "2.0.19") // rtk: per-project bloop plugin (drop global-plugin reliance)

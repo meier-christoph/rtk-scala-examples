@@ -1,0 +1,10 @@
+diff --git a/project/plugins.sbt b/project/plugins.sbt
+index bc916aa..ef887f0 100644
+--- a/project/plugins.sbt
++++ b/project/plugins.sbt
+@@ -38,3 +38,5 @@ addSbtPlugin("nl.gn0s1s" % "sbt-pekko-version-check" % "0.0.9")
+ libraryDependencies ++= Seq(
+   "org.webjars" % "webjars-locator-core" % webjarsLocatorCore
+ )
++
++addSbtPlugin("ch.epfl.scala" % "sbt-bloop" % "2.0.19") // rtk: per-project bloop plugin (drop global-plugin reliance)

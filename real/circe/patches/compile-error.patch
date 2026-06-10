@@ -1,0 +1,13 @@
+diff --git a/modules/core/shared/src/main/scala/io/circe/Json.scala b/modules/core/shared/src/main/scala/io/circe/Json.scala
+index c0c139f..9b2ad1c 100644
+--- a/modules/core/shared/src/main/scala/io/circe/Json.scala
++++ b/modules/core/shared/src/main/scala/io/circe/Json.scala
+@@ -716,3 +716,8 @@ object Json {
+ 
+   implicit final val showJson: Show[Json] = Show.fromToString[Json]
+ }
++
++private object RtkInjectedCompileError {
++  // No Encoder[Thread] instance exists -> "could not find implicit value" (circe's signature error).
++  val brokenSummon: Encoder[Thread] = Encoder[Thread]
++}

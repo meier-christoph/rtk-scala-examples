@@ -1,0 +1,14 @@
+diff --git a/transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala b/transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala
+index fdc3a87..ffcc25d 100644
+--- a/transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala
++++ b/transport/server/play-server/src/main/scala/play/core/server/ServerStartException.scala
+@@ -10,3 +10,9 @@ package play.core.server
+  */
+ final case class ServerStartException(message: String, cause: Option[Throwable] = None)
+     extends Exception(message, cause.orNull)
++
++private object RtkInjectedCompileError {
++  // math.max takes two args -> "missing argument for parameter y" (a 5th distinct error
++  // kind, not reused from the other real repos). Self-contained: depends only on stdlib.
++  val broken: Int = math.max(1)
++}

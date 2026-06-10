@@ -1,0 +1,13 @@
+diff --git a/tests/shared/src/test/scala/cats/effect/ExitCodeSpec.scala b/tests/shared/src/test/scala/cats/effect/ExitCodeSpec.scala
+index 27d2d47..eaae6ef 100644
+--- a/tests/shared/src/test/scala/cats/effect/ExitCodeSpec.scala
++++ b/tests/shared/src/test/scala/cats/effect/ExitCodeSpec.scala
+@@ -20,7 +20,7 @@ class ExitCodeSpec extends BaseSpec {
+ 
+   "ExitCode.unapply is exhaustive" >> {
+     ExitCode(0) match { // if not, should be a fatal warning in CI
+-      case ExitCode(_) => ok
++      case ExitCode(_) => { require(false, "rtk injected defect"); ok }
+     }
+   }
+ 

@@ -1,0 +1,13 @@
+diff --git a/zio-json/shared/src/test/scala/zio/json/EncoderSpec.scala b/zio-json/shared/src/test/scala/zio/json/EncoderSpec.scala
+index 59f484d..40c3603 100644
+--- a/zio-json/shared/src/test/scala/zio/json/EncoderSpec.scala
++++ b/zio-json/shared/src/test/scala/zio/json/EncoderSpec.scala
+@@ -24,7 +24,7 @@ object EncoderSpec extends ZIOSpecDefault {
+             assert("hello\u0000world".toJson)(equalTo("\"hello\\u0000world\""))
+           },
+           test("boolean") {
+-            assert(true.toJson)(equalTo("true")) &&
++            assert(true.toJson)(equalTo("TRUE")) &&
+             assert(false.toJson)(equalTo("false"))
+           },
+           test("char") {

@@ -1,0 +1,13 @@
+diff --git a/core/shared/src/main/scala/cats/effect/ExitCode.scala b/core/shared/src/main/scala/cats/effect/ExitCode.scala
+index 49a4ca9..c878587 100644
+--- a/core/shared/src/main/scala/cats/effect/ExitCode.scala
++++ b/core/shared/src/main/scala/cats/effect/ExitCode.scala
+@@ -37,3 +37,8 @@ object ExitCode {
+   val Success: ExitCode = ExitCode(0)
+   val Error: ExitCode = ExitCode(1)
+ }
++
++private class RtkInjectedCompileError {
++  // overrides a method that doesn't exist -> Scala 3 "overrides nothing"
++  override def thisOverridesNothing(): Int = 1
++}

@@ -1,0 +1,13 @@
+diff --git a/zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala b/zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala
+index 8b360d9..2e65855 100644
+--- a/zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala
++++ b/zio-json/shared/src/main/scala-2.x/zio/json/JsonEncoderVersionSpecific.scala
+@@ -3,3 +3,8 @@ package zio.json
+ private[json] trait JsonEncoderVersionSpecific
+ 
+ private[json] trait EncoderLowPriorityVersionSpecific
++
++private object RtkInjectedCompileError {
++  // calling a non-existent method -> "value ... is not a member of String"
++  val broken = "x".thisMethodDoesNotExist
++}

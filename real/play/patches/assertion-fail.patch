@@ -1,0 +1,13 @@
+diff --git a/core/play/src/test/scala/play/utils/PlayIOSpec.scala b/core/play/src/test/scala/play/utils/PlayIOSpec.scala
+index 3b79f8c..2b860c5 100644
+--- a/core/play/src/test/scala/play/utils/PlayIOSpec.scala
++++ b/core/play/src/test/scala/play/utils/PlayIOSpec.scala
+@@ -18,7 +18,7 @@ class PlayIOSpec extends Specification {
+       val file = JFiles.createTempFile("", "")
+       writeFile(file, "file content")
+ 
+-      new String(PlayIO.readFile(file), utf8) must beEqualTo("file content")
++      new String(PlayIO.readFile(file), utf8) must beEqualTo("rtk injected failure")
+     }
+ 
+     "read file content as a String" in {

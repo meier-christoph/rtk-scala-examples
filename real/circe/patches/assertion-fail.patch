@@ -1,0 +1,13 @@
+diff --git a/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala b/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala
+index 7ffd533..54bbcc5 100644
+--- a/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala
++++ b/modules/tests/shared/src/test/scala/io/circe/JsonSuite.scala
+@@ -184,7 +184,7 @@ class JsonSuite extends CirceMunitSuite with FloatJsonTests {
+   test("deepDropNullValues should remove null value for JsonArray") {
+     val actual = Json.fromValues(List(Json.Null, Json.fromString("a"))).deepDropNullValues
+ 
+-    assertEquals(actual, Json.fromValues(List(Json.fromString("a"))))
++    assertEquals(actual, Json.fromValues(List(Json.fromString("REGRESSION"))))
+   }
+ 
+   test("deepDropNullValues should remove null value for nested object") {

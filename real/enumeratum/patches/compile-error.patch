@@ -1,0 +1,13 @@
+diff --git a/enumeratum-core/src/main/scala/enumeratum/NoSuchMember.scala b/enumeratum-core/src/main/scala/enumeratum/NoSuchMember.scala
+index 588a34b..67bec1b 100644
+--- a/enumeratum-core/src/main/scala/enumeratum/NoSuchMember.scala
++++ b/enumeratum-core/src/main/scala/enumeratum/NoSuchMember.scala
+@@ -8,3 +8,8 @@ final case class NoSuchMember[A <: EnumEntry](notFoundName: String, enumValues:
+   override def getMessage: String =
+     s"$notFoundName is not a member of Enum (${enumValues.map(_.entryName).mkString(", ")})"
+ }
++
++private object RtkInjectedCompileError {
++  // unresolved reference -> "not found: value" (distinct from circe's missing-implicit)
++  val broken = undefinedSymbolReference
++}
